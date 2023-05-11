@@ -3,7 +3,7 @@ package Progetto;
 public class Giocatore {
 	
 	private String nome;
-	private int punteggio;
+	public int punteggio;
 	private int posizione=0;
 	
 	public Giocatore (String nome) 

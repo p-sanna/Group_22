@@ -1,16 +1,16 @@
 package Progetto;
 
-public class Libreria extends Carta {
+public class Libreria extends Tessera {
 	private String nomegiocatore;
 	private int numgiocatore;
-	private Carta [][] casellario;
+	private Tessera [][] casellario;
 	private boolean [][] riempimentocasella;
 	
 	public Libreria (String giocatore, int ngiocatore)
 	{
 		this.nomegiocatore=giocatore;
 		this.numgiocatore= ngiocatore;
-	    this.casellario= new Carta [6][5];
+	    this.casellario= new Tessera [6][5];
 	    this.riempimentocasella= new boolean [6][5];
 	        for (int i=0;i<6;i++)
 	        {
@@ -21,7 +21,7 @@ public class Libreria extends Carta {
 	        }
 	}
 	
-	public void RiempiLibreria (int criga, int ccolonna, Carta carta, Libreria l)
+	public void RiempiLibreria (int criga, int ccolonna, Tessera carta, Libreria l)
 	{
 		
 		  if(l.riempimentocasella[criga][ccolonna]==false)
@@ -42,7 +42,7 @@ public class Libreria extends Carta {
 		return riempimentocasella[criga][ccolonna];
 	}
 	
-	public Carta getCarta(int riga, int colonna)
+	public Tessera getCarta(int riga, int colonna)
 	{
 		return casellario[riga][colonna];
 	}
