@@ -1,6 +1,6 @@
 package Progetto;
 
-public class Carta {
+public class Tessera {
 	private int numero=0;
 	private String colore;
 	private String figura;
