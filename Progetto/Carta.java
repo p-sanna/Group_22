@@ -6,7 +6,7 @@ public class Carta {
 	private String figura;
 	private boolean finite=false;
 	
-	 public boolean Carta(int tipologierimanenti, String colore, String figura)
+	 public  Carta(int tipologierimanenti, String colore, String figura)
 	 {
 		 numero++;
 		   if (tipologierimanenti>0)
@@ -21,7 +21,7 @@ public class Carta {
 			   boolean finite=true;
 		   }
 		   
-		 return finite;
+		 
 	 }
 	 
 	 public String getColore()
@@ -33,6 +33,10 @@ public class Carta {
 	 {
 		 int rim=132-this.numero;
 		 return rim;
+	 }
+	 public boolean getFinite()
+	 {
+		 return finite;
 	 }
 
 }

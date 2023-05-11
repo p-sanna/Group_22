@@ -1,6 +1,6 @@
 package Progetto;
 
-public class Libreria extends Carta {
+public class Libreria  {
 	private String nomegiocatore;
 	private int numgiocatore;
 	private Carta [][] casellario;
