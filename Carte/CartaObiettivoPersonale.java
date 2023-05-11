@@ -2,6 +2,6 @@ package Carte;
 
 public class CartaObiettivoPersonale {
 	
-	getImage()
+	//getImage()
 
 }

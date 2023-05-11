@@ -6,7 +6,7 @@ public class Tessera {
 	private String figura;
 	private boolean finite=false;
 	
-	 public  Carta(int tipologierimanenti, String colore, String figura)
+	 public  Tessera (int tipologierimanenti, String colore, String figura)
 	 {
 		 numero++;
 		   if (tipologierimanenti>0)

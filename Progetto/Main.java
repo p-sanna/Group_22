@@ -9,7 +9,7 @@ public class Main {
 		int nverdi=22,nrosse=22,nblu=22,nazzurre=22,ngialle=22,nbianche=22;
 
 		Random generatore = new Random();
-		ArrayList <Carta> carte= new ArrayList<>();
+		ArrayList <Tessera> carte= new ArrayList<>();
 
 		 do
 		  {
@@ -21,7 +21,7 @@ public class Main {
 			       {
 			    	 if (nverdi>0)
 			    	 {
-			         Carta v= new Carta (nverdi,"Verde","Gatti");
+			         Tessera v= new Tessera (nverdi,"Verde","Gatti");
 			         nverdi--;
 			         carte.add(v);
 			         i++;
@@ -38,7 +38,7 @@ public class Main {
 			       {
 
 
-				         Carta r= new Carta (nrosse,"Rossa","Piante");
+				         Tessera r= new Tessera (nrosse,"Rossa","Piante");
 				         nrosse--;
 				         carte.add(r);
 				         i++;
@@ -50,7 +50,7 @@ public class Main {
 			       if(d==3&&nblu>0)
 			       {
 
-				         Carta b= new Carta (nblu,"Blu","Cornici");
+				         Tessera b= new Tessera(nblu,"Blu","Cornici");
 				         nblu--;
 				         carte.add(b);
 				         i++;
@@ -61,7 +61,7 @@ public class Main {
 			       if(d==4&&nazzurre>0)
 			       {
 
-				         Carta az= new Carta (nazzurre,"Azzurra","Trofei");
+				         Tessera az= new Tessera (nazzurre,"Azzurra","Trofei");
 				         nazzurre--;
 				         i++;
 				         carte.add(az);
@@ -72,7 +72,7 @@ public class Main {
 			       {
 
 
-			    	     Carta g= new Carta (ngialle,"Gialla","Giochi");
+			    	    Tessera g= new Tessera (ngialle,"Gialla","Giochi");
 				         ngialle--;
 				         System.out.println("Ciao");
 				         carte.add(g);
@@ -84,7 +84,7 @@ public class Main {
 			        if(d==6&&nbianche>0)
 			        {
 
-				         Carta bi= new Carta (nbianche,"Bianca","Libri");
+				        Tessera bi= new Tessera (nbianche,"Bianca","Libri");
 				         nbianche--;
 				         i++;
 				         carte.add(bi);
@@ -98,7 +98,7 @@ public class Main {
 		  } while(i<132);
 		  int cont=0;
 
-		  for(Carta c: carte)
+		  for(Tessera c: carte)
 		  {
 			  System.out.println("Ciao");
 			  System.out.println("Carta "+c.getColore());
