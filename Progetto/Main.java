@@ -98,19 +98,21 @@ public class Main {
 		  } while(i<132);
 		  int cont=0;
 
-		  for(Tessera c: carte)
+		  //for(int i)
 		  {
 			  System.out.println("Ciao");
-			  System.out.println("Carta "+c.getColore());
+			  //System.out.println("Carta "+c.getColore());
 			  cont++;
 		  }
 		  System.out.println("Conattaore "+cont);
-		  System.out.println("Verdi "+nverdi);
+		  System.out.println("   Verdi "+nverdi);
 		  System.out.println("Bianche "+nbianche);
 		  System.out.println("Blu "+nblu);
 		  System.out.println("Gialle "+ngialle);
 		  System.out.println("Azzurre "+nazzurre);
-
+          Plancia p= new Plancia('2');
+          p.CaricaCarte(carte,  p);
+          p.StampaCarte(p);
 
 	}
 
