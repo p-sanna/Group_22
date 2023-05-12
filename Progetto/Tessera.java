@@ -38,6 +38,10 @@ public class Tessera {
 	 {
 		 return finite;
 	 }
-	
+	public char getInizialeColore()
+	{
+		char a= colore.charAt(0);
+		return  a;
+	}
 
 }

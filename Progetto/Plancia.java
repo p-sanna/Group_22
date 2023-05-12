@@ -1,7 +1,7 @@
 package Progetto;
 
 import java.util.ArrayList;
-
+import java.util.Arrays;
 
 import Funzionalità.Ciclico;
 
@@ -234,13 +234,17 @@ public class Plancia {
 	  case'2':
 		  int posizione=0,j=0;
 		  int i;
+		  char [] rigac2= new char[2];
 			this.riga1=null;
 			 for(i=posizione;i<posizione+2;i++)
 			 {
-				 System.out.println(riga2[j].getColore());
+				 
+				 rigac2[j]=riga2[j].getInizialeColore();
+				
 				 j++;
 			 }
-		     posizione=i;
+			 System.out.println("Rigaaaa "+Arrays.toString(rigac2));
+		     //posizione=i;
 		     j=0;
 			 for(i=posizione;i<posizione+3;i++)
 			 {
@@ -292,6 +296,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+2;i++)
 			 {
 				 System.out.println(riga2[i].getColore());
+				 
 			 }
 		     posizione=i;
 			 for(i=posizione;i<posizione+5;i++)
@@ -336,9 +341,9 @@ public class Plancia {
 			break;
 	  case '4':
 			posizione=0;
-			for(i=posizione;i<posizione+2;i++)
+			//for(i=posizione;i<posizione+2;i++)
 			 {
-				 System.out.println(riga1[i].getColore());
+				 System.out.println(riga1[0].getColore()+riga1[1].getColore());
 			 }
 			
 			 for(i=posizione;i<posizione+3;i++)
@@ -388,7 +393,10 @@ public class Plancia {
 		
 	  
   }
-	 System.out.println("Rigaaaa "+riga6.toString());
+	  char [] a=  {'a','b'};
+	 
+	
+	 
 }
 }
   
