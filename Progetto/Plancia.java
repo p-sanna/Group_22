@@ -229,12 +229,22 @@ public class Plancia {
   
   public void StampaCarte(Plancia p)
   {
+	  char [] rigac2= new char[3];
+	  char [] rigac3= new char[5];
+	  char [] rigac4= new char[8];
+	  char [] rigac5= new char[9];
+	  char [] rigac6= new char[8];
+	  char [] rigac7= new char[5];
+	  char [] rigac8= new char[3];
+	  char [] rigac9= new char[2];
 	  switch(p.ngioc)
 	  {
-	  case'2':
+	  
+	      case'2':
 		  int posizione=0,j=0;
 		  int i;
-		  char [] rigac2= new char[2];
+		  
+		  
 			this.riga1=null;
 			 for(i=posizione;i<posizione+2;i++)
 			 {
@@ -243,49 +253,56 @@ public class Plancia {
 				
 				 j++;
 			 }
-			 System.out.println("Rigaaaa "+Arrays.toString(rigac2));
-		     //posizione=i;
+			 System.out.println("         "+Arrays.toString(rigac2));
+		     posizione=i;
 		     j=0;
+		     
 			 for(i=posizione;i<posizione+3;i++)
 			 {
-				 System.out.println(riga3[j].getColore());
+				 rigac3[j+1]=riga3[j].getInizialeColore();
 				 j++;
 			 }
+			 System.out.println("       "+ Arrays.toString(rigac3));
 			 posizione=i;
 			 j=0;
 			 for(i=posizione;i<posizione+6;i++)
 			 {
-				 System.out.println(riga4[j].getColore());
+				 rigac4[j+1]=riga4[j].getInizialeColore();
 				 j++;
 			 }
+			 System.out.println("    "+Arrays.toString(rigac4));
 			 posizione=i;
 			 j=0;
 			 for(i=posizione;i<posizione+7;i++)
 			 {
-				 System.out.println(riga5[j].getColore());
+				 rigac5[j+1]=riga5[j].getInizialeColore();
 				 j++;
 			 }
 			 posizione=i;
+			 System.out.println(" "+ Arrays.toString(rigac5));
 			 j=0;
 			 for(i=posizione;i<posizione+6;i++)
 			 {
-				 System.out.println(riga6[j].getColore());
+				 rigac6[j+1]=riga6[j].getInizialeColore();
 				 j++;
 			 }
 			 posizione=i;
+			 System.out.println( " "+Arrays.toString(rigac6));
 			 j=0;
 			 for(i=posizione;i<posizione+3;i++)
 			 {
-				 System.out.println(riga7[j].getColore());
+				 rigac7[j+1]=riga7[j].getInizialeColore();
 				 j++;
 			 }
 			 posizione=i;
 			 j=0;
+			 System.out.println( "       "+Arrays.toString(rigac7));
 			 for(i=posizione;i<posizione+2;i++)
 			 {
-				 System.out.println(riga8[j].getColore());
+				 rigac8[j+1]=riga8[j].getInizialeColore();
 				 j++;
 			 }
+			 System.out.println("       "+ Arrays.toString(rigac8));
 			 
 		
 			
