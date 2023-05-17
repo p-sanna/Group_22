@@ -110,7 +110,7 @@ public class Main {
 		  System.out.println("Blu "+nblu);
 		  System.out.println("Gialle "+ngialle);
 		  System.out.println("Azzurre "+nazzurre);
-          Plancia p= new Plancia('2');
+          Plancia p= new Plancia('3');
           p.CaricaCarte(carte,  p);
           p.StampaCarte(p);
 

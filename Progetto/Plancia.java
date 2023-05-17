@@ -126,46 +126,63 @@ public class Plancia {
 			
 			break;
 		case'3':
-			posizione=1;
+			j=0;
+			posizione=1; //adattare come sopra il caricamento e poi stampare
 			this.riga1[0]=c.get(0);
 			 for(i=posizione;i<posizione+2;i++)
 			 {
-				 this.riga2[i]=c.get(i);
+				 this.riga2[j]=c.get(i);
+				 j++;
 			 }
 		     posizione=i;
+		     j=0;
 			 for(i=posizione;i<posizione+5;i++)
 			 {
-				 this.riga3[i]=c.get(i);
+				 this.riga3[j]=c.get(i);
+				 j++;
 			 }
+			 posizione=i;
+			 j=0;
+			 for(i=posizione;i<posizione+7;i++)
+			 {
+				 this.riga4[j]=c.get(i);
+				 j++;
+			 }
+			 posizione=i;
+			 j=0;
+			 for(i=posizione;i<posizione+7;i++)
+			 {
+				 this.riga5[j]=c.get(i);
+				 j++;
+				 
+			 }
+			 j=0;
 			 posizione=i;
 			 for(i=posizione;i<posizione+7;i++)
 			 {
-				 this.riga4[i]=c.get(i);
+				 this.riga6[j]=c.get(i);
+				 j++;
 			 }
 			 posizione=i;
-			 for(i=posizione;i<posizione+7;i++)
-			 {
-				 this.riga5[i]=c.get(i);
-			 }
-			 posizione=i;
-			 for(i=posizione;i<posizione+7;i++)
-			 {
-				 this.riga6[i]=c.get(i);
-			 }
-			 posizione=i;
+			 j=0;
 			 for(i=posizione;i<posizione+5;i++)
 			 {
-				 this.riga7[i]=c.get(i);
+				 this.riga7[j]=c.get(i);
+				 j++;
 			 }
 			 posizione=i;
+			 j=0;
 			 for(i=posizione;i<posizione+2;i++)
 			 {
-				 this.riga8[i]=c.get(i);
+				 this.riga8[j]=c.get(i);
+				 j++;
 			 }
 			 posizione=i;
+			 j=0;
 			 for(i=posizione;i<posizione+1;i++)
 			 {
-				 this.riga9[i]=c.get(i);
+				 this.riga9[j]=c.get(i);
+				 j++;
 			 }
 		
 			
@@ -176,49 +193,68 @@ public class Plancia {
 		
 		case '4':
 			posizione=0;
+			j=0;
 			for(i=posizione;i<posizione+2;i++)
 			 {
-				 this.riga1[i]=c.get(i);
+				 this.riga1[j]=c.get(i);
+				 j++;
 			 }
+			posizione=i;
+		     j=0;
 			
 			 for(i=posizione;i<posizione+3;i++)
 			 {
-				 this.riga2[i]=c.get(i);
+				 this.riga2[j]=c.get(i);
+				 j++;
 			 }
-		     posizione=i;
+			 posizione=i;
+		     j=0;
 			 for(i=posizione;i<posizione+5;i++)
 			 {
-				 this.riga3[i]=c.get(i);
+				 this.riga3[j]=c.get(i);
+				 j++;
 			 }
 			 posizione=i;
+		     j=0;
 			 for(i=posizione;i<posizione+8;i++)
 			 {
-				 this.riga4[i]=c.get(i);
+				 this.riga4[j]=c.get(i);
+				 j++;
 			 }
 			 posizione=i;
+		     j=0;
 			 for(i=posizione;i<posizione+9;i++)
 			 {
-				 this.riga5[i]=c.get(i);
+				 this.riga5[j]=c.get(i);
+				 j++;
 			 }
 			 posizione=i;
+		     j=0;
 			 for(i=posizione;i<posizione+8;i++)
 			 {
-				 this.riga6[i]=c.get(i);
+				 this.riga6[j]=c.get(i);
+				 j++;
 			 }
 			 posizione=i;
+		     j=0;
 			 for(i=posizione;i<posizione+5;i++)
 			 {
-				 this.riga7[i]=c.get(i);
+				 this.riga7[j]=c.get(i);
+				 j++;
 			 }
 			 posizione=i;
+		     j=0;
 			 for(i=posizione;i<posizione+3;i++)
 			 {
-				 this.riga8[i]=c.get(i);
+				 this.riga8[j]=c.get(i);
+				 j++;
 			 }
 			 posizione=i;
+		     j=0;
 			 for(i=posizione;i<posizione+2;i++)
 			 {
-				 this.riga9[i]=c.get(i);
+				 this.riga9[j]=c.get(i);
+				 j++;
 			 }
 		
 			
@@ -229,6 +265,7 @@ public class Plancia {
   
   public void StampaCarte(Plancia p)
   {
+	  char[] rigac1=new char[2];
 	  char [] rigac2= new char[3];
 	  char [] rigac3= new char[5];
 	  char [] rigac4= new char[8];
@@ -237,12 +274,13 @@ public class Plancia {
 	  char [] rigac7= new char[5];
 	  char [] rigac8= new char[3];
 	  char [] rigac9= new char[2];
+	  int posizione=0,j=0;
+	  int i;
 	  switch(p.ngioc)
 	  {
 	  
 	      case'2':
-		  int posizione=0,j=0;
-		  int i;
+		 
 		  
 		  
 			this.riga1=null;
@@ -308,49 +346,71 @@ public class Plancia {
 			
 			break;
 	  case'3':
-			posizione=1;
-			 System.out.println(riga1[0].getColore());
-			 for(i=posizione;i<posizione+2;i++)
+		  posizione=0;
+		  rigac1[0]=riga1[0].getInizialeColore();
+		  System.out.println("         "+Arrays.toString(rigac1));
+		  for(i=posizione;i<posizione+2;i++)
 			 {
-				 System.out.println(riga2[i].getColore());
 				 
+				 rigac2[j]=riga2[j].getInizialeColore();
+				
+				 j++;
 			 }
+			 System.out.println("         "+Arrays.toString(rigac2));
 		     posizione=i;
+		     j=0;
+		     
 			 for(i=posizione;i<posizione+5;i++)
 			 {
-				 System.out.println(riga3[i].getColore());
+				 rigac3[j]=riga3[j].getInizialeColore();
+				 j++;
 			 }
+			 System.out.println("      "+ Arrays.toString(rigac3));
 			 posizione=i;
+			 j=0;
 			 for(i=posizione;i<posizione+7;i++)
 			 {
-				 System.out.println(riga4[i].getColore());
+				 rigac4[j+1]=riga4[j].getInizialeColore();
+				 j++;
 			 }
+			 System.out.println("    "+Arrays.toString(rigac4));
 			 posizione=i;
+			 j=0;
 			 for(i=posizione;i<posizione+7;i++)
 			 {
-				 System.out.println(riga5[i].getColore());
+				 rigac5[j+1]=riga5[j].getInizialeColore();
+				 j++;
 			 }
 			 posizione=i;
+			 System.out.println(" "+ Arrays.toString(rigac5));
+			 j=0;
 			 for(i=posizione;i<posizione+7;i++)
 			 {
-				 System.out.println(riga6[i].getColore());
+				 rigac6[j]=riga6[j].getInizialeColore();
+				 j++;
 			 }
 			 posizione=i;
+			 System.out.println( ""+Arrays.toString(rigac6));
+			 j=0;
 			 for(i=posizione;i<posizione+5;i++)
 			 {
-				 System.out.println(riga7[i].getColore());
+				 rigac7[j]=riga7[j].getInizialeColore();
+				 j++;
 			 }
 			 posizione=i;
+			 j=0;
+			 System.out.println( "      "+Arrays.toString(rigac7));
 			 for(i=posizione;i<posizione+2;i++)
 			 {
-				 System.out.println(riga8[i].getColore());
+				 rigac8[j+1]=riga8[j].getInizialeColore();
+				 j++;
 			 }
 			 posizione=i;
-			 for(i=posizione;i<posizione+1;i++)
-			 {
-				 System.out.println(riga9[i].getColore());
-			 }
-		
+			 System.out.println("          "+ Arrays.toString(rigac8));
+			 rigac9[1]=riga9[0].getInizialeColore();
+			 System.out.println("             "+Arrays.toString(rigac9));
+			 
+			 
 			
 			
 
@@ -410,7 +470,7 @@ public class Plancia {
 		
 	  
   }
-	  char [] a=  {'a','b'};
+	 
 	 
 	
 	 
