@@ -346,7 +346,7 @@ public class Plancia {
 			
 			break;
 	  case'3':
-		  posizione=0;
+		  posizione=1;
 		  rigac1[0]=riga1[0].getInizialeColore();
 		  System.out.println("         "+Arrays.toString(rigac1));
 		  for(i=posizione;i<posizione+2;i++)
@@ -417,52 +417,72 @@ public class Plancia {
 			
 			break;
 	  case '4':
-			posizione=0;
-			//for(i=posizione;i<posizione+2;i++)
+		  posizione=2;
+		  rigac1[0]=riga1[0].getInizialeColore();
+		  rigac1[1]=riga1[1].getInizialeColore();
+		  System.out.println("         "+Arrays.toString(rigac1));
+		  for(i=posizione;i<posizione+3;i++)
 			 {
-				 System.out.println(riga1[0].getColore()+riga1[1].getColore());
+				 
+				 rigac2[j]=riga2[j].getInizialeColore();
+				
+				 j++;
 			 }
-			
-			 for(i=posizione;i<posizione+3;i++)
-			 {
-				 System.out.println(riga2[i].getColore());
-			 }
+			 System.out.println("         "+Arrays.toString(rigac2));
 		     posizione=i;
+		     j=0;
+		     
 			 for(i=posizione;i<posizione+5;i++)
 			 {
-				 System.out.println(riga3[i].getColore());
+				 rigac3[j]=riga3[j].getInizialeColore();
+				 j++;
 			 }
+			 System.out.println("      "+ Arrays.toString(rigac3));
 			 posizione=i;
+			 j=0;
 			 for(i=posizione;i<posizione+8;i++)
 			 {
-				 System.out.println(riga4[i].getColore());
+				 rigac4[j]=riga4[j].getInizialeColore();
+				 j++;
 			 }
+			 System.out.println("   "+Arrays.toString(rigac4));
 			 posizione=i;
+			 j=0;
 			 for(i=posizione;i<posizione+9;i++)
 			 {
-				 System.out.println(riga5[i].getColore());
+				 rigac5[j]=riga5[j].getInizialeColore();
+				 j++;
 			 }
 			 posizione=i;
+			 System.out.println(""+ Arrays.toString(rigac5));
+			 j=0;
 			 for(i=posizione;i<posizione+8;i++)
 			 {
-				 System.out.println(riga6[i].getColore());
+				 rigac6[j]=riga6[j].getInizialeColore();
+				 j++;
 			 }
 			 posizione=i;
+			 System.out.println( ""+Arrays.toString(rigac6));
+			 j=0;
 			 for(i=posizione;i<posizione+5;i++)
 			 {
-				 System.out.println(riga7[i].getColore());
-			 posizione=i;
+				 rigac7[j]=riga7[j].getInizialeColore();
+				 j++;
 			 }
+			 posizione=i;
+			 j=0;
+			 System.out.println( "      "+Arrays.toString(rigac7));
 			 for(i=posizione;i<posizione+3;i++)
 			 {
-				 System.out.println(riga8[i].getColore());
+				 rigac8[j]=riga8[j].getInizialeColore();
+				 j++;
 			 }
 			 posizione=i;
-			 for(i=posizione;i<posizione+2;i++)
-			 {
-				 System.out.println(riga9[i].getColore());
-			 }
-		
+			 System.out.println("          "+ Arrays.toString(rigac8));
+			 rigac9[1]=riga9[0].getInizialeColore();
+			 rigac9[0]=riga9[1].getInizialeColore();
+			 System.out.println("             "+Arrays.toString(rigac9));
+			 
 			
 			
 			break;

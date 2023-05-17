@@ -110,7 +110,13 @@ public class Main {
 		  System.out.println("Blu "+nblu);
 		  System.out.println("Gialle "+ngialle);
 		  System.out.println("Azzurre "+nazzurre);
-          Plancia p= new Plancia('3');
+		  int numerogiocatori=0;
+		  System.out.println("Inserisci il numero di giocatori");
+		  Scanner s= new Scanner(System.in);
+		  numerogiocatori=s.nextInt();
+		  String str = String.valueOf(numerogiocatori);
+		  char ng= str.charAt(0);
+          Plancia p= new Plancia(ng);
           p.CaricaCarte(carte,  p);
           p.StampaCarte(p);
 
