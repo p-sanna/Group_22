@@ -11,7 +11,7 @@ public class Main {
 		Random generatore = new Random();
 		ArrayList <Tessera> carte= new ArrayList<>();
 
-		 do
+		 do //Generazione carte esattamente nelle quantità prescritte, con quindi controlli
 		  {
 			  int d = 1+ generatore.nextInt(6);
 			  System.out.println("d "+d);
@@ -96,15 +96,10 @@ public class Main {
 			    d=0;
 
 		  } while(i<132);
-		  int cont=0;
+		  
 
-		  //for(int i)
-		  {
-			  System.out.println("Ciao");
-			  //System.out.println("Carta "+c.getColore());
-			  cont++;
-		  }
-		  System.out.println("Conattaore "+cont);
+		  
+		  
 		  System.out.println("   Verdi "+nverdi);
 		  System.out.println("Bianche "+nbianche);
 		  System.out.println("Blu "+nblu);
@@ -119,6 +114,16 @@ public class Main {
           Plancia p= new Plancia(ng);
           p.CaricaCarte(carte,  p);
           p.StampaCarte(p);
+          // /**Bozza idea per selezione carte (parte più difficile), bisogna usare la selezione numero giocatore
+          
+         //Si possono prendere solo carte in linea retta ed adiacenti ad altre carte
+         //Creare metodo in classe plancia prendicarte, dove prendo la carta metto il valore 0 oppure la lettera x
+          //Bisogna quindi fare in modo che l'utente non sbagli. Perchè la semplice selezione è molto facile basta dare le coordinate
+          //ma noi vorremmo che il programma blocchi l'utente se questo bara.
+          
+          
+          
+          
 
 	}
 

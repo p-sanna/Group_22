@@ -478,10 +478,10 @@ public class Plancia {
 				 j++;
 			 }
 			 posizione=i;
-			 System.out.println("          "+ Arrays.toString(rigac8));
+			 System.out.println("         "+ Arrays.toString(rigac8));
 			 rigac9[1]=riga9[0].getInizialeColore();
 			 rigac9[0]=riga9[1].getInizialeColore();
-			 System.out.println("             "+Arrays.toString(rigac9));
+			 System.out.println("            "+Arrays.toString(rigac9));
 			 
 			
 			
