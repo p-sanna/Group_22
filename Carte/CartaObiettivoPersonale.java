@@ -12,7 +12,7 @@ public class CartaObiettivoPersonale {
         // crea oggetto Random
         Random random = new Random();
         // genera numero casuale tra 0 e 3
-        int number = random.nextInt(3);
+        int number = random.nextInt(12);
         switch(number) {
 	case 0: 
 		System.out.println( "");
