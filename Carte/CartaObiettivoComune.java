@@ -38,7 +38,7 @@ public class CartaObiettivoComune {
 		System.out.println ("completa la digonale della libreria dello stesso colore");
 		break;
 	case 7:
-		System.out.println ("completa in 3 righe differenti il seguente schema dello stesso oclore dal basso verso l'alto: 3,3,2");
+		System.out.println ("completa in 3 righe differenti il seguente schema dello stesso colore dal basso verso l'alto: 3,3,2");
 		break;
 	case 8:
 		System.out.println ("e");
