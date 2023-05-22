@@ -461,6 +461,19 @@ public class Plancia {
 			
 			break;
 	  case '4':
+		  for(int k=0;k<9;k++)
+			{
+				for(int w=0;w<9;w++)
+				{
+				t[w][k]=new Tessera(1000,"0n","nero");
+				
+				}
+				
+			}
+		  
+		  rigac1[0]=riga1[0].getInizialeColore();
+		  t[0][3]=riga1[0];
+		  t[0][4]=riga1[1];
 		  posizione=2;
 		  rigac1[0]=riga1[0].getInizialeColore();
 		  rigac1[1]=riga1[1].getInizialeColore();
@@ -469,7 +482,7 @@ public class Plancia {
 			 {
 				 
 				 rigac2[j]=riga2[j].getInizialeColore();
-				
+				 t[1][j+3]=riga2[j];
 				 j++;
 			 }
 			 System.out.println("         "+Arrays.toString(rigac2));
@@ -479,6 +492,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+5;i++)
 			 {
 				 rigac3[j]=riga3[j].getInizialeColore();
+				 t[2][j+2]=riga3[j];
 				 j++;
 			 }
 			 System.out.println("      "+ Arrays.toString(rigac3));
@@ -487,6 +501,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+8;i++)
 			 {
 				 rigac4[j]=riga4[j].getInizialeColore();
+				 t[3][j+1]=riga4[j];
 				 j++;
 			 }
 			 System.out.println("   "+Arrays.toString(rigac4));
@@ -495,6 +510,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+9;i++)
 			 {
 				 rigac5[j]=riga5[j].getInizialeColore();
+				 t[4][j]=riga5[j];
 				 j++;
 			 }
 			 posizione=i;
@@ -503,6 +519,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+8;i++)
 			 {
 				 rigac6[j]=riga6[j].getInizialeColore();
+				 t[5][j]=riga6[j];
 				 j++;
 			 }
 			 posizione=i;
@@ -511,6 +528,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+5;i++)
 			 {
 				 rigac7[j]=riga7[j].getInizialeColore();
+				 t[6][j+2]=riga7[j];
 				 j++;
 			 }
 			 posizione=i;
@@ -519,11 +537,14 @@ public class Plancia {
 			 for(i=posizione;i<posizione+3;i++)
 			 {
 				 rigac8[j]=riga8[j].getInizialeColore();
+				 t[7][j+3]=riga8[j];
 				 j++;
 			 }
 			 posizione=i;
 			 System.out.println("         "+ Arrays.toString(rigac8));
 			 rigac9[1]=riga9[0].getInizialeColore();
+			 t[8][j+4]=riga9[0];
+			 t[1][j+5]=riga9[1];
 			 rigac9[0]=riga9[1].getInizialeColore();
 			 System.out.println("            "+Arrays.toString(rigac9));
 			 
