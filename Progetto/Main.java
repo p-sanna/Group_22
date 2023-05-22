@@ -132,7 +132,7 @@ public class Main {
             
             //Inizio prelievo
             int riga = 0,colonna = 0,numerocarte;
-        	 boolean correttezza=false; 
+        	 boolean correttezza=false,correttezza2=false; 
         	 Scanner sc= new Scanner(System.in);
             do
    	     {
@@ -147,12 +147,18 @@ public class Main {
    	    	    do {
    	    	         System.out.println("Inserisci la riga della carta da prelevare tranne la 1 e la 9 ");
    	    	         riga=sc.nextInt();
-   	    	       }while(riga==1||riga==9)	;
+   	    	       }while(riga<2||riga>8)	;
         	  
-        	     System.out.println("Inserisci la colonna della carta da prelevare ");
-        	     colonna=sc.nextInt();
+        	    do
+        	    	{
+        	    	  System.out.println("Inserisci la colonna della carta da prelevare ");
+        	    	  colonna=sc.nextInt();
+        	    	}while(colonna<1||colonna>9);
+        	    
+        	     
                  correttezza=p.Controllo(t, riga, colonna, numerocarte, ng);
-	            }  while(correttezza==false);
+                 correttezza2=p.Controllo2(t);
+	            }  while(correttezza==false&&correttezza2==false);
    	         
    	       
    	        	
@@ -176,13 +182,7 @@ public class Main {
              	System.out.println("");
              }
    	         
-   	         //Pensare che la riga della plancia sia come in una matrice, aggiornare quindi gli indici   
-          // /**Bozza idea per selezione carte (parte più difficile), bisogna usare la selezione numero giocatore
-          
-         //Si possono prendere solo carte in linea retta ed adiacenti ad altre carte
-         //Creare metodo in classe plancia prendicarte, dove prendo la carta metto il valore 0 oppure la lettera x
-          //Bisogna quindi fare in modo che l'utente non sbagli. Perchè la semplice selezione è molto facile basta dare le coordinate
-          //ma noi vorremmo che il programma blocchi l'utente se questo bara.
+   	       
           
           
           
