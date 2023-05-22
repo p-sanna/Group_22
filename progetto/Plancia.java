@@ -528,6 +528,7 @@ public class Plancia {
 	
 	        	Lib.add(t[riga][colonna+2]);
 	        	
+	        	
 	         
 	 return Lib;
   }
@@ -535,6 +536,7 @@ public class Plancia {
   public static Tessera[][] AggiornaMatrice(Tessera t[][],int riga,int colonna)
   {
 	  t[riga][colonna+2]=new Tessera(1000,"0n","nera");
+	  System.out.println("metodo3 "+t[riga][colonna+2].getInizialeColore());
 	  return t;
   }
   

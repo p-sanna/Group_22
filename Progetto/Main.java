@@ -156,10 +156,13 @@ public class Main {
         	}while(correttezza==false);
    	        	
    	        	lib=Plancia.Prelievo(t, riga, colonna);
+   	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
    	            t=Plancia.AggiornaMatrice(t,riga,colonna);
-   	            i=0;
-   	            for(i=0;i<numerocarte;i++)
-   	            System.out.println("LIBBBB" +lib.get(i).getInizialeColore());
+   	            for ( i=0;i<numerocarte;i++)
+   	            {
+   	            	System.out.println("metodo2 "+lib.get(i).getInizialeColore());
+   	            }
+   	            
    	         for(int k=0;k<9;k++)
              {
              	for(int w=0;w<9;w++)
