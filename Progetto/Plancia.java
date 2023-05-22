@@ -316,6 +316,7 @@ public class Plancia {
 			 {
 				 rigac3[j+1]=riga3[j].getInizialeColore();
 				 t[2][j+3]=riga3[j];
+				 
 				 j++;
 			 }
 			 System.out.println("       "+ Arrays.toString(rigac3));
@@ -625,8 +626,7 @@ public class Plancia {
 		    	if ((t[i][j].getInizialeColore()!='x'||t[i][j].getInizialeColore()!='0')&&i>1&&j<1&&j<8&&i<8)
 		    	{
 		    	 	
-		    	
-		    		
+		    	   
 		    	     if(t[i+1][j].getInizialeColore()=='x'||t[i+1][j].getInizialeColore()=='0')
 		    		{
 		    			if(t[i-1][j].getInizialeColore()=='x'||t[i-1][j].getInizialeColore()=='0')
@@ -700,13 +700,14 @@ public class Plancia {
 		     }
 		    
 	        
-	    if(controlloa==false||controllob==false||controlloc==false||controllod==false||controlloe==false)
+	    if(controlloa==false&&controllob==false&&controlloc==false&&controllod==false&&controlloe==false)
 	    {
 	    	controllo=false;
+	    	
 	    }
 	   
 		     
-	  
+	   
 		return  controllo;
   }
   

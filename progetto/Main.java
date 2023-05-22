@@ -158,7 +158,7 @@ public class Main {
         	     
                  correttezza=p.Controllo(t, riga, colonna, numerocarte, ng);
                  correttezza2=p.Controllo2(t);
-	            }  while(correttezza==false&&correttezza2==false);
+	            }  while(correttezza==false||correttezza2==false);
    	         
    	       
    	        	
