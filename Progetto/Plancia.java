@@ -572,13 +572,18 @@ public class Plancia {
   public boolean Controllo2(Tessera t[][])
   {
 	  int riga,colonna;
-	  boolean controllo=true; //fare file cosa da fare
+	  boolean controllo=true;
+	  boolean controlloa=true; boolean controllob=true; boolean controlloc=true;boolean controllod=true,controlloe=true;
+	  //fare file cosa da fare
 	  for (int i=0;i<9;i++)
-		    for(int j=0;j<9;j++)
+		    for(int j=0;j<9;j++) //righe centrali
 		    {
-		    	if (t[i][j].getInizialeColore()!='x'||t[i][j].getInizialeColore()!='0')
+		    	if ((t[i][j].getInizialeColore()!='x'||t[i][j].getInizialeColore()!='0')&&i>1&&j>1&&j<8&&i<8)
 		    	{
-		    		if(t[i+1][j].getInizialeColore()=='x'||t[i+1][j].getInizialeColore()=='0')
+		    	 	
+		    	
+		    		
+		    	     if(t[i+1][j].getInizialeColore()=='x'||t[i+1][j].getInizialeColore()=='0')
 		    		{
 		    			if(t[i-1][j].getInizialeColore()=='x'||t[i-1][j].getInizialeColore()=='0')
 		    			{
@@ -586,14 +591,121 @@ public class Plancia {
 		    				{
 		    					if(t[i][j-1].getInizialeColore()=='x'||t[i][j-1].getInizialeColore()=='0')
 		    					{
-		    						controllo=false;
+		    						controlloa=false;
 		    					}
 		    				}
 		    			}
 		    				
 		    		}
+		    	     
+		    	  }
+		    	
+		    	
+		    	
+		    	if ((t[i][j].getInizialeColore()!='x'||t[i][j].getInizialeColore()!='0')&&i<1&&j>1&&j<8&&i<8)
+		    	{
+		    	 	
+		    	
+		    		
+		    	     if(t[i+1][j].getInizialeColore()=='x'||t[i+1][j].getInizialeColore()=='0')
+		    		{
+		    			
+		    				if(t[i][j+1].getInizialeColore()=='x'||t[i][j+1].getInizialeColore()=='0')
+		    				{
+		    					if(t[i][j-1].getInizialeColore()=='x'||t[i][j-1].getInizialeColore()=='0')
+		    					{
+		    						controllob=false;
+		    					}
+		    				}
+		    			}
+		    				
 		    	}
-		    }
+		    	  
+		    	 
+		    	if ((t[i][j].getInizialeColore()!='x'||t[i][j].getInizialeColore()!='0')&&i>1&&j<1&&j<8&&i<8)
+		    	{
+		    	 	
+		    	
+		    		
+		    	     if(t[i+1][j].getInizialeColore()=='x'||t[i+1][j].getInizialeColore()=='0')
+		    		{
+		    			if(t[i-1][j].getInizialeColore()=='x'||t[i-1][j].getInizialeColore()=='0')
+		    			{
+		    				if(t[i][j+1].getInizialeColore()=='x'||t[i][j+1].getInizialeColore()=='0')
+		    				{
+		    					
+		    						controlloc=false;
+		    					
+		    				}
+		    			}
+		    				
+		    		}
+		    	}
+		    	
+		    	
+		    	if ((t[i][j].getInizialeColore()!='x'||t[i][j].getInizialeColore()!='0')&&i>1&&j>1&&j==9&&i<8)
+		    	{
+		    	 	
+		    	
+		    		
+		    	     if(t[i+1][j].getInizialeColore()=='x'||t[i+1][j].getInizialeColore()=='0')
+		    		{
+		    			if(t[i-1][j].getInizialeColore()=='x'||t[i-1][j].getInizialeColore()=='0')
+		    			{
+		    				
+		    					if(t[i][j-1].getInizialeColore()=='x'||t[i][j-1].getInizialeColore()=='0')
+		    					{
+		    						controllod=false;
+		    					}
+		    				
+		    			}
+		    				
+		    		}
+		    	     
+		    	  }
+		    	
+		    	
+		    	
+		    	if ((t[i][j].getInizialeColore()!='x'||t[i][j].getInizialeColore()!='0')&&i>1&&j>1&&j<8&&i==9)
+		    	{
+		    	 	
+		    	
+		    		
+		    	     
+		    			if(t[i-1][j].getInizialeColore()=='x'||t[i-1][j].getInizialeColore()=='0')
+		    			{
+		    				if(t[i][j+1].getInizialeColore()=='x'||t[i][j+1].getInizialeColore()=='0')
+		    				{
+		    					if(t[i][j-1].getInizialeColore()=='x'||t[i][j-1].getInizialeColore()=='0')
+		    					{
+		    						controlloe=false;
+		    					}
+		    				}
+		    			}
+		    				
+		    		
+		    	     
+		    	  }
+		    	
+		    	
+		    	
+		    	
+		    	
+		    	
+		    	
+		    	
+		    	
+		    	
+		    	
+		     }
+		    
+	        
+	    if(controlloa==false||controllob==false||controlloc==false||controllod==false||controlloe==false)
+	    {
+	    	controllo=false;
+	    }
+	   
+		     
 	  
 		return  controllo;
   }
