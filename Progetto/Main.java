@@ -106,9 +106,13 @@ public class Main {
 		  System.out.println("Gialle "+ngialle);
 		  System.out.println("Azzurre "+nazzurre);
 		  int numerogiocatori=0;
-		  System.out.println("Inserisci il numero di giocatori");
-		  Scanner s= new Scanner(System.in);
-		  numerogiocatori=s.nextInt();
+		  
+		  do
+			  {
+			    System.out.println("Inserisci il numero di giocatori");
+		        Scanner s= new Scanner(System.in);
+		        numerogiocatori=s.nextInt();
+			  }while(numerogiocatori<2||numerogiocatori>4);
 		  String str = String.valueOf(numerogiocatori);
 		  char ng= str.charAt(0);
           Plancia p= new Plancia(ng);
