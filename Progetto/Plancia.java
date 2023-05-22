@@ -535,9 +535,38 @@ public class Plancia {
   
   public static Tessera[][] AggiornaMatrice(Tessera t[][],int riga,int colonna)
   {
-	  t[riga][colonna+2]=new Tessera(1000,"xn","nera");
+	  t[riga-1][colonna-1]=new Tessera(1000,"xn","nera");
 	  System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
 	  return t;
+  }
+  
+  public boolean Controllo (Tessera t[][],int riga, int colonna,int numerocarte,char ngioc)
+  {
+	  boolean correttezza=false;
+	  int riga1,colonna1=0;
+	  riga1=riga-1;
+	  colonna1=colonna-1;
+	
+	  switch (ngioc)
+	  {
+	  case'2':
+		     if(numerocarte==1)
+		     {
+		    	 	
+	   	        	   
+	   	        	    if(t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')
+	        	         {
+	   	        	    	if(t[riga1][colonna1].getInizialeColore()!='0')
+	        	    	    correttezza=true;
+	        	    	 
+	        	         }
+	        	   
+	               
+	        	
+		    	 
+		     }
+	  }
+	  return correttezza;
   }
   
 }

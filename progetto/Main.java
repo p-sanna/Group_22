@@ -127,7 +127,7 @@ public class Main {
             
             
             //Inizio prelievo
-            int riga,colonna,numerocarte;
+            int riga = 0,colonna = 0,numerocarte;
         	 boolean correttezza=false; 
         	 Scanner sc= new Scanner(System.in);
             do
@@ -135,29 +135,24 @@ public class Main {
    	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
    	    	 numerocarte= sc.nextInt();
    	     }while(numerocarte>3||numerocarte<1);
-   	     
-   	         if(numerocarte==1)
-   	         {
-   	        	 do
-   	        	{
-   	        		
-   	        	   System.out.println("Inserisci la riga della carta da prelevare ");
+   	       do {
+   	    	   do {
+   	    	    System.out.println("Inserisci la riga della carta da prelevare tranne la 1 e la 9 ");
+   	    	    riga=sc.nextInt();
+   	    	   }while(riga==1||riga==9)	;
+        	  
+        	   System.out.println("Inserisci la colonna della carta da prelevare ");
+        	   colonna=sc.nextInt();
+             correttezza=p.Controllo(t, riga, colonna, numerocarte, ng);
+	       }  while(correttezza==false);
+   	         
+   	       
    	        	
-   	        	   riga=sc.nextInt();
-   	        	   System.out.println("Inserisci la colonna della carta da prelevare ");
-   	        	   colonna=sc.nextInt();
-   	        	    if(t[riga-1][colonna+2].getInizialeColore()=='0'||t[riga][colonna+3].getInizialeColore()=='0'||t[riga+1][colonna+2].getInizialeColore()=='0'||t[riga][colonna+1].getInizialeColore()=='0')
-        	         {
-        	    	 correttezza=true;
-        	    	 
-        	         }
-        	   
-               
-        	}while(correttezza==false);
    	        	
    	        	lib=Plancia.Prelievo(t, riga, colonna);
    	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
    	            t=Plancia.AggiornaMatrice(t,riga,colonna);
+   	         
    	            for ( i=0;i<numerocarte;i++)
    	            {
    	            	System.out.println("metodo2 "+lib.get(i).getInizialeColore());
@@ -183,6 +178,6 @@ public class Main {
           
           
 
-   	         }}}
+   	         }}
 
 	
