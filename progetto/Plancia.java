@@ -371,13 +371,24 @@ public class Plancia {
 			
 			break;
 	  case'3':
+		  for(int k=0;k<9;k++)
+			{
+				for(int w=0;w<9;w++)
+				{
+				t[w][k]=new Tessera(1000,"0n","nero");
+				
+				}
+				
+			}
 		  posizione=1;
 		  rigac1[0]=riga1[0].getInizialeColore();
+		  t[0][3]=riga1[0];
 		  System.out.println("         "+Arrays.toString(rigac1));
 		  for(i=posizione;i<posizione+2;i++)
 			 {
 				 
 				 rigac2[j]=riga2[j].getInizialeColore();
+				 t[1][j+3]=riga2[j];
 				
 				 j++;
 			 }
@@ -388,6 +399,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+5;i++)
 			 {
 				 rigac3[j]=riga3[j].getInizialeColore();
+				 t[2][j+2]=riga3[j];
 				 j++;
 			 }
 			 System.out.println("      "+ Arrays.toString(rigac3));
@@ -396,6 +408,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+7;i++)
 			 {
 				 rigac4[j+1]=riga4[j].getInizialeColore();
+				 t[3][j+2]=riga4[j];
 				 j++;
 			 }
 			 System.out.println("    "+Arrays.toString(rigac4));
@@ -404,6 +417,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+7;i++)
 			 {
 				 rigac5[j+1]=riga5[j].getInizialeColore();
+				 t[4][j+1]=riga5[j];
 				 j++;
 			 }
 			 posizione=i;
@@ -412,6 +426,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+7;i++)
 			 {
 				 rigac6[j]=riga6[j].getInizialeColore();
+				 t[5][j]=riga6[j];
 				 j++;
 			 }
 			 posizione=i;
@@ -420,6 +435,7 @@ public class Plancia {
 			 for(i=posizione;i<posizione+5;i++)
 			 {
 				 rigac7[j]=riga7[j].getInizialeColore();
+				 t[6][j+2]=riga7[j];
 				 j++;
 			 }
 			 posizione=i;
@@ -428,11 +444,14 @@ public class Plancia {
 			 for(i=posizione;i<posizione+2;i++)
 			 {
 				 rigac8[j+1]=riga8[j].getInizialeColore();
+				 t[7][j+4]=riga8[j];
 				 j++;
 			 }
 			 posizione=i;
+			 j=0;
 			 System.out.println("          "+ Arrays.toString(rigac8));
 			 rigac9[1]=riga9[0].getInizialeColore();
+			 t[8][j+5]=riga9[j];
 			 System.out.println("             "+Arrays.toString(rigac9));
 			 
 			 
