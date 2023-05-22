@@ -25,7 +25,6 @@ public class Plancia {
 		switch (ngioc)
 		{
 			case'2':
-				
 				System.out.println("Ciaooooo");
 				this.riga2=new Tessera[2];
 				this.riga3=new Tessera[3];
@@ -34,6 +33,7 @@ public class Plancia {
 				this.riga6=new Tessera[6];
 				this.riga7=new Tessera[3];
 				this.riga8=new Tessera[2];
+				
 				break;
 			case'3':
 				
@@ -526,7 +526,7 @@ public class Plancia {
   {
 	 ArrayList <Tessera>Lib = new ArrayList();
 	
-	        	Lib.add(t[riga][colonna+2]);
+	        	Lib.add(t[riga-1][colonna-1]);
 	        	
 	        	
 	         
@@ -535,8 +535,8 @@ public class Plancia {
   
   public static Tessera[][] AggiornaMatrice(Tessera t[][],int riga,int colonna)
   {
-	  t[riga][colonna+2]=new Tessera(1000,"0n","nera");
-	  System.out.println("metodo3 "+t[riga][colonna+2].getInizialeColore());
+	  t[riga][colonna+2]=new Tessera(1000,"xn","nera");
+	  System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
 	  return t;
   }
   
