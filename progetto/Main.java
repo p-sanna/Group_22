@@ -113,7 +113,7 @@ public class Main {
 		  char ng= str.charAt(0);
           Plancia p= new Plancia(ng);
           p.CaricaCarte(carte,  p);
-         Tessera t[][]= new Tessera[9][9];
+          Tessera t[][]= new Tessera[9][9];
           t=p.StampaCarte(p);
           ArrayList <Tessera> lib= new ArrayList(); 
             for(int k=0;k<9;k++)
@@ -135,16 +135,20 @@ public class Main {
    	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
    	    	 numerocarte= sc.nextInt();
    	     }while(numerocarte>3||numerocarte<1);
-   	       do {
-   	    	   do {
-   	    	    System.out.println("Inserisci la riga della carta da prelevare tranne la 1 e la 9 ");
-   	    	    riga=sc.nextInt();
-   	    	   }while(riga==1||riga==9)	;
+            
+            if (numerocarte==1)
+            {
+            
+   	         do {
+   	    	    do {
+   	    	         System.out.println("Inserisci la riga della carta da prelevare tranne la 1 e la 9 ");
+   	    	         riga=sc.nextInt();
+   	    	       }while(riga==1||riga==9)	;
         	  
-        	   System.out.println("Inserisci la colonna della carta da prelevare ");
-        	   colonna=sc.nextInt();
-             correttezza=p.Controllo(t, riga, colonna, numerocarte, ng);
-	       }  while(correttezza==false);
+        	     System.out.println("Inserisci la colonna della carta da prelevare ");
+        	     colonna=sc.nextInt();
+                 correttezza=p.Controllo(t, riga, colonna, numerocarte, ng);
+	            }  while(correttezza==false);
    	         
    	       
    	        	
@@ -152,6 +156,7 @@ public class Main {
    	        	lib=Plancia.Prelievo(t, riga, colonna);
    	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
    	            t=Plancia.AggiornaMatrice(t,riga,colonna);
+            }//fine if carte==1
    	         
    	            for ( i=0;i<numerocarte;i++)
    	            {
@@ -166,6 +171,7 @@ public class Main {
              	}
              	System.out.println("");
              }
+   	         
    	         //Pensare che la riga della plancia sia come in una matrice, aggiornare quindi gli indici   
           // /**Bozza idea per selezione carte (parte più difficile), bisogna usare la selezione numero giocatore
           

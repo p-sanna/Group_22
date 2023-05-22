@@ -15,6 +15,7 @@ public class Plancia {
 	public Tessera []riga7;
 	public Tessera []riga8;
 	public Tessera []riga9;
+	int posizione=0;
 	char ngioc;
 	
 	public Plancia (char ngioc)
@@ -70,7 +71,7 @@ public class Plancia {
 	  {
 	  
 	  case'2':
-		  int posizione=0,j=0;
+		 int j=0;
 			this.riga1=null;
 			 for(i=posizione;i<posizione+2;i++)
 			 {
@@ -127,7 +128,7 @@ public class Plancia {
 			break;
 		case'3':
 			j=0;
-			posizione=1; //adattare come sopra il caricamento e poi stampare
+			posizione++; //adattare come sopra il caricamento e poi stampare
 			this.riga1[0]=c.get(0);
 			 for(i=posizione;i<posizione+2;i++)
 			 {
@@ -192,7 +193,7 @@ public class Plancia {
 			break;
 		
 		case '4':
-			posizione=0;
+			
 			j=0;
 			for(i=posizione;i<posizione+2;i++)
 			 {
@@ -567,6 +568,34 @@ public class Plancia {
 		     }
 	  }
 	  return correttezza;
+  }
+  public boolean Controllo2(Tessera t[][])
+  {
+	  int riga,colonna;
+	  boolean controllo=true;
+	  for (int i=0;i<9;i++)
+		    for(int j=0;j<9;j++)
+		    {
+		    	if (t[i][j].getInizialeColore()!='x'||t[i][j].getInizialeColore()!='0')
+		    	{
+		    		if(t[i+1][j].getInizialeColore()=='x'||t[i+1][j].getInizialeColore()=='0')
+		    		{
+		    			if(t[i-1][j].getInizialeColore()=='x'||t[i-1][j].getInizialeColore()=='0')
+		    			{
+		    				if(t[i][j+1].getInizialeColore()=='x'||t[i][j+1].getInizialeColore()=='0')
+		    				{
+		    					if(t[i][j-1].getInizialeColore()=='x'||t[i][j-1].getInizialeColore()=='0')
+		    					{
+		    						controllo=false;
+		    					}
+		    				}
+		    			}
+		    				
+		    		}
+		    	}
+		    }
+	  
+		return  controllo;
   }
   
 }
