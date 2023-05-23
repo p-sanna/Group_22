@@ -1,4 +1,4 @@
-package progetto;
+package Progetto;
 
 public class Libreria  {
 	private String nomegiocatore;

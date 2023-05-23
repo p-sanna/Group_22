@@ -1,4 +1,4 @@
-package carte;
+package Carte;
 import java.util.Random;
 
 public class CartaObiettivoComune {

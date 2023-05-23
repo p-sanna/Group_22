@@ -1,4 +1,4 @@
-package progetto;
+package Progetto;
 import java.util.*;
 
 public class Main {
