@@ -193,7 +193,7 @@ public class Main {
             	    	
             	    
             	   
-            		     System.out.println("Vuoi prelevare per riga o per colonna? r/c ");
+            		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
             	       
             	      
             	         r=sca0.nextLine();
@@ -203,14 +203,14 @@ public class Main {
             	       
             	   
             	   
-            	         if(rc=='r')
+            	         if(rc=='v')
             	         {
             	        	
             	        		 
             	        	 
             		       //  do
             		        	 //{
-            		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
+            		        	   System.out.println("Vuoi andare alla riga successiva? +1/-1");
             		        	   a=sc.nextInt();
                         	        
             		        	 //}while((sd=='s'&&riga<3)||(sd=='d'&&riga>7));
@@ -237,7 +237,7 @@ public class Main {
                 	           
             	         
             	         
-            	         if(rc=='c')
+            	         if(rc=='o')
             	         {
             	        	 
             		        System.out.println("Vuoi andare alla colonna successiva +1 o -1?");
