@@ -118,7 +118,9 @@ public class Main {
           Plancia p= new Plancia(ng);
           p.CaricaCarte(carte,  p);
           Tessera t[][]= new Tessera[9][9];
+        
           t=p.StampaCarte(p);
+          t[7][3]=new Tessera(1000,"Ko","nero");
           ArrayList <Tessera> lib= new ArrayList(); 
           Scanner sca0= new Scanner(System.in);
           int a,b=0;
@@ -208,17 +210,11 @@ public class Main {
             	        	
             	        		 
             	        	 
-<<<<<<< HEAD
+
             		       
             		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
-=======
-            		       //  do
-            		        	 //{
-            		        	   System.out.println("Vuoi andare alla riga successiva? +1/-1");
-<<<<<<< Updated upstream
-=======
->>>>>>> d2377bc0f31cd4a1586c26636e5a75a52050c673
->>>>>>> Stashed changes
+
+            		       
             		        	   a=sc.nextInt();
                         	        
             		        	
@@ -280,6 +276,144 @@ public class Main {
                
             
         }
+            
+            
+            
+            
+            if(numerocarte==3)
+            {
+            	
+            	 do 
+	        	 {
+       	    	         System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+       	    	         riga=sc.nextInt();
+       	    	       
+            	  
+            	   
+            	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+            	    	 colonna=sc.nextInt();
+            	    	
+            	    
+            	   
+            		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
+            	       
+            	      
+            	         r=sca0.nextLine();
+            	         System.out.println(r+"rrrrr");
+            	         rc=r.charAt(0);
+            	         System.out.println(rc+"a");
+            	       
+            	   
+            	   
+            	         if(rc=='v')
+            	         {
+            	        	
+            	        		 
+            	        	 
+
+            		       
+            		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
+
+            		       
+            		        	   a=sc.nextInt();
+                        	        
+            		        	
+            		        
+                  	           
+                  	            	
+                  	            		 correttezza=p.Controllorighe2(t, riga, colonna, a,numerogiocatori);
+                  	                     correttezza2=p.Controllo2(t);
+                  	                     if(correttezza==true&&correttezza2==true)
+                  	                     {
+                  	                    	lib=Plancia.Prelievorighe2(t, riga, colonna,a); 
+                  	          	            t=Plancia.AggiornaMatricerighe2(t,riga,colonna,a);
+                  	            	   
+                  	                    
+                  	                     }
+                  	                     
+                  	                   System.out.println("Inserisci lo spostamento della riga per caricare la terza carta, rispetto alla prima scelta");
+
+                        		       
+                		        	   a=sc.nextInt();
+                            	        
+                		        	
+                		        
+                		        	   correttezza=false;
+                  	                   correttezza2=false;
+                      	            	
+                      	            		 correttezza=p.Controllorighe2(t, riga, colonna, a,numerogiocatori);
+                      	                     correttezza2=p.Controllo2(t);
+                      	                     if(correttezza==true&&correttezza2==true)
+                      	                     {
+                      	                    	lib=Plancia.Prelievorighe2(t, riga, colonna,a); 
+                      	          	            t=Plancia.AggiornaMatricerighe2(t,riga,colonna,a);
+                      	            	   
+                      	                    
+                      	                     }
+                  	            	
+                  	            
+            	         }
+            	         
+            	         
+
+                	         
+                	           
+                	           
+            	         
+            	         
+            	         if(rc=='o')
+            	         {
+            	        	 
+            		        System.out.println("Vuoi andare alla colonna successiva +1 o -1?");
+            		        b=sc.nextInt();
+            		         
+            		        
+                  	           
+                  	            	
+                  	            		 correttezza=p.Controllocolonne2(t, riga, colonna, b, ng);
+                  	                     correttezza2=p.Controllo2(t);
+                  	                   if(correttezza==true&&correttezza2==true)
+                	                     {
+                	                    	lib=Plancia.Prelievocolonne2(t, riga, colonna,b); 
+                	          	            t=Plancia.AggiornaMatricecolonne2(t,riga,colonna,b);
+                	            	   
+                	                    
+                	                     }
+                  	                   
+                  	                   correttezza=false;
+                  	                   correttezza2=false;
+                  	                 System.out.println("Inserisci lo spostamento per caricare la terza carta, rispetto alla prima scelta");
+                  	                b=0; 		
+                     		        b=sc.nextInt();
+                     		        
+                     		        
+                           	            	
+                           	            		 correttezza=p.Controllocolonne2(t, riga, colonna,b , ng);
+                           	                     correttezza2=p.Controllo2(t);
+                           	                   if(correttezza==true&&correttezza2==true)
+                         	                     {
+                         	                    	lib=Plancia.Prelievocolonne2(t, riga, colonna,b); 
+                         	          	            t=Plancia.AggiornaMatricecolonne2(t,riga,colonna,b);
+                         	            	   
+                         	                    
+                         	                     }
+                  	            	//domani controlla questo e serve metodo per la terza carta
+            	         }
+            	         
+                    }while(correttezza==false||correttezza2==false);
+            	 
+            	  
+            	   
+            		   
+                    
+            	         
+                  	            		 
+                  	            	
+                  	            	
+                  	           
+               
+            
+        }
    	         
    	            for ( i=0;i<numerocarte;i++)
    	            {
@@ -293,7 +427,10 @@ public class Main {
              		System.out.print(t[k][w].getInizialeColore());
              	}
              	System.out.println("");
+             
              }
+   	         
+   	         
    	         
    	       
    	      break;  
