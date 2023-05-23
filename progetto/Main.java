@@ -208,12 +208,20 @@ public class Main {
             	        	
             	        		 
             	        	 
+<<<<<<< HEAD
+            		       
+            		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
+=======
             		       //  do
             		        	 //{
             		        	   System.out.println("Vuoi andare alla riga successiva? +1/-1");
+<<<<<<< Updated upstream
+=======
+>>>>>>> d2377bc0f31cd4a1586c26636e5a75a52050c673
+>>>>>>> Stashed changes
             		        	   a=sc.nextInt();
                         	        
-            		        	 //}while((sd=='s'&&riga<3)||(sd=='d'&&riga>7));
+            		        	
             		        
                   	           
                   	            	
