@@ -1,4 +1,4 @@
-package Progetto;
+package progetto;
 
 public class Tessera {
 	private int numero=0;
