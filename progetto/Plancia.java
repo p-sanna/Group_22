@@ -589,14 +589,13 @@ public class Plancia {
 	  riga1=riga-1;
 	  colonna1=colonna-1;
 	
-	  switch (ngioc)
-	  {
-	  case'2':
+	 
+	  
 		     if(numerocarte==1)
 		     {
 		    	 	
 	   	        	   
-	   	        	    if(t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')
+	   	        	    
 	        	         {
 	   	        	    	if(t[riga1][colonna1].getInizialeColore()!='0')
 	        	    	    correttezza=true;
@@ -607,7 +606,10 @@ public class Plancia {
 	        	
 		    	 
 		     }
-	  }
+		     
+		     
+		    	
+	  
 	  return correttezza;
   }
   public boolean Controllo2(Tessera t[][])
@@ -750,6 +752,98 @@ public class Plancia {
 	   
 		return  controllo;
   }
+  public boolean Controllorighe2(Tessera t[][], int riga,int colonna,int sfasamento, int ngioc)
+  {
+	  boolean controllo= false;
+	  int riga1=riga-1;
+	 int colonna1=colonna-1;
+	
+	        
+	        	 if(riga1>=1&&riga1<9&&riga1+sfasamento>=1&&riga1+sfasamento<=9)
+	        	 {
+	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
+	        			 if(t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')
+	        			 {
+	        				 if(t[riga1-1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='0')
+	        				 {
+	        				 {
+	        			           if(t[riga1+sfasamento][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento][colonna1].getInizialeColore()!='x')
+	        			        		   {
+	        			        	            controllo=true;
+	        			        		   }
+	        				 }
+	        			 }}
+	        	 }
+	        			 
+	        
+	  
+	      
+	  return controllo;
+  }
+  public boolean Controllocolonne2(Tessera t[][], int riga,int colonna,int sfasamento, int ngioc)
+  {
+	  boolean controllo= false;
+	  int colonna1=colonna-1;
+	  int riga1=riga-1;
+	
+	        
+	        	 if(colonna1>=1&&colonna1<=9&&colonna1+sfasamento>=1&&colonna1+sfasamento<=9)
+	        	 {
+	        		 if(t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')
+	        		 {
+	        			 if(t[riga1-1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1+1+sfasamento].getInizialeColore()=='0'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='0')
+	        			 {
+	        		     if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
+	        				 {
+	        			           if(t[riga1][colonna1+sfasamento].getInizialeColore()!='0'&&t[riga1][colonna1+sfasamento].getInizialeColore()!='x')
+	        			        	   
+	        			        		   {
+	        			        	            controllo=true;
+	        			        		   }
+	        				 }
+	        			 }
+	        		 }
+	        	 }
+	        			 
+	        
+	  
+	      
+	  return controllo;
+  }
+  public static ArrayList <Tessera> Prelievorighe2 (Tessera [][] t,int riga, int colonna,int sfasamento)
+  {
+	 ArrayList <Tessera>Lib = new ArrayList();
+	
+	        	Lib.add(t[riga-1][colonna-1]);
+	        	Lib.add(t[riga-1+sfasamento][colonna-1]);
+	        	
+	         
+	 return Lib;
+  }
   
+  public static ArrayList <Tessera> Prelievocolonne2 (Tessera [][] t,int riga, int colonna,int sfasamento)
+  {
+	 ArrayList <Tessera>Lib = new ArrayList();
+	
+	        	Lib.add(t[riga-1][colonna-1]);
+	        	Lib.add(t[riga-1][colonna-1+sfasamento]);
+	        	
+	         
+	 return Lib;
+  }
+  public static Tessera[][] AggiornaMatricerighe2(Tessera t[][],int riga,int colonna,int sfasamento)
+  {
+	  t[riga-1+sfasamento][colonna-1]=new Tessera(1000,"xn","nera");
+	  t[riga-1][colonna-1]=new Tessera(1000,"xn","nera");
+	  System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
+	  return t;
+  }
+  public static Tessera[][] AggiornaMatricecolonne2(Tessera t[][],int riga,int colonna,int sfasamento)
+  {
+	  t[riga-1][colonna-1+sfasamento]=new Tessera(1000,"xn","nera");
+	  t[riga-1][colonna-1]=new Tessera(1000,"xn","nera");
+	  System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
+	  return t;
+  }
 }
   

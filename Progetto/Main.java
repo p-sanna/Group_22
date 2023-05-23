@@ -120,6 +120,8 @@ public class Main {
           Tessera t[][]= new Tessera[9][9];
           t=p.StampaCarte(p);
           ArrayList <Tessera> lib= new ArrayList(); 
+          Scanner sca0= new Scanner(System.in);
+          int a,b=0;
             for(int k=0;k<9;k++)
             {
             	for(int w=0;w<9;w++)
@@ -131,9 +133,15 @@ public class Main {
             
             
             //Inizio prelievo
-            int riga = 0,colonna = 0,numerocarte;
-        	 boolean correttezza=false,correttezza2=false; 
+            int riga = 0,colonna = 0,numerocarte=0;
+            String r;
+ 	         char rc=0,sd=0;
+        	 boolean correttezza=false,correttezza2=false,correttezzaa=false,correttezza22=false; 
         	 Scanner sc= new Scanner(System.in);
+        switch(numerogiocatori)
+        {
+        case 2:
+       
             do
    	     {
    	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
@@ -145,9 +153,9 @@ public class Main {
             
    	         do {
    	    	    do {
-   	    	         System.out.println("Inserisci la riga della carta da prelevare tranne la 1 e la 9 ");
+   	    	         System.out.println("Inserisci la riga della carta da prelevare  ");
    	    	         riga=sc.nextInt();
-   	    	       }while(riga<2||riga>8)	;
+   	    	       }while(riga<2||riga>8);
         	  
         	    do
         	    	{
@@ -161,12 +169,109 @@ public class Main {
 	            }  while(correttezza==false||correttezza2==false);
    	         
    	       
-   	        	
+   	        	correttezza=false;
+   	        	correttezza2=false;
    	        	
    	        	lib=Plancia.Prelievo(t, riga, colonna);
    	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
    	            t=Plancia.AggiornaMatrice(t,riga,colonna);
             }//fine if carte==1
+            
+            
+            if(numerocarte==2)
+            {
+            	
+            	 do 
+	        	 {
+       	    	         System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+       	    	         riga=sc.nextInt();
+       	    	       
+            	  
+            	   
+            	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+            	    	 colonna=sc.nextInt();
+            	    	
+            	    
+            	   
+            		     System.out.println("Vuoi prelevare per riga o per colonna? r/c ");
+            	       
+            	      
+            	         r=sca0.nextLine();
+            	         System.out.println(r+"rrrrr");
+            	         rc=r.charAt(0);
+            	         System.out.println(rc+"a");
+            	       
+            	   
+            	   
+            	         if(rc=='r')
+            	         {
+            	        	
+            	        		 
+            	        	 
+            		       //  do
+            		        	 //{
+            		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
+            		        	   a=sc.nextInt();
+                        	        
+            		        	 //}while((sd=='s'&&riga<3)||(sd=='d'&&riga>7));
+            		        
+                  	           
+                  	            	
+                  	            		 correttezza=p.Controllorighe2(t, riga, colonna, a,numerogiocatori);
+                  	                     correttezza2=p.Controllo2(t);
+                  	                     if(correttezza==true&&correttezza2==true)
+                  	                     {
+                  	                    	lib=Plancia.Prelievorighe2(t, riga, colonna,a); 
+                  	          	            t=Plancia.AggiornaMatricerighe2(t,riga,colonna,a);
+                  	            	   
+                  	                    
+                  	                     }
+                  	            	
+                  	            
+            	         }
+            	         
+            	         
+
+                	         
+                	           
+                	           
+            	         
+            	         
+            	         if(rc=='c')
+            	         {
+            	        	 
+            		        System.out.println("Vuoi andare alla colonna successiva +1 o -1?");
+            		        b=sc.nextInt();
+            		         
+            		        
+                  	           
+                  	            	
+                  	            		 correttezza=p.Controllocolonne2(t, riga, colonna, b, ng);
+                  	                     correttezza2=p.Controllo2(t);
+                  	                   if(correttezza==true&&correttezza2==true)
+                	                     {
+                	                    	lib=Plancia.Prelievocolonne2(t, riga, colonna,b); 
+                	          	            t=Plancia.AggiornaMatricecolonne2(t,riga,colonna,b);
+                	            	   
+                	                    
+                	                     }
+                  	            	
+            	         }
+            	         
+                    }while(correttezza==false||correttezza2==false);
+            	 
+            	  
+            	   
+            		   
+                    
+            	         
+                  	            		 
+                  	            	
+                  	            	
+                  	           
+               
+            
+        }
    	         
    	            for ( i=0;i<numerocarte;i++)
    	            {
@@ -183,11 +288,11 @@ public class Main {
              }
    	         
    	       
-          
+   	      break;  
           
           
           
 
-   	         }}
+   	         }}}
 
 	
