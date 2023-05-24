@@ -115,6 +115,7 @@ public class Main {
 			   }while(numerogiocatori<2||numerogiocatori>4);
 		  String str = String.valueOf(numerogiocatori);
 		  char ng= str.charAt(0);
+		  ng++;
           Plancia p= new Plancia(ng);
           p.CaricaCarte(carte,  p);
           Tessera t[][]= new Tessera[9][9];
