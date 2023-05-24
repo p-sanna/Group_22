@@ -138,16 +138,17 @@ public class Main {
              int riga = 0,colonna = 0,numerocarte=0;
              String r;
  	         char rc=0,sd=0;
-        	 boolean correttezza=false,correttezza2=false,correttezzaa=false,correttezza22=false; 
+        	 boolean correttezza=false,correttezza2=false,correttezzaa=false,correttezza22=false,finepartita=false; 
         	 Scanner sc= new Scanner(System.in);
         switch(numerogiocatori)
         {
         case 2:
        
-        	
+        do {
         	
         	Giocatore primo= new Giocatore ("francesco");
         	Giocatore secondo= new Giocatore("micheal");
+        	
             do
    	     {
    	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
@@ -409,7 +410,8 @@ public class Main {
    	         
    	         
    	         
-   	       
+        }while(finepartita==false); 
+        numerocarte=0;
    	      break;  
           
           

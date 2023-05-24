@@ -1,5 +1,7 @@
 package progetto;
 
+import java.util.ArrayList;
+
 public class Libreria  {
 	private String nomegiocatore;
 	private int numgiocatore;
@@ -21,12 +23,13 @@ public class Libreria  {
 	        }
 	}
 
-	public void RiempiLibreria (int criga, int ccolonna, Tessera carta, Libreria l)
+	public void RiempiLibreria (int criga, int ccolonna, ArrayList <Tessera> lib, Libreria l)
 	{
 
+		int lunghezza= lib.size();
 		  if(l.riempimentocasella[criga][ccolonna]==false)
 		  {
-			  casellario[criga][ccolonna]=carta;
+			  casellario[criga][ccolonna]=lib.get();
 			  riempimentocasella[criga][ccolonna]=true;
 		  }
 		  else
