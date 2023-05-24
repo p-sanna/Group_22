@@ -123,7 +123,7 @@ public class Main {
           t[7][3]=new Tessera(1000,"Ko","nero");
           ArrayList <Tessera> lib= new ArrayList(); 
           Scanner sca0= new Scanner(System.in);
-          int a,b=0;
+          int a,b=0,c,d=0;
             for(int k=0;k<9;k++)
             {
             	for(int w=0;w<9;w++)
@@ -312,44 +312,29 @@ public class Main {
             	        	 
 
             		       
-            		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
+            		        	   System.out.println("Vuoi salire o scendere per la riga successiva1? +1/-1");
 
             		       
             		        	   a=sc.nextInt();
+            		        	   System.out.println("Vuoi salire o scendere per la riga successiva1? +1/-1");
                         	        
-            		        	
+            		        	   c=sc.nextInt();
             		        
                   	           
                   	            	
-                  	            		 correttezza=p.Controllorighe2(t, riga, colonna, a,numerogiocatori);
+                  	            		 correttezza=p.Controllorighe3(t, riga, colonna, a,numerogiocatori,c);
                   	                     correttezza2=p.Controllo2(t);
                   	                     if(correttezza==true&&correttezza2==true)
                   	                     {
-                  	                    	lib=Plancia.Prelievorighe2(t, riga, colonna,a); 
-                  	          	            t=Plancia.AggiornaMatricerighe2(t,riga,colonna,a);
+                  	                    	lib=Plancia.Prelievorighe3(t, riga, colonna,a,c); 
+                  	          	            t=Plancia.AggiornaMatricerighe3(t,riga,colonna,a,c);
                   	            	   
                   	                    
                   	                     }
                   	                     
-                  	                   System.out.println("Inserisci lo spostamento della riga per caricare la terza carta, rispetto alla prima scelta");
-
-                        		       
-                		        	   a=sc.nextInt();
-                            	        
-                		        	
-                		        
-                		        	   correttezza=false;
-                  	                   correttezza2=false;
+                  	                   
                       	            	
-                      	            		 correttezza=p.Controllorighe2(t, riga, colonna, a,numerogiocatori);
-                      	                     correttezza2=p.Controllo2(t);
-                      	                     if(correttezza==true&&correttezza2==true)
-                      	                     {
-                      	                    	lib=Plancia.Prelievorighe2(t, riga, colonna,a); 
-                      	          	            t=Plancia.AggiornaMatricerighe2(t,riga,colonna,a);
-                      	            	   
-                      	                    
-                      	                     }
+                      	            		 
                   	            	
                   	            
             	         }
@@ -364,39 +349,27 @@ public class Main {
             	         if(rc=='o')
             	         {
             	        	 
-            		        System.out.println("Vuoi andare alla colonna successiva +1 o -1?");
+            		        System.out.println("Vuoi andare alla colonna successiva1 +1 o -1?");
             		        b=sc.nextInt();
+            		        System.out.println("Vuoi andare alla colonna successiva2 +1 o -1?");
+            		        d=sc.nextInt();
             		         
             		        
                   	           
                   	            	
-                  	            		 correttezza=p.Controllocolonne2(t, riga, colonna, b, ng);
+                  	            		 correttezza=p.Controllocolonne3(t, riga, colonna, b, ng,d);
                   	                     correttezza2=p.Controllo2(t);
                   	                   if(correttezza==true&&correttezza2==true)
                 	                     {
-                	                    	lib=Plancia.Prelievocolonne2(t, riga, colonna,b); 
-                	          	            t=Plancia.AggiornaMatricecolonne2(t,riga,colonna,b);
+                	                    	lib=Plancia.Prelievocolonne3(t, riga, colonna,b,d); 
+                	          	            t=Plancia.AggiornaMatricecolonne3(t,riga,colonna,b,d);
                 	            	   
                 	                    
                 	                     }
                   	                   
-                  	                   correttezza=false;
-                  	                   correttezza2=false;
-                  	                 System.out.println("Inserisci lo spostamento per caricare la terza carta, rispetto alla prima scelta");
-                  	                b=0; 		
-                     		        b=sc.nextInt();
-                     		        
-                     		        
-                           	            	
-                           	            		 correttezza=p.Controllocolonne2(t, riga, colonna,b , ng);
-                           	                     correttezza2=p.Controllo2(t);
-                           	                   if(correttezza==true&&correttezza2==true)
-                         	                     {
-                         	                    	lib=Plancia.Prelievocolonne2(t, riga, colonna,b); 
-                         	          	            t=Plancia.AggiornaMatricecolonne2(t,riga,colonna,b);
-                         	            	   
-                         	                    
-                         	                     }
+                  	                   //correttezza=false;
+                  	                  // correttezza2=false;
+                  	                 
                   	            	//domani controlla questo e serve metodo per la terza carta
             	         }
             	         
