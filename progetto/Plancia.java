@@ -587,6 +587,7 @@ public class Plancia {
 	  boolean correttezza=false;
 	  int riga1,colonna1=0;
 	  riga1=riga-1;
+	  System.out.println(riga1 +" ciaone");
 	  colonna1=colonna-1;
 	
 	 
@@ -596,6 +597,7 @@ public class Plancia {
 		    	 	
 		    	 if(riga1>=1&&riga1<9)
 	        	 {
+		    		 
 	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 	        		 {
 	        			 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
@@ -606,17 +608,57 @@ public class Plancia {
 	   	        	    		
 	   	        	    	}
 	        	    	    correttezza=true;
+	        	    	    System.out.println(correttezza +" ciaone");
 	        	    	 
 	        	         }
 	        	   
 	               
 	        		 }
+	        	 }
+	        		 
+	        		 if(riga1==0)
+	        		 {
+	        			 System.out.println(correttezza +" ciaone1");
+	        			 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
+		        		 {
+		        			 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
+		   	        	    
+		        	         {
+		   	        	    	if(t[riga1][colonna1].getInizialeColore()!='0')
+		   	        	    	{
+		   	        	    		
+		   	        	    	}
+		        	    	    correttezza=true;
+		        	    	    System.out.println(correttezza +" ciaone");
+		        	    	 
+		        	         }
+	        		 }}
+	        			 
+	        		 if(riga1==8)
+	        		 {
+	        			 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
+		        		 {
+		        			 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
+		   	        	    
+		        	         {
+		   	        	    	if(t[riga1][colonna1].getInizialeColore()!='0')
+		   	        	    	{
+		   	        	    		
+		   	        	    	}
+		        	    	    correttezza=true;
+		        	    	    System.out.println(correttezza +" ciaone");
+		        	    	 
+		        	         }
+	        		 }
 		    	 
-		     }
+		      }
+	        	 
+	        	 }
 		     
 		     
-		     }   	
-	  
+		     
+		        	
+	        		 	  
 	  return correttezza;
   }
   public boolean Controllo2(Tessera t[][])
@@ -766,13 +808,49 @@ public class Plancia {
 	 int colonna1=colonna-1;
 	
 	        
-	        	 if(riga1>=1&&riga1<9&&riga1+sfasamento>=1&&riga1+sfasamento<=9)
+	        	 if(riga1>=0&&riga1<9&&riga1+sfasamento>=0&&riga1+sfasamento<9&&colonna1>=1&&colonna1<8)
 	        	 {
+	        		 System.out.println("Controllo1");
 	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 	        			 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 	        			 {
 	        				 
 	        				 if((t[riga1-1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='0')||(t[riga1-1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='x'))
+	        				 {
+	        					 System.out.println("Provariga");
+	        			           if(t[riga1+sfasamento][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento][colonna1].getInizialeColore()!='x')
+	        			        		   {
+	        			        	            controllo=true;
+	        			        		   }
+	        				 
+	        			 }}
+	        	 }
+	        	 
+	        	 //Parte nuova
+	        	 
+	        	 if(colonna1<1)
+	        	 {
+	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
+	        			 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'))
+	        			 {
+	        				 
+	        				 if((t[riga1-1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='0')||(t[riga1-1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='x'))
+	        				 {
+	        					 System.out.println("Provariga");
+	        			           if(t[riga1+sfasamento][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento][colonna1].getInizialeColore()!='x')
+	        			        		   {
+	        			        	            controllo=true;
+	        			        		   }
+	        				 
+	        			 }}
+	        	 }
+	        	 if(colonna1>7)
+	        	 {
+	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
+	        			 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
+	        			 {
+	        				 
+	        				 if((t[riga1-1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='0')||(t[riga1-1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='x'))
 	        				 {
 	        					 System.out.println("Provariga");
 	        			           if(t[riga1+sfasamento][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento][colonna1].getInizialeColore()!='x')
@@ -795,9 +873,49 @@ public class Plancia {
 	  int riga1=riga-1;
 	
 	        
-	        	 if(colonna1>=1&&colonna1<=9&&colonna1+sfasamento>=1&&colonna1+sfasamento<=9)
+	        	 if(colonna1>=0&&colonna1<=8&&colonna1+sfasamento>=0&&colonna1+sfasamento<=8&&  riga1>=1&&riga1<8)
+	        	 {
+	        		 System.out.println("Controllo1");
+	        		 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
+	        		 {
+	        			 if((t[riga1-1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1+1+sfasamento].getInizialeColore()=='0'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='0')||(t[riga1-1][colonna1+sfasamento].getInizialeColore()=='x'||t[riga1][colonna1+1+sfasamento].getInizialeColore()=='x'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='x'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='x'))
+	        			 {
+	        		     if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
+	        				 {
+	        			           if(t[riga1][colonna1+sfasamento].getInizialeColore()!='0'&&t[riga1][colonna1+sfasamento].getInizialeColore()!='x')
+	        			        	   
+	        			        		   {
+	        			        	            controllo=true;
+	        			        		   }
+	        				 }
+	        			 }
+	        		 }
+	        	 }
+	        	 
+	        	 
+	        	 
+	        	 //Parte nuova
+	        	 if(riga1<1)
 	        	 {
 	        		 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
+	        		 {
+	        			 if((t[riga1][colonna1+1+sfasamento].getInizialeColore()=='0'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='0')||(t[riga1][colonna1+1+sfasamento].getInizialeColore()=='x'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='x'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='x'))
+	        			 {
+	        		     if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
+	        				 {
+	        			           if(t[riga1][colonna1+sfasamento].getInizialeColore()!='0'&&t[riga1][colonna1+sfasamento].getInizialeColore()!='x')
+	        			        	   
+	        			        		   {
+	        			        	            controllo=true;
+	        			        		   }
+	        				 }
+	        			 }
+	        		 }
+	        	 }
+	        	 
+	        	 if(riga1>7)
+	        	 {
+	        		 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 	        		 {
 	        			 if((t[riga1-1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1+1+sfasamento].getInizialeColore()=='0'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='0')||(t[riga1-1][colonna1+sfasamento].getInizialeColore()=='x'||t[riga1][colonna1+1+sfasamento].getInizialeColore()=='x'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='x'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='x'))
 	        			 {
@@ -969,5 +1087,33 @@ public class Plancia {
 	  return t;
   }
   
+  public boolean Controllo3r(Tessera t[][],int riga,int colonna,int scostamento)
+  {
+	  boolean correttezza=false;
+	  int riga1=riga-1;
+	  int colonna1=colonna-1;
+	      if ((riga1+scostamento)>0&&(riga1+scostamento<9))
+	      {
+	    	  
+	    	  
+	    		  correttezza=true;
+	    	  
+	      }
+	      return correttezza;
+  }
+  public boolean Controllo3c(Tessera t[][],int riga,int colonna,int scostamento)
+  {
+	  boolean correttezza=false;
+	  int riga1=riga-1;
+	  int colonna1=colonna-1;
+	      if ((colonna1+scostamento)>0&&(colonna1+scostamento<9))
+	      {
+	    	  
+	    	  
+	    		  correttezza=true;
+	    	  
+	      }
+	      return correttezza;
+  }
 }
   
