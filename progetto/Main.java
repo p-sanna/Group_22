@@ -312,11 +312,11 @@ public class Main {
             	        	 
 
             		       
-            		        	   System.out.println("Vuoi salire o scendere per la riga successiva1? +1/-1");
+            		        	   System.out.println("Vuoi salire o scendere per la riga successiva1? ");
 
             		       
             		        	   a=sc.nextInt();
-            		        	   System.out.println("Vuoi salire o scendere per la riga successiva1? +1/-1");
+            		        	   System.out.println("Vuoi salire o scendere per la riga successiva2?" );
                         	        
             		        	   c=sc.nextInt();
             		        
@@ -349,9 +349,9 @@ public class Main {
             	         if(rc=='o')
             	         {
             	        	 
-            		        System.out.println("Vuoi andare alla colonna successiva1 +1 o -1?");
+            		        System.out.println("Vuoi andare alla colonna successiva1");
             		        b=sc.nextInt();
-            		        System.out.println("Vuoi andare alla colonna successiva2 +1 o -1?");
+            		        System.out.println("Vuoi andare alla colonna successiva2?");
             		        d=sc.nextInt();
             		         
             		        
