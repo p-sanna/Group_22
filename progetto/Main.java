@@ -107,12 +107,12 @@ public class Main {
 		  System.out.println("Azzurre "+nazzurre);
 		  int numerogiocatori=0;
 		  
-		  do
-			  {
+		    do
+			   {
 			    System.out.println("Inserisci il numero di giocatori");
 		        Scanner s= new Scanner(System.in);
 		        numerogiocatori=s.nextInt();
-			  }while(numerogiocatori<2||numerogiocatori>4);
+			   }while(numerogiocatori<2||numerogiocatori>4);
 		  String str = String.valueOf(numerogiocatori);
 		  char ng= str.charAt(0);
           Plancia p= new Plancia(ng);
@@ -135,8 +135,8 @@ public class Main {
             
             
             //Inizio prelievo
-            int riga = 0,colonna = 0,numerocarte=0;
-            String r;
+             int riga = 0,colonna = 0,numerocarte=0;
+             String r;
  	         char rc=0,sd=0;
         	 boolean correttezza=false,correttezza2=false,correttezzaa=false,correttezza22=false; 
         	 Scanner sc= new Scanner(System.in);
@@ -144,6 +144,10 @@ public class Main {
         {
         case 2:
        
+        	
+        	
+        	Giocatore primo= new Giocatore ("francesco");
+        	Giocatore secondo= new Giocatore("micheal");
             do
    	     {
    	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
@@ -343,7 +347,7 @@ public class Main {
 
                 	         
                 	           
-                	           
+                	           //togliere il generatore k
             	         
             	         
             	         if(rc=='o')
