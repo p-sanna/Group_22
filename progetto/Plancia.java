@@ -1025,7 +1025,7 @@ return controllo;
 	  int riga1=riga-1;
 	
 	        
-	        	 if(colonna1>=0&&colonna1<=8&&colonna1+sfasamento1>=0&&colonna1+sfasamento1<=8&&colonna1+sfasamento2>=0&&colonna1+sfasamento2<=8)
+	        	 if(colonna1>=0&&colonna1<=8&&colonna1+sfasamento1>=0&&colonna1+sfasamento1<=8&&colonna1+sfasamento2>=0&&colonna1+sfasamento2<=8&&riga1>1&&riga1<8)
 	        	 {
 	        		 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 	        		 {
