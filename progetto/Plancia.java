@@ -1113,7 +1113,7 @@ return controllo;
 	 int colonna1=colonna-1;
 	
 	        
-	        	 if(riga1>=1&&riga1<=8&&riga1+sfasamento1>=1&&riga1+sfasamento1<=8&&riga1+sfasamento2>=0&&riga1+sfasamento2<=8)
+	        	 if(riga1>=1&&riga1<=8&&riga1+sfasamento1>=1&&riga1+sfasamento1<=8&&riga1+sfasamento2>=1&&riga1+sfasamento2<=8)
 	        	 {
 	        		 
 	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
