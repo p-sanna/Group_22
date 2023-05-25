@@ -836,9 +836,10 @@ public class Plancia {
 	 
 	 //oggi
 	 
-	 if((riga1==0||riga1+sfasamento==0)&&colonna1>=1&&colonna1<8)
+	 if(((riga1==0||riga1+sfasamento==0)&&(riga1+sfasamento>-1))&&colonna1>=1&&colonna1<8)
 	 {
 		 System.out.println("Oggi1");
+		 System.out.println(riga1+sfasamento);
 		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 		 {
 			 System.out.println("Oggi2");
@@ -1141,7 +1142,7 @@ return controllo;
 	        	 
 	        	 
 	        	 //oggi
-	        	 if((riga1==0||riga1+sfasamento1==0)&&colonna1>=1&&colonna1<8)
+	        	 if((riga1==0||riga1+sfasamento1==0)&&(riga1+sfasamento1>-1)&&colonna1>=1&&colonna1<8&&(riga1+sfasamento2>-1))
 	        	 {
 	        		 System.out.println("Oggi1");
 	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
