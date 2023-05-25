@@ -138,24 +138,25 @@ public class Main {
             
             //Inizio prelievo
              int riga = 0,colonna = 0,numerocarte=0;
-             String r,nome1,nome2,nome3 = null,nome4;
+             String r,nome1,nome2 = null,nome3 = null,nome4;
  	         char rc=0,sd=0;
         	 boolean correttezza=false,correttezza2=false,correttezza3=false,finepartita=false; 
         	 Scanner sc= new Scanner(System.in);
         switch(numerogiocatori)
         {
         case 2:
-       
-        do {
-        	
         	System.out.println("Inserisci il nome del primo giocatore");
         	nome1=sc.nextLine();
         	System.out.println("Inserisci il nome del secondo giocatore");
-        	nome2=sc.nextLine();
-        	
-        	
         	Giocatore primo= new Giocatore (nome1);
         	Giocatore secondo= new Giocatore(nome2);
+        	nome2=sc.nextLine();
+        do {
+        	
+        	
+        	
+        	
+        	
         	do 
        	 { 	correttezza=false;
         	correttezza2=false;
@@ -416,7 +417,7 @@ public class Main {
              
              }
    	         
-   	         
+   	      System.out.println("Tocca a un altro giocatore");   
    	         
         }while(finepartita==false); 
         numerocarte=0;
@@ -427,21 +428,22 @@ public class Main {
    	      
         case 3:
         	
-        	 
+        	System.out.println("Inserisci il nome del primo giocatore");
+        	nome1=sc.nextLine();
+        	System.out.println("Inserisci il nome del secondo giocatore");
+        	nome2=sc.nextLine();
+        	System.out.println("Inserisci il nome del terzo giocatore");
+        	nome3=sc.nextLine();
+        	 primo= new Giocatore (nome1);
+        	 secondo= new Giocatore(nome2);
+        	Giocatore terzo= new Giocatore(nome3);
         	
         	do {
             	
-            	System.out.println("Inserisci il nome del primo giocatore");
-            	nome1=sc.nextLine();
-            	System.out.println("Inserisci il nome del secondo giocatore");
-            	nome2=sc.nextLine();
-            	System.out.println("Inserisci il nome del terzo giocatore");
-            	nome3=sc.nextLine();
             	
             	
-            	Giocatore primo= new Giocatore (nome1);
-            	Giocatore secondo= new Giocatore(nome2);
-            	Giocatore terzo= new Giocatore(nome3);
+            	
+            	
             	
          do {
         	 correttezza=false;
@@ -712,14 +714,309 @@ public class Main {
                  }
        	         
        	         
-       	         
+       	       System.out.println("Tocca a un altro giocatore"); 
             }while(finepartita==false); 
             numerocarte=0;
         	
         	
         	break;
-          
-          
+            
+        case 4:
+        	System.out.println("Inserisci il nome del primo giocatore");
+        	nome1=sc.nextLine();
+        	System.out.println("Inserisci il nome del secondo giocatore");
+        	nome2=sc.nextLine();
+        	System.out.println("Inserisci il nome del terzo giocatore");
+        	nome3=sc.nextLine();
+        	System.out.println("Inserisci il nome del quarto giocatore");
+        	 nome4=sc.nextLine();
+        	 primo= new Giocatore (nome1);
+        	 secondo= new Giocatore(nome2);
+        	 terzo= new Giocatore(nome3);
+        	 Giocatore quarto= new Giocatore(nome4);
+        	
+        	do {
+            	
+            	
+            	
+            	
+            	
+            	
+         do {
+        	 correttezza=false;
+	         correttezza2=false;
+        	
+        	 do
+         
+       	     {
+       	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
+       	    	 numerocarte= sc.nextInt();
+       	     }while(numerocarte>3||numerocarte<1);
+                
+                if (numerocarte==1)
+                {
+                
+       	         do {
+       	    	    do {
+       	    	         System.out.println("Inserisci la riga della carta da prelevare  ");
+       	    	         riga=sc.nextInt();
+       	    	       }while(riga<1||riga>9);
+            	  
+            	    do
+            	    	{
+            	    	  System.out.println("Inserisci la colonna della carta da prelevare ");
+            	    	  colonna=sc.nextInt();
+            	    	}while(colonna<1||colonna>9);
+            	    
+            	     
+                     correttezza=p.Controllo(t, riga, colonna, numerocarte, ng);
+                     System.out.println("Correttezza "+correttezza);
+                     correttezza2=p.Controllo2(t);
+                     System.out.println("Correttezza2 "+correttezza2);
+                     
+    	            }  while(correttezza==false||correttezza2==false);
+       	         
+       	       
+       	        	
+       	        	
+       	        	lib=Plancia.Prelievo(t, riga, colonna);
+       	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
+       	            t=Plancia.AggiornaMatrice(t,riga,colonna);
+                }//fine if carte==1
+                
+                
+                if(numerocarte==2)
+                {
+                	
+                	 do 
+    	        	 {
+           	    	         System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+           	    	         riga=sc.nextInt();
+           	    	       
+                	  
+                	   
+                	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+                	    	 colonna=sc.nextInt();
+                	    	
+                	    
+                	   
+                		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
+                	       
+                	      
+                	         r=sca0.nextLine();
+                	         System.out.println(r+"rrrrr");
+                	         rc=r.charAt(0);
+                	         System.out.println(rc+"a");
+                	       
+                	   
+                	   
+                	         if(rc=='v')
+                	         {
+                	        	
+                	        		 
+                	        	 
+
+                		       
+                		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
+
+                		       
+                		        	   a=sc.nextInt();
+                            	        
+                		        	
+                		        
+                      	           
+                      	            	
+                      	            		 correttezza=p.Controllorighe2(t, riga, colonna, a,numerogiocatori);
+                      	                     correttezza2=p.Controllo2(t);
+                      	                     //correttezza3=p.Controllo3r(t, riga, colonna, a);
+                      	                     if(correttezza==true&&correttezza2==true)
+                      	                     {
+                      	                    	lib=Plancia.Prelievorighe2(t, riga, colonna,a); 
+                      	          	            t=Plancia.AggiornaMatricerighe2(t,riga,colonna,a);
+                      	            	   
+                      	                    
+                      	                     }
+                      	            	
+                      	            
+                	         }
+                	         
+                	         
+
+                    	         
+                    	           
+                    	           
+                	         
+                	         
+                	         if(rc=='o')
+                	         {
+                	        	 
+                		        System.out.println("Vuoi andare alla colonna successiva +1 o -1?");
+                		        b=sc.nextInt();
+                		         
+                		        
+                      	           
+                      	            	
+                      	            		 correttezza=p.Controllocolonne2(t, riga, colonna, b, ng);
+                      	                     correttezza2=p.Controllo2(t);
+                      	                     System.out.println("Controllo1"+correttezza);
+                      	                   System.out.println("Controllo2"+correttezza2);
+                      	                     //correttezza3=p.Controllo3c(t, riga, colonna, b);
+                      	                   if(correttezza==true&&correttezza2==true)
+                    	                     {
+                    	                    	lib=Plancia.Prelievocolonne2(t, riga, colonna,b); 
+                    	          	            t=Plancia.AggiornaMatricecolonne2(t,riga,colonna,b);
+                    	            	   
+                    	                    
+                    	                     }
+                      	            	
+                	         }
+                	         
+                        }while(correttezza==false||correttezza2==false);
+                	 
+                	  
+                	   
+                		   
+                        
+                	         
+                      	            		 
+                      	            	
+                      	            	
+                      	           
+                   
+                
+            }
+                
+                
+                
+                
+                if(numerocarte==3)
+                {
+                	
+                	      System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+           	    	         riga=sc.nextInt();
+           	    	       
+                	  
+                	   
+                	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+                	    	 colonna=sc.nextInt();
+                	    	
+                	    
+                	   
+                		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
+                	       
+                	      
+                	         r=sca0.nextLine();
+                	         System.out.println(r+"rrrrr");
+                	         rc=r.charAt(0);
+                	         System.out.println(rc+"a");
+                	       
+                	   
+                	   
+                	         if(rc=='v')
+                	         {
+                	        	
+                	        		 
+                	        	 
+
+                		       
+                		        	   System.out.println("Vuoi salire o scendere per la riga successiva1? ");
+
+                		       
+                		        	   a=sc.nextInt();
+                		        	   System.out.println("Vuoi salire o scendere per la riga successiva2?" );
+                            	        
+                		        	   c=sc.nextInt();
+                		        
+                      	           
+                      	            	
+                      	            		 correttezza=p.Controllorighe3(t, riga, colonna, a,numerogiocatori,c);
+                      	                     correttezza2=p.Controllo2(t);
+                      	                     if(correttezza==true&&correttezza2==true)
+                      	                     {
+                      	                    	lib=Plancia.Prelievorighe3(t, riga, colonna,a,c); 
+                      	          	            t=Plancia.AggiornaMatricerighe3(t,riga,colonna,a,c);
+                      	            	   
+                      	                    
+                      	                     }
+                      	                     
+                      	                   
+                          	            	
+                          	            		 
+                      	            	
+                      	            
+                	         }
+                	         
+                	         
+
+                    	         
+                    	           
+                    	           //togliere il generatore k
+                	         
+                	         
+                	         if(rc=='o')
+                	         {
+                	        	 
+                		        System.out.println("Vuoi andare alla colonna successiva1");
+                		        b=sc.nextInt();
+                		        System.out.println("Vuoi andare alla colonna successiva2?");
+                		        d=sc.nextInt();
+                		         
+                		        
+                      	           
+                      	            	
+                      	            		 correttezza=p.Controllocolonne3(t, riga, colonna, b, ng,d);
+                      	                     correttezza2=p.Controllo2(t);
+                      	                   if(correttezza==true&&correttezza2==true)
+                    	                     {
+                    	                    	lib=Plancia.Prelievocolonne3(t, riga, colonna,b,d); 
+                    	          	            t=Plancia.AggiornaMatricecolonne3(t,riga,colonna,b,d);
+                    	            	   
+                    	                    
+                    	                     }
+                      	                   
+                      	                   //correttezza=false;
+                      	                  // correttezza2=false;
+                      	                 
+                      	            	//domani controlla questo e serve metodo per la terza carta
+                	         }
+                	         
+                        }}while(correttezza==false||correttezza2==false);
+                	 
+                	  
+                	   
+                		   
+                        
+                	         
+                      	            		 
+                      	            	
+                      	            	
+                      	           
+                   
+                
+        	
+       	         
+       	            for ( i=0;i<numerocarte;i++)
+       	            {
+       	            	System.out.println("metodo2 "+lib.get(i).getInizialeColore());
+       	            }
+       	            
+       	         for(int k=0;k<9;k++)
+                 {
+                 	for(int w=0;w<9;w++)
+                 	{
+                 		System.out.print(t[k][w].getInizialeColore());
+                 	}
+                 	System.out.println("");
+                 
+                 }
+       	         
+       	         
+       	       System.out.println("Tocca a un altro giocatore"); 
+            }while(finepartita==false); 
+            numerocarte=0;
+        	
+        	
+        	break;
 
    	         }
         
