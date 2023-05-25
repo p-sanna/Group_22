@@ -2,8 +2,8 @@ package Funzionalità;
 
 import java.util.ArrayList;
 
-import Progetto.Plancia;
-import Progetto.Tessera;
+import progetto.Plancia;
+import progetto.Tessera;
 
 public class Ciclico {
 	int i=0;

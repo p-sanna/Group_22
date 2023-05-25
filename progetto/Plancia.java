@@ -943,7 +943,7 @@ return controllo;
 	        	 //Parte nuova
 	        	 if(riga1<1)
 	        	 {
-	        		 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
+	        		 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 	        		 {
 	        			 if((t[riga1][colonna1+1+sfasamento].getInizialeColore()=='0'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='0')||(t[riga1][colonna1+1+sfasamento].getInizialeColore()=='x'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='x'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='x'))
 	        			 {
