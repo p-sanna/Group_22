@@ -6,6 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		int i=0;
+		 System.out.println("ciao");   
 		int nverdi=22,nrosse=22,nblu=22,nazzurre=22,ngialle=22,nbianche=22;
 
 		Random generatore = new Random();
@@ -28,7 +29,7 @@ public class Main {
 			    	 }
 			    	 else
 			    	 {
-			    		 d=0;
+					 d=0;
 
 
 			    	 }
