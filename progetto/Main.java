@@ -98,7 +98,7 @@ public class Main {
 		  } while(i<132);
 		  
 
-		  //Inizio gioco
+		  
 		  
 		  System.out.println("   Verdi "+nverdi);
 		  System.out.println("Bianche "+nbianche);
@@ -156,7 +156,9 @@ public class Main {
         	
         	Giocatore primo= new Giocatore (nome1);
         	Giocatore secondo= new Giocatore(nome2);
-        	
+        	do 
+       	 { 	correttezza=false;
+        	correttezza2=false;
             do
    	     {
    	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
@@ -184,8 +186,7 @@ public class Main {
 	            }  while(correttezza==false||correttezza2==false);
    	         
    	       
-   	        	correttezza=false;
-   	        	correttezza2=false;
+   	        	
    	        	
    	        	lib=Plancia.Prelievo(t, riga, colonna);
    	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
@@ -296,8 +297,7 @@ public class Main {
             if(numerocarte==3)
             {
             	
-            	 do 
-	        	 {
+            	 
        	    	         System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
        	    	         riga=sc.nextInt();
        	    	       
@@ -386,7 +386,7 @@ public class Main {
                   	            	//domani controlla questo e serve metodo per la terza carta
             	         }
             	         
-                    }while(correttezza==false||correttezza2==false);
+                    }}while(correttezza==false||correttezza2==false);
             	 
             	  
             	   
@@ -399,7 +399,7 @@ public class Main {
                   	           
                
             
-        }
+        
    	         
    	            for ( i=0;i<numerocarte;i++)
    	            {
@@ -420,7 +420,6 @@ public class Main {
    	         
         }while(finepartita==false); 
         numerocarte=0;
-       
    	      break;  
           
    	      
@@ -444,7 +443,12 @@ public class Main {
             	Giocatore secondo= new Giocatore(nome2);
             	Giocatore terzo= new Giocatore(nome3);
             	
-                do
+         do {
+        	 correttezza=false;
+	         correttezza2=false;
+        	
+        	 do
+         
        	     {
        	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
        	    	 numerocarte= sc.nextInt();
@@ -474,8 +478,7 @@ public class Main {
     	            }  while(correttezza==false||correttezza2==false);
        	         
        	       
-       	        	correttezza=false;
-       	        	correttezza2=false;
+       	        	
        	        	
        	        	lib=Plancia.Prelievo(t, riga, colonna);
        	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
@@ -590,9 +593,7 @@ public class Main {
                 if(numerocarte==3)
                 {
                 	
-                	 do 
-    	        	 {
-           	    	         System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+                	      System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
            	    	         riga=sc.nextInt();
            	    	       
                 	  
@@ -680,7 +681,7 @@ public class Main {
                       	            	//domani controlla questo e serve metodo per la terza carta
                 	         }
                 	         
-                        }while(correttezza==false||correttezza2==false);
+                        }}while(correttezza==false||correttezza2==false);
                 	 
                 	  
                 	   
@@ -693,7 +694,7 @@ public class Main {
                       	           
                    
                 
-            }
+        	
        	         
        	            for ( i=0;i<numerocarte;i++)
        	            {
@@ -727,6 +728,25 @@ public class Main {
 	
 	
 	}}
+
+	// 4 metodi di fare punti 
+
+    // 1-tessera obiettivo personale (possono/devono essere calcolati solo alla fine)
+	// 2-tessera obiettivo comune (deve essere controllato ogni volta che vengono immesse tessere nella libreria)
+	// 3-tessere uguali adiacenti (possono/devono essere calcolati solo alla fine)
+	// 4-primo giocatore che completa la libreria (controllo ogni volta che vengono immesse tessere nella libreria, appena il primo completa la libreria termina il gioco)
+
+	// metodo4: controllare che ogni elemento della libreria sia diverso da 0 (matrice della libreria inizializzata a tanti 0, prima di passare al turno successivo)
+
+	// metodo1: verificare che la matrice obiettivo personale e la matrice della libreria abbiano elementi uguali nelle stesse coordinate (due cicli for che scorrono le  
+	//          matrici e verificano ogni volta se l'elemento è uguale o no?, possibile problema: se la libreria non è completa potrebbe considerare gli zeri delle due  
+    //          matrici come valore uguale)
+
+    // metodo3: realizzare qualcosa di simile al controllo delle tessere adiacenti della plancia, si sceglie una iniziale e si verifica se ce ne siano di uguali adiacenti,
+    //          si sommano gli eventuali punti e poi si passa alla lettera successiva.
+
+    // metodo2: implementare un controllo diverso per ogni tessere obiettivo comune, in parte credo si possa adattare parte dei controlli del metodo3 ma sicuramente è il più
+    //          difficile da realizzare, non mi vengono in mente idee per renderlo facile da realizzare
 
 	// 4 metodi di fare punti 
 
