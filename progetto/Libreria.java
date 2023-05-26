@@ -40,50 +40,37 @@ public class Libreria  {
 		boolean check=false;
 		char sel;
 		String sel1;
+		i=lunghezza-1;
 		do
 		{
 			System.out.println("");
-			System.out.println("Vuoi mettere le tue "+lunghezza+" carte in verticale o in orizzontale? v/o");
 			sel1=sc.nextLine();
-			sel=sel1.charAt(0);
-			   if(sel=='o')
-			   {
-				   System.out.println("Inserisci la colonna di partenza, le carte vengono caricate dalla prima andando verso dx");
-				   a=sc.nextInt();
-				   r=Controllor(a,lunghezza,l);
-				   if(r<10)
+			
+				System.out.println("Inserisci la colonna");
+				 a=sc.nextInt();
+				 
+				 r=Controllor(a,lunghezza,l);
+				  if(r!=-6)
 				   {
-					   for(int j=a-1;j<=a-1+lunghezza&&i<lunghezza;j++)
+					   for(int j=r;j>r-lunghezza;j--)
 					   {
-						   if(l.riempimentocasella[r][j]==false)
-						   {
-							   l.casellario[r][j]=lib.get(i);
-							   l.riempimentocasella[r][j]=true;
-							   i++;
-							   ctr=true;
-						   }
-					   }
-				   }
-			   }if(sel=='c')
-			   {
-				   System.out.println("Inserisci la colonna");
-				   a=sc.nextInt();
-				   check=Controlr(a,lunghezza,l);
-				   if(check==true)
-				   {
-					   for(int j=5;j>=0&&i<=lunghezza;j--)
-					   {
+						   System.out.println("J"+j);
 						   if(l.riempimentocasella[j][a-1]==false)
 						   {
 							   l.casellario[j][a-1]=lib.get(i);
+							   i--;
+							   System.out.println("J"+j);
 							   l.riempimentocasella[j][a-1]=true;
-							   i++;
+							   
+							   ctr=true;
 						   }
 					   }
-				   }
+				   
 			   }
+			   
+		System.out.println("ctr"+ctr);		   
 			
-		}while(r>5&&ctr==false);
+		}while(ctr==false);
 
 		  //if(l.riempimentocasella[criga][ccolonna]==false)
 		  {
@@ -104,64 +91,63 @@ public class Libreria  {
 		int i=0,contatore=0;
 		boolean check=false;
 		int riga=0;
-		
-		for (i=5;i>=0;i--)
-		{
-			if(lunghezza==1)
-			{
-				System.out.println("Rigaaa1 "+riga);
+		   for(i=5;i>=0;i--)
+		   {
+			 if(lunghezza==1&&i>=0)
+			 {
+				 
+			
 			   if(l.riempimentocasella[i][a-1]==false)
-			    {
+			   {
+				   
 				   riga=i;
 				   i=-6;
-				   System.out.println("i"+i);
 				   
-				   System.out.println("Rigaaa2 "+riga);
-				   check=true;
-			    }
-			}//fine lughezza1
-			
-			{
-				if( lunghezza==2)
-				{
-					 if(l.riempimentocasella[i][a-1]==false)
-					 {
-						 if(l.riempimentocasella[i][a]==false)
-						 {
-							 riga=i;
-							   i=-6;
-							   check=true;
-						 }
-					 }
-				}//fine lunghezza2
-				
-				{
-					if (lunghezza==3)
-					{
-						 if(l.riempimentocasella[i][a-1]==false)
-						 {
-							 if(l.riempimentocasella[i][a]==false)
-							 {
-								 if(l.riempimentocasella[i][a+1]==false)
-									 {
-										 riga=i;
-								         i=-6;
-								        		 
-								         check=true;
-									 }
-							 }
-						 }
-					}
-				}
-				
-				
-			}
-		}
-		 if(check==false)
-		 {
-			 riga=10;
-		 }
-		 System.out.println("Rigaaa "+riga);
+			   }
+			   else
+			   {
+				   riga=-6;
+			   }
+			   
+		     }
+			 
+			 if (lunghezza==2&&i-2>=0)
+			 {
+				 
+				 if(l.riempimentocasella[i][a-1]==false&&l.riempimentocasella[i-1][a-1]==false)
+				 {
+					  
+					  
+					   riga=i;
+					   i=-6;
+				 }
+				 else
+				   {
+					   riga=-6;
+				   }
+			 }
+			 if (lunghezza==3&&i-3>=0)
+			 {
+				 
+				 if(l.riempimentocasella[i][a-1]==false&&l.riempimentocasella[i-1][a-1]==false&&l.riempimentocasella[i-2][a-1]==false)
+				 {
+					  
+					   
+					   riga=i;
+					   i=-6;
+					   
+				 }
+				 else
+				   {
+					   riga=-6;
+				   }
+			 }
+			 
+		   
+		   
+		   
+		   }
+		   System.out.println("Riga"+riga);
 		return riga;
 	}
 	public boolean Controlr(int a, int lunghezza,Libreria l)
