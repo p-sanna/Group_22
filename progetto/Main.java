@@ -139,6 +139,7 @@ public class Main {
             
             //Inizio prelievo
              int riga = 0,colonna = 0,numerocarte=0;
+             int contatoreturni=1;
              String r,nome1,nome2 = null,nome3 = null,nome4;
  	         char rc=0,sd=0;
         	 boolean correttezza=false,correttezza2=false,correttezza3=false,finepartita=false; 
@@ -151,6 +152,8 @@ public class Main {
         	System.out.println("Inserisci il nome del secondo giocatore");
         	Giocatore primo= new Giocatore (nome1);
         	Giocatore secondo= new Giocatore(nome2);
+        	Libreria l1= new Libreria(nome1,1);
+        	Libreria l2= new Libreria(nome2,2);
         	nome2=sc.nextLine();
         do {
         	
@@ -418,10 +421,25 @@ public class Main {
              
              }
    	         
-   	      System.out.println("Tocca a un altro giocatore");   
+   	         
+   	      numerocarte=0;
+          if(contatoreturni%2==0)
+          {
+        	 l1.RiempiLibreria(lib,l1);
+        	 l1.StampaLibreria(l1);
+          }
+          else
+          {
+        	  l2.RiempiLibreria(lib,l2);
+        	  l2.StampaLibreria(l2);
+          }
+          lib=null;
+          
+   	      System.out.println("Tocca a un altro giocatore");  
+   	      
    	         
         }while(finepartita==false); 
-        numerocarte=0;
+       
    	      break;  
           
    	      
