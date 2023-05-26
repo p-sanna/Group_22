@@ -3,5 +3,12 @@
 /Libreria.class
 /Plancia.class
 /Main.class
+<<<<<<< Updated upstream:progetto/.gitignore
 /Sedia.class
 /Tessera.class
+=======
+/Tessera.class
+/ObiettivoPersonale.class
+/ObiettiviComuni.class
+/Sedia.class
+>>>>>>> Stashed changes:Progetto/.gitignore
