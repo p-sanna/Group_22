@@ -36,11 +36,13 @@ public class Libreria  {
 		int a=0;
 		int i=0;
 		int r=0;
+		boolean ctr=false;
 		boolean check=false;
 		char sel;
 		String sel1;
 		do
 		{
+			System.out.println("");
 			System.out.println("Vuoi mettere le tue "+lunghezza+" carte in verticale o in orizzontale? v/o");
 			sel1=sc.nextLine();
 			sel=sel1.charAt(0);
@@ -53,10 +55,12 @@ public class Libreria  {
 				   {
 					   for(int j=a-1;j<=a-1+lunghezza&&i<lunghezza;j++)
 					   {
-						   if(riempimentocasella[r][j]==false)
+						   if(l.riempimentocasella[r][j]==false)
 						   {
-							   casellario[r][j]=lib.get(i);
+							   l.casellario[r][j]=lib.get(i);
+							   l.riempimentocasella[r][j]=true;
 							   i++;
+							   ctr=true;
 						   }
 					   }
 				   }
@@ -69,16 +73,17 @@ public class Libreria  {
 				   {
 					   for(int j=5;j>=0&&i<=lunghezza;j--)
 					   {
-						   if(riempimentocasella[j][a-1]==false)
+						   if(l.riempimentocasella[j][a-1]==false)
 						   {
-							   casellario[j][a-1]=lib.get(i);
+							   l.casellario[j][a-1]=lib.get(i);
+							   l.riempimentocasella[j][a-1]=true;
 							   i++;
 						   }
 					   }
 				   }
 			   }
 			
-		}while(r>5);
+		}while(r>5&&ctr==false);
 
 		  //if(l.riempimentocasella[criga][ccolonna]==false)
 		  {
@@ -105,7 +110,7 @@ public class Libreria  {
 			if(lunghezza==1)
 			{
 				System.out.println("Rigaaa1 "+riga);
-			   if(riempimentocasella[i][a-1]==false)
+			   if(l.riempimentocasella[i][a-1]==false)
 			    {
 				   riga=i;
 				   i=-6;
@@ -119,9 +124,9 @@ public class Libreria  {
 			{
 				if( lunghezza==2)
 				{
-					 if(riempimentocasella[i][a-1]==false)
+					 if(l.riempimentocasella[i][a-1]==false)
 					 {
-						 if(riempimentocasella[i][a]==false)
+						 if(l.riempimentocasella[i][a]==false)
 						 {
 							 riga=i;
 							   i=-6;
@@ -133,11 +138,11 @@ public class Libreria  {
 				{
 					if (lunghezza==3)
 					{
-						 if(riempimentocasella[i][a-1]==false)
+						 if(l.riempimentocasella[i][a-1]==false)
 						 {
-							 if(riempimentocasella[i][a]==false)
+							 if(l.riempimentocasella[i][a]==false)
 							 {
-								 if(riempimentocasella[i][a+1]==false)
+								 if(l.riempimentocasella[i][a+1]==false)
 									 {
 										 riga=i;
 								         i=-6;
@@ -179,12 +184,12 @@ public class Libreria  {
 	
 	public void StampaLibreria(Libreria l)
 	{
-		System.out.println("Casellario");
+		System.out.println("Casellario di "+l.getGiocatore(l));
 		for(int i=0;i<=5;i++)
 		{
 			for(int j=0;j<=4;j++)
 			{
-				System.out.print(casellario[i][j].getInizialeColore());
+				System.out.print(l.casellario[i][j].getInizialeColore());
 				
 			}
 			System.out.println("");

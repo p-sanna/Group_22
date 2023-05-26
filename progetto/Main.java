@@ -149,12 +149,17 @@ public class Main {
         case 2:
         	System.out.println("Inserisci il nome del primo giocatore");
         	nome1=sc.nextLine();
-        	System.out.println("Inserisci il nome del secondo giocatore");
+        	
         	Giocatore primo= new Giocatore (nome1);
+        	System.out.println("Inserisci il nome del secondo giocatore");
+        	
+        	nome2=sc.nextLine();
         	Giocatore secondo= new Giocatore(nome2);
         	Libreria l1= new Libreria(nome1,1);
         	Libreria l2= new Libreria(nome2,2);
-        	nome2=sc.nextLine();
+        	System.out.println("Nome1lib "+l1.getGiocatore(l1));
+        	System.out.println("Nome2lib "+l2.getGiocatore(l2));
+        	
         do {
         	
         	
@@ -432,11 +437,12 @@ public class Main {
           {
         	  l2.RiempiLibreria(lib,l2);
         	  l2.StampaLibreria(l2);
+        	  System.out.println("ciaoooo");
           }
           lib=null;
           
    	      System.out.println("Tocca a un altro giocatore");  
-   	      
+   	      contatoreturni++;
    	         
         }while(finepartita==false); 
        
