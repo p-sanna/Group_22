@@ -140,20 +140,33 @@ public class Main {
             //Inizio prelievo
              int riga = 0,colonna = 0,numerocarte=0;
              int contatoreturni=1;
-             String r,nome1,nome2 = null,nome3 = null,nome4;
+             String r = null;
+             String nome1 = "";
+             String nome2 = "";
+             String nome3 = "";
+             String nome4 = "";
  	         char rc=0,sd=0;
         	 boolean correttezza=false,correttezza2=false,correttezza3=false,finepartita=false; 
         	 Scanner sc= new Scanner(System.in);
         switch(numerogiocatori)
         {
         case 2:
-        	System.out.println("Inserisci il nome del primo giocatore");
-        	nome1=sc.nextLine();
-        	
+        	while(nome1.isEmpty()|| nome2.isEmpty()||nome1.equals(nome2))
+        	{
+	        	System.out.println("Inserisci il nome del primo giocatore");
+	        	nome1=sc.nextLine();
+	        	
+	        	
+	        	System.out.println("Inserisci il nome del secondo giocatore");
+	        	nome2=sc.nextLine();
+	        	
+	        	if(nome1.isEmpty()||nome2.isEmpty())
+	        	{System.out.println("I nomi dei giocatori non possono essere vuoti. Riprova");
+	        	} else if(nome1.equals(nome2))
+	        	{System.out.println("I nomi dei giocatori non possono essere uguali. Riprova");
+	        	
+	        	}}
         	Giocatore primo= new Giocatore (nome1);
-        	System.out.println("Inserisci il nome del secondo giocatore");
-        	
-        	nome2=sc.nextLine();
         	Giocatore secondo= new Giocatore(nome2);
         	Libreria l1= new Libreria(nome1,1);
         	Libreria l2= new Libreria(nome2,2);
@@ -452,15 +465,25 @@ public class Main {
    	      
    	      
         case 3:
-        	
+        	while(nome1.isEmpty()||nome2.isEmpty()||nome3.isEmpty()||nome1.equals(nome2)||nome2.equals(nome3)||nome3.equals(nome1))
+        	{
         	System.out.println("Inserisci il nome del primo giocatore");
         	nome1=sc.nextLine();
         	System.out.println("Inserisci il nome del secondo giocatore");
         	nome2=sc.nextLine();
         	System.out.println("Inserisci il nome del terzo giocatore");
         	nome3=sc.nextLine();
-        	 primo= new Giocatore (nome1);
-        	 secondo= new Giocatore(nome2);
+        	
+        	
+        	if(nome1.isEmpty()||nome2.isEmpty()||nome3.isEmpty())
+        	{System.out.println("I nomi dei giocatori non possono essere vuoti. Riprova");
+        	} else if(nome1.equals(nome2)||nome2.equals(nome3)||nome3.equals(nome1))
+        	{System.out.println("I nomi dei giocatori non possono essere uguali. Riprova");
+        	
+        	}}
+        	
+        	primo= new Giocatore (nome1);
+        	secondo= new Giocatore(nome2);
         	Giocatore terzo= new Giocatore(nome3);
         	
         	do {
@@ -747,6 +770,9 @@ public class Main {
         	break;
             
         case 4:
+        	
+        	while(nome1.isEmpty()||nome2.isEmpty()||nome3.isEmpty()||nome4.isEmpty()||nome1.equals(nome2)||nome2.equals(nome3)||nome3.equals(nome1)||nome1.equals(nome4)||nome2.equals(nome4)||nome3.equals(nome4))
+        	{
         	System.out.println("Inserisci il nome del primo giocatore");
         	nome1=sc.nextLine();
         	System.out.println("Inserisci il nome del secondo giocatore");
@@ -754,11 +780,19 @@ public class Main {
         	System.out.println("Inserisci il nome del terzo giocatore");
         	nome3=sc.nextLine();
         	System.out.println("Inserisci il nome del quarto giocatore");
-        	 nome4=sc.nextLine();
-        	 primo= new Giocatore (nome1);
-        	 secondo= new Giocatore(nome2);
-        	 terzo= new Giocatore(nome3);
-        	 Giocatore quarto= new Giocatore(nome4);
+        	nome4=sc.nextLine();
+        	
+        	if(nome1.isEmpty()||nome2.isEmpty()||nome3.isEmpty()||nome4.isEmpty())
+        	{System.out.println("I nomi dei giocatori non possono essere vuoti. Riprova");
+        	} else if(nome1.equals(nome2)||nome2.equals(nome3)||nome3.equals(nome1)||nome1.equals(nome4)||nome2.equals(nome4)||nome3.equals(nome4))
+        	{System.out.println("I nomi dei giocatori non possono essere uguali. Riprova");
+        	
+        	}}
+        	 
+        	primo= new Giocatore (nome1);
+        	secondo= new Giocatore(nome2);
+        	terzo= new Giocatore(nome3);
+        	Giocatore quarto= new Giocatore(nome4);
         	
         	do {
             	
