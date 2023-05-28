@@ -1466,21 +1466,3 @@ return controllo;
     // ---> resta da implementare il controllo per impedire la selezione di singole tessere con soli zeri e x adiacenti in nuovo turno
     // ---> resta da implementare il controllo per impedire, quando si vogliono prendere tessere in fila o colonna, si selezionare tessere della stessa riga/colonna ma 
     //      non adiacenti (credo basti imporre che, quando il giocatore deve dire se salire o scendere ecc, si sia un controllo a ciclo sul numero immesso)
-
-
-
-
-    // caso 3 gioc 3 carte e 3 gioc 2 carte: in generale funziona senza errori o riimmissioni in cicli che non dovebbe fare, bisogna implentare i controlli sopracitati
-	
-	// RIIMMISIONE IN CICLO CHE NON DOVREBBE FARE: una volta presa la tessera in posizione 7.7, dovrei poter prendere le tessere 9.6, 8.6, 7.6 ma il programma mi rimette 
-	// nel ciclo senza motivo apparente... succede solo se seleziono come tessere di partenza quella della riga 9, se invece seleziono come principale la 7.6 o 8.6 fuzniona correttamente
-	// avevo pensato che il problema potesse essere lo scorrimento in verticale della colonna di 2 salti verso l'alto ma nei casi generali non riscontro problemi
-//CORRETTO
-
-    
-	// ERRORE CHE NON DOVREBBE ESSERCI: se voglio prendere tessere in colonna sotto la tessera della prima riga segna errore continuamente sia con 2 carte sia con 3 carte
-    // segna errore anche se sempre con quella tessere seleziono le direzioni dx e sx (dovrebbe riportarmi nel ciclo di richiesta teoricamente), se seleziono invece la direzione
-    // in alto mi rimette nel ciclo correttamente... a differenza del caso estremo inferiore qua qualsiasi tessere seleziono come principale da errore... se invece prendo solo le due
-	// tessere della seconda e terza riga (2.4, 3.4 una volta resa disponibile) non ho problemi... credo riguardi proprio la tessera 1.4 il problema
-
-	// estremo sx e dx non riscontro problemi o errori
