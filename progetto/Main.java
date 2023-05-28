@@ -110,7 +110,7 @@ public class Main {
 		  
 		    do
 			   {
-			    System.out.println("Inserisci il numero di giocatori");
+			    System.out.println("Inserisci il numero di giocatori (numero compreso tra 2 e 4)");
 		        Scanner s= new Scanner(System.in);
 		        numerogiocatori=s.nextInt();
 			   }while(numerogiocatori<2||numerogiocatori>4);
@@ -184,7 +184,7 @@ public class Main {
         	correttezza2=false;
             do
    	     {
-   	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
+   	    	 System.out.println("Inserisci il numero di tessere adiacenti tra loro che vuoi prelevare, da 1 a 3");
    	    	 numerocarte= sc.nextInt();
    	     }while(numerocarte>3||numerocarte<1);
             
@@ -193,13 +193,13 @@ public class Main {
             
    	         do {
    	    	    do {
-   	    	         System.out.println("Inserisci la riga della carta da prelevare  ");
+   	    	         System.out.println("Inserisci la riga della tessera da prelevare");
    	    	         riga=sc.nextInt();
    	    	       }while(riga<1||riga>9);
         	  
         	    do
         	    	{
-        	    	  System.out.println("Inserisci la colonna della carta da prelevare ");
+        	    	  System.out.println("Inserisci la colonna della tessera da prelevare");
         	    	  colonna=sc.nextInt();
         	    	}while(colonna<1||colonna>9);
         	    
@@ -222,17 +222,17 @@ public class Main {
             	
             	 do 
 	        	 {
-       	    	         System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+       	    	         System.out.println("Inserisci la riga della prima tessera da prelevare, questa sarà la riga di partenza");
        	    	         riga=sc.nextInt();
        	    	       
             	  
             	   
-            	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+            	    	 System.out.println("Inserisci la colonna della prima tessera da prelevare, questa sarà la colonna di partenza");
             	    	 colonna=sc.nextInt();
             	    	
             	    
             	   
-            		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
+            		     System.out.println("Vuoi prelevare la seconda tessera in verticale o orizzontale? v/o");
             	       
             	      
             	         r=sca0.nextLine();
@@ -249,7 +249,7 @@ public class Main {
             	        	 
 
             		       
-            		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
+            		        	   System.out.println("Vuoi passare alla riga inferiore (+1) o superiore (-1) per la seconda tessera?");
 
             		       
             		        	   a=sc.nextInt();
@@ -281,7 +281,7 @@ public class Main {
             	         if(rc=='o')
             	         {
             	        	 
-            		        System.out.println("Vuoi andare alla colonna successiva +1 o -1?");
+            		        System.out.println("Vuoi passare alla colonna successiva (+1) o precedente (-1) per la seconda tessera?");
             		        b=sc.nextInt();
             		         
             		        
@@ -321,17 +321,17 @@ public class Main {
             {
             	
             	 
-       	    	         System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+       	    	         System.out.println("Inserisci la riga della prima tessera da prelevare, questa sarà la riga di partenza");
        	    	         riga=sc.nextInt();
        	    	       
             	  
             	   
-            	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+            	    	 System.out.println("Inserisci la colonna della prima tessera da prelevare, questa sarà la riga di partenza");
             	    	 colonna=sc.nextInt();
             	    	
             	    
             	   
-            		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
+            		     System.out.println("Vuoi prelevare le altre tessere in verticale o orizzontale? v/o");
             	       
             	      
             	         r=sca0.nextLine();
@@ -345,19 +345,13 @@ public class Main {
             	         {
             	        	
             	        		 
-            	        	 
-
-            		       
-            		        	   System.out.println("Vuoi salire o scendere per la riga successiva1? ");
-
-            		       
+            		        	   System.out.println("Vuoi passare alla riga inferiore (+1) o superiore (-1) per la seconda tessera?");
             		        	   a=sc.nextInt();
-            		        	   System.out.println("Vuoi salire o scendere per la riga successiva2?" );
-                        	        
+            		        	   
+            		        	   System.out.println("Vuoi passare a due righe inferiori (+2) o superiori (-2) rispetto alla riga di partenza per la terza tessera?" );
             		        	   c=sc.nextInt();
             		        
                   	           
-                  	            	
                   	            		 correttezza=p.Controllorighe3(t, riga, colonna, a,numerogiocatori,c);
                   	                     correttezza2=p.Controllo2(t);
                   	                     if(correttezza==true&&correttezza2==true)
@@ -376,18 +370,15 @@ public class Main {
             	         }
             	         
             	         
-
-                	         
-                	           
                 	           //togliere il generatore k
             	         
             	         
             	         if(rc=='o')
             	         {
             	        	 
-            		        System.out.println("Vuoi andare alla colonna successiva1");
+            		        System.out.println("Vuoi passare alla colonna successiva (+1) o precedente (-1) per la seconda tessera?");
             		        b=sc.nextInt();
-            		        System.out.println("Vuoi andare alla colonna successiva2?");
+            		        System.out.println("Vuoi passare a due colonne successive (+2) o precedenti (-2) rispetto alla colonna di partenza per la terza tessera?");
             		        d=sc.nextInt();
             		         
             		        
@@ -500,7 +491,7 @@ public class Main {
         	 do
          
        	     {
-       	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
+       	    	 System.out.println("Inserisci il numero di tessere adiacenti tra loro che vuoi prelevare, da 1 a 3");
        	    	 numerocarte= sc.nextInt();
        	     }while(numerocarte>3||numerocarte<1);
                 
@@ -509,13 +500,13 @@ public class Main {
                 
        	         do {
        	    	    do {
-       	    	         System.out.println("Inserisci la riga della carta da prelevare  ");
+       	    	         System.out.println("Inserisci la riga della tessera da prelevare");
        	    	         riga=sc.nextInt();
        	    	       }while(riga<1||riga>9);
             	  
             	    do
             	    	{
-            	    	  System.out.println("Inserisci la colonna della carta da prelevare ");
+            	    	  System.out.println("Inserisci la colonna della tessera da prelevare");
             	    	  colonna=sc.nextInt();
             	    	}while(colonna<1||colonna>9);
             	    
@@ -541,17 +532,17 @@ public class Main {
                 	
                 	 do 
     	        	 {
-           	    	         System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+           	    	         System.out.println("Inserisci la riga della prima tessera da prelevare, questa sarà la riga di partenza");
            	    	         riga=sc.nextInt();
            	    	       
                 	  
                 	   
-                	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+                	    	 System.out.println("Inserisci la colonna della prima tessera da prelevare, questa sarà la riga di partenza");
                 	    	 colonna=sc.nextInt();
                 	    	
                 	    
                 	   
-                		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
+                		     System.out.println("Vuoi prelevare la seconda tessera in verticale o orizzontale? v/o");
                 	       
                 	      
                 	         r=sca0.nextLine();
@@ -568,7 +559,7 @@ public class Main {
                 	        	 
 
                 		       
-                		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
+                		        	   System.out.println("Vuoi passare alla riga inferiore (+1) o superiore (-1) per la seconda tessera?");
 
                 		       
                 		        	   a=sc.nextInt();
@@ -601,7 +592,7 @@ public class Main {
                 	         if(rc=='o')
                 	         {
                 	        	 
-                		        System.out.println("Vuoi andare alla colonna successiva +1 o -1?");
+                		        System.out.println("Vuoi passare alla colonna successiva (+1) o precedente (-1) per la seconda tessera?");
                 		        b=sc.nextInt();
                 		         
                 		        
@@ -643,17 +634,17 @@ public class Main {
                 if(numerocarte==3)
                 {
                 	
-                	      System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+                	      	 System.out.println("Inserisci la riga della prima tessera da prelevare, questa sarà la riga di partenza");
            	    	         riga=sc.nextInt();
            	    	       
                 	  
                 	   
-                	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+                	    	 System.out.println("Inserisci la colonna della prima tessera da prelevare, questa sarà la riga di partenza");
                 	    	 colonna=sc.nextInt();
                 	    	
                 	    
                 	   
-                		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
+                		     System.out.println("Vuoi prelevare le altre tessere in verticale o orizzontale? v/o");
                 	       
                 	      
                 	         r=sca0.nextLine();
@@ -670,11 +661,11 @@ public class Main {
                 	        	 
 
                 		       
-                		        	   System.out.println("Vuoi salire o scendere per la riga successiva1? ");
+                		        	   System.out.println("Vuoi passare alla riga inferiore (+1) o superiore (-1) per la seconda tessera?");
 
                 		       
                 		        	   a=sc.nextInt();
-                		        	   System.out.println("Vuoi salire o scendere per la riga successiva2?" );
+                		        	   System.out.println("Vuoi passare a due righe inferiori (+2) o superiori (-2) rispetto alla riga di partenza per la terza tessera?" );
                             	        
                 		        	   c=sc.nextInt();
                 		        
@@ -707,9 +698,9 @@ public class Main {
                 	         if(rc=='o')
                 	         {
                 	        	 
-                		        System.out.println("Vuoi andare alla colonna successiva1");
+                		        System.out.println("Vuoi passare alla colonna successiva (+1) o precedente (-1) per la seconda tessera?");
                 		        b=sc.nextInt();
-                		        System.out.println("Vuoi andare alla colonna successiva2?");
+                		        System.out.println("Vuoi passare a due colonne successive (+2) o precedenti (-2) rispetto alla colonna di partenza per la terza tessera?");
                 		        d=sc.nextInt();
                 		         
                 		        
@@ -808,7 +799,7 @@ public class Main {
         	 do
          
        	     {
-       	    	 System.out.println("Inserisci il numero di carte che vuoi prelevare, da 1 a 3");
+       	    	 System.out.println("Inserisci il numero di tessere adiacenti tra loro che vuoi prelevare, da 1 a 3");
        	    	 numerocarte= sc.nextInt();
        	     }while(numerocarte>3||numerocarte<1);
                 
@@ -817,13 +808,13 @@ public class Main {
                 
        	         do {
        	    	    do {
-       	    	         System.out.println("Inserisci la riga della carta da prelevare  ");
+       	    	         System.out.println("Inserisci la riga della tessera da prelevare");
        	    	         riga=sc.nextInt();
        	    	       }while(riga<1||riga>9);
             	  
             	    do
             	    	{
-            	    	  System.out.println("Inserisci la colonna della carta da prelevare ");
+            	    	  System.out.println("Inserisci la colonna della tessera da prelevare");
             	    	  colonna=sc.nextInt();
             	    	}while(colonna<1||colonna>9);
             	    
@@ -849,17 +840,17 @@ public class Main {
                 	
                 	 do 
     	        	 {
-           	    	         System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+           	    	         System.out.println("Inserisci la riga della prima tessera da prelevare, questa sarà la riga di partenza");
            	    	         riga=sc.nextInt();
            	    	       
                 	  
                 	   
-                	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+                	    	 System.out.println("Inserisci la colonna della prima tessera da prelevare, questa sarà la riga di partenza");
                 	    	 colonna=sc.nextInt();
                 	    	
                 	    
                 	   
-                		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
+                		     System.out.println("Vuoi prelevare la seconda tessera in verticale o orizzontale? v/o");
                 	       
                 	      
                 	         r=sca0.nextLine();
@@ -876,7 +867,7 @@ public class Main {
                 	        	 
 
                 		       
-                		        	   System.out.println("Vuoi salire o scendere per la riga successiva? +1/-1");
+                		        	   System.out.println("Vuoi passare alla riga inferiore (+1) o superiore (-1) per la seconda tessera?");
 
                 		       
                 		        	   a=sc.nextInt();
@@ -909,7 +900,7 @@ public class Main {
                 	         if(rc=='o')
                 	         {
                 	        	 
-                		        System.out.println("Vuoi andare alla colonna successiva +1 o -1?");
+                		        System.out.println("Vuoi passare alla colonna successiva (+1) o precedente (-1) per la seconda tessera?");
                 		        b=sc.nextInt();
                 		         
                 		        
@@ -951,17 +942,17 @@ public class Main {
                 if(numerocarte==3)
                 {
                 	
-                	      System.out.println("Inserisci la riga delle carte da prelevare, questa sarà la riga di partenza  ");
+                	         System.out.println("Inserisci la riga della prima tessera da prelevare, questa sarà la riga di partenza");
            	    	         riga=sc.nextInt();
            	    	       
                 	  
                 	   
-                	    	 System.out.println("Inserisci la colonna delle carte da prelevare, questa sarà la colonna di partenza ");
+                	    	 System.out.println("Inserisci la colonna della prima tessera da prelevare, questa sarà la riga di partenza");
                 	    	 colonna=sc.nextInt();
                 	    	
                 	    
                 	   
-                		     System.out.println("Vuoi prelevare in verticale o orizzontale? v/o ");
+                		     System.out.println("Vuoi prelevare le altre tessere in verticale o orizzontale? v/o");
                 	       
                 	      
                 	         r=sca0.nextLine();
@@ -978,11 +969,11 @@ public class Main {
                 	        	 
 
                 		       
-                		        	   System.out.println("Vuoi salire o scendere per la riga successiva1? ");
+                		        	   System.out.println("Vuoi passare alla riga inferiore (+1) o superiore (-1) per la seconda tessera?");
 
                 		       
                 		        	   a=sc.nextInt();
-                		        	   System.out.println("Vuoi salire o scendere per la riga successiva2?" );
+                		        	   System.out.println("Vuoi passare a due righe inferiori (+2) o superiori (-2) rispetto alla riga di partenza per la terza tessera?" );
                             	        
                 		        	   c=sc.nextInt();
                 		        
@@ -1015,9 +1006,9 @@ public class Main {
                 	         if(rc=='o')
                 	         {
                 	        	 
-                		        System.out.println("Vuoi andare alla colonna successiva1");
+                		        System.out.println("Vuoi passare alla colonna successiva (+1) o precedente (-1) per la seconda tessera?");
                 		        b=sc.nextInt();
-                		        System.out.println("Vuoi andare alla colonna successiva2?");
+                		        System.out.println("Vuoi passare a due colonne successive (+2) o precedenti (-2) rispetto alla colonna di partenza per la terza tessera?");
                 		        d=sc.nextInt();
                 		         
                 		        

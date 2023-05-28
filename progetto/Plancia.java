@@ -1461,8 +1461,10 @@ return controllo;
 }
   
 
-	// caso 2 gioc 2 carte: non riscontro problemi
-	// caso 2 gioc 3 carte: non riscontro problemi
+
     // ---> resta da implementare il controllo per impedire la selezione di singole tessere con soli zeri e x adiacenti in nuovo turno
     // ---> resta da implementare il controllo per impedire, quando si vogliono prendere tessere in fila o colonna, si selezionare tessere della stessa riga/colonna ma 
     //      non adiacenti (credo basti imporre che, quando il giocatore deve dire se salire o scendere ecc, si sia un controllo a ciclo sul numero immesso)
+
+
+	// caso 4 gioc 3 carte: problemi con il prelievo in verticale dalla prima riga
