@@ -1469,4 +1469,11 @@ return controllo;
 
 	// caso 4 gioc 3 carte: problemi con il prelievo in verticale dalla prima riga (DA CORREGGERE)
 	
-	// richiamare un controllo del numero massimo di elementi che si possono prendere (DA FARE)
+	// richiamare un controllo del numero massimo di elementi che si possono prendere e immettere (DA FARE)
+
+	// quando nella propria libreria ho già tre tessere in una colonna non mi lascia metterne 3 sopra e mi rimette nel ciclo di richiaesta colonna
+	// se ne ho 2 e poi 3 funziona, se ne ho 3 e poi 2 funziona  (CONTROLLARE)
+
+	// riempimento plancia non attivo (DA FARE)
+
+	// implementare ciclo per quando si immettono le tessere nella propria libreria sulla colonna selezionata, altrimenti riporta errore (DA FARE)
