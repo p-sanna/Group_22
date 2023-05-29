@@ -1467,4 +1467,6 @@ return controllo;
     //      non adiacenti (credo basti imporre che, quando il giocatore deve dire se salire o scendere ecc, si sia un controllo a ciclo sul numero immesso)
 
 
-	// caso 4 gioc 3 carte: problemi con il prelievo in verticale dalla prima riga
+	// caso 4 gioc 3 carte: problemi con il prelievo in verticale dalla prima riga (DA CORREGGERE)
+	
+	// richiamare un controllo del numero massimo di elementi che si possono prendere (DA FARE)
