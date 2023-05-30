@@ -50,6 +50,7 @@ public class Libreria  {
 				 a=sc.nextInt();
 				 
 				 r=Controllor(a,lunghezza,l);
+				 System.out.println(r);
 				  if(r!=-6)
 				   {
 					   for(int j=r;j>r-lunghezza;j--)
@@ -91,7 +92,7 @@ public class Libreria  {
 		int i=0,contatore=0;
 		boolean check=false;
 		int riga=0;
-		   for(i=6;i>=0;i--)
+		   for(i=5;i>=0;i--)
 		   {
 			 if(lunghezza==1&&i>=0)
 			 {
@@ -111,8 +112,9 @@ public class Libreria  {
 			   
 		     }
 			 
-			 if (lunghezza==2&&i-2>=0)
+			 if (lunghezza==2&&i-1>=0)
 			 {
+				 System.out.println("i "+i);
 				 
 				 if(l.riempimentocasella[i][a-1]==false&&l.riempimentocasella[i-1][a-1]==false)
 				 {
@@ -126,8 +128,9 @@ public class Libreria  {
 					   riga=-6;
 				   }
 			 }
-			 if (lunghezza==3&&i-3>=0)
+			 if (lunghezza==3&&i-2>=0)
 			 {
+				 System.out.println("i "+i);
 				 
 				 if(l.riempimentocasella[i][a-1]==false&&l.riempimentocasella[i-1][a-1]==false&&l.riempimentocasella[i-2][a-1]==false)
 				 {
