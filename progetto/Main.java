@@ -85,7 +85,7 @@ public class Main {
 			        if(d==6&&nbianche>0)
 			        {
 
-				        Tessera bi= new Tessera (nbianche,"Bianca","Libri");
+				        Tessera bi= new Tessera (nbianche,"White","Libri");
 				         nbianche--;
 				         i++;
 				         carte.add(bi);

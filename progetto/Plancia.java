@@ -1218,42 +1218,7 @@ return controllo;
 	        	 }
 	        	 
 	        	 
-	        	 if((riga1==0||riga1+sfasamento1==0)&&(riga1+sfasamento1>-1)&&colonna1>=1&&colonna1<8)
-	        	 {
-	        		 System.out.println("Oggi1");
-	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
-	        		 {
-	        			 System.out.println("Oggi2");
-	                     //inserire if che discrimina uno
-
-	        			 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
-	        			 {
-	        				 System.out.println("Oggi3");
-	        				 
-	        				 if((t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='0'||t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='x'||t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='x'))
-        					 {
-
-	        				 if((t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='0'||t[riga1-1+sfasamento1][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='x'||t[riga1-1+sfasamento1][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='x'))
-	        				 {
-	        					 System.out.println("Provariga");
-	        					 System.out.println("Oggi4");
-	        			           if(t[riga1+sfasamento1][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento1][colonna1].getInizialeColore()!='x')
-	        			        		   {
-	        			        	            
-	        			        	           if(t[riga1+sfasamento2][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento2][colonna1].getInizialeColore()!='x')   
-	        			        		      
-	        			        	        	   {controllo=true;
-	        			        	                System.out.println("Oggi5");
-	        			        		         }
-	        			        	           }
-
-	        			 }}
-
-
-	        	     }
-
-	        	 }
-	        	 }
+	        	 
 	        	 
 	        	 //Adesso2
 	        	 if((riga1==8||riga1+sfasamento2==8)&&(riga1+sfasamento2<9)&&colonna1>=1&&colonna1<8)
