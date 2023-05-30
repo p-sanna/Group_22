@@ -2,17 +2,33 @@ package carte;
 
 import java.util.Random;
 
+import progetto.Libreria;
+
 public class CartaObiettivoPersonale {
 	static String caso;
 	
 	
-	public static void main(String[] args) {
-		
+	
+	
 		
 		int righe = 6;
 		int colonne = 5;
 		char[][] matrice = new char[righe][colonne];
+		char[][] matrice1 = new char[righe][colonne];
+		char[][] matrice2 = new char[righe][colonne];
+		char[][] matrice3 = new char[righe][colonne];
+		char[][] matrice4 = new char[righe][colonne];
+		char[][] matrice5 = new char[righe][colonne];
+		char[][] matrice6 = new char[righe][colonne];
+		char[][] matrice7 = new char[righe][colonne];
+		char[][] matrice8 = new char[righe][colonne];
+		char[][] matrice9 = new char[righe][colonne];
+		char[][] matrice10 = new char[righe][colonne];
+		char[][] matrice11 = new char[righe][colonne];
+		char[][] matrice12 = new char[righe][colonne];
 
+public void CaricaMatrici()
+{
 		// Inizializza tutti gli elementi della matrice a zero di prova
 		for (int i = 0; i < righe; i++) {
 		    for (int j = 0; j < colonne; j++) {
@@ -31,25 +47,14 @@ public class CartaObiettivoPersonale {
         System.out.println();
 		
 		
-		char[][] matrice1 = new char[righe][colonne];
-		char[][] matrice2 = new char[righe][colonne];
-		char[][] matrice3 = new char[righe][colonne];
-		char[][] matrice4 = new char[righe][colonne];
-		char[][] matrice5 = new char[righe][colonne];
-		char[][] matrice6 = new char[righe][colonne];
-		char[][] matrice7 = new char[righe][colonne];
-		char[][] matrice8 = new char[righe][colonne];
-		char[][] matrice9 = new char[righe][colonne];
-		char[][] matrice10 = new char[righe][colonne];
-		char[][] matrice11 = new char[righe][colonne];
-		char[][] matrice12 = new char[righe][colonne];
+		
 		
 		// Carta Personale 1
 		System.out.println("personale 1 prova");
 		
 		for (int i = 0; i < righe; i++) {
 		    for (int j = 0; j < colonne; j++) {
-		        matrice1[i][j] = '0';
+		        matrice1[i][j] = 'X';
 		    }
 		}
 		
@@ -73,7 +78,7 @@ public class CartaObiettivoPersonale {
 		
 		for (int i = 0; i < righe; i++) {
 		    for (int j = 0; j < colonne; j++) {
-		        matrice2[i][j] = '0';
+		        matrice2[i][j] = 'X';
 		    }
 		}
 		
@@ -97,7 +102,7 @@ public class CartaObiettivoPersonale {
 		
 		for (int i = 0; i < righe; i++) {
 		    for (int j = 0; j < colonne; j++) {
-		        matrice3[i][j] = '0';
+		        matrice3[i][j] = 'X';
 		    }
 		}
 		
@@ -121,7 +126,7 @@ public class CartaObiettivoPersonale {
      		
      		for (int i = 0; i < righe; i++) {
      		    for (int j = 0; j < colonne; j++) {
-     		        matrice4[i][j] = '0';
+     		        matrice4[i][j] = 'X';
      		    }
      		}
      		
@@ -145,7 +150,7 @@ public class CartaObiettivoPersonale {
      		
      		for (int i = 0; i < righe; i++) {
      		    for (int j = 0; j < colonne; j++) {
-     		        matrice5[i][j] = '0';
+     		        matrice5[i][j] = 'X';
      		    }
      		}
      		
@@ -169,7 +174,7 @@ public class CartaObiettivoPersonale {
      		
      		for (int i = 0; i < righe; i++) {
      		    for (int j = 0; j < colonne; j++) {
-     		        matrice6[i][j] = '0';
+     		        matrice6[i][j] = 'X';
      		    }
      		}
      		
@@ -193,7 +198,7 @@ public class CartaObiettivoPersonale {
      		
      		for (int i = 0; i < righe; i++) {
      		    for (int j = 0; j < colonne; j++) {
-     		        matrice7[i][j] = '0';
+     		        matrice7[i][j] = 'X';
      		    }
      		}
      		
@@ -217,7 +222,7 @@ public class CartaObiettivoPersonale {
      		
      		for (int i = 0; i < righe; i++) {
      		    for (int j = 0; j < colonne; j++) {
-     		        matrice8[i][j] = '0';
+     		        matrice8[i][j] = 'X';
      		    }
      		}
      		
@@ -241,7 +246,7 @@ public class CartaObiettivoPersonale {
      		
      		for (int i = 0; i < righe; i++) {
      		    for (int j = 0; j < colonne; j++) {
-     		        matrice9[i][j] = '0';
+     		        matrice9[i][j] = 'X';
      		    }
      		}
      		
@@ -265,7 +270,7 @@ public class CartaObiettivoPersonale {
      		
      		for (int i = 0; i < righe; i++) {
      		    for (int j = 0; j < colonne; j++) {
-     		        matrice10[i][j] = '0';
+     		        matrice10[i][j] = 'X';
      		    }
      		}
      		
@@ -289,7 +294,7 @@ public class CartaObiettivoPersonale {
      		
      		for (int i = 0; i < righe; i++) {
      		    for (int j = 0; j < colonne; j++) {
-     		        matrice11[i][j] = '0';
+     		        matrice11[i][j] = 'X';
      		    }
      		}
      		
@@ -313,7 +318,7 @@ public class CartaObiettivoPersonale {
      		
      		for (int i = 0; i < righe; i++) {
      		    for (int j = 0; j < colonne; j++) {
-     		        matrice12[i][j] = '0';
+     		        matrice12[i][j] = 'X';
      		    }
      		}
      		
@@ -332,7 +337,7 @@ public class CartaObiettivoPersonale {
      		}
              System.out.println();
              
-             
+  
              
         // controllare problemi iniziale colore (bianco-blu)
 
@@ -359,10 +364,61 @@ public class CartaObiettivoPersonale {
 		
 		
 		
-        // crea oggetto Random
+       
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             // crea oggetto Random
         Random random = new Random();
         // genera numero casuale tra 0 e 3
-        int number = random.nextInt(3);
+        int number = random.nextInt(12);
         switch(number) {
 	case 0: 
 		System.out.println("");
@@ -408,9 +464,137 @@ public class CartaObiettivoPersonale {
 	}
 	}
 	
+
+
+	
+
+	//FARE NEL MAIN UN numero random da a 12 che ti dice quale matrice prendere
+
+public int PunteggioPersonale(Libreria l,char [][] a)
+{
+	  int contatore=0,punteggio=0;
+	   for(int i=0;i<6;i++)
+	   {
+		   for (int j=0;j<5;j++)
+		   {
+			   if(l.casellario[i][j].getInizialeColore()==a[i][j])
+			   {
+				   contatore++;
+			   }
+		   }
+			   
+	   }
+	   
+	   if(contatore==1)
+	   {
+		   punteggio++;
+	   }if(contatore==2)
+	   {
+		   punteggio=2;
+	   }if(contatore==3)
+	   {
+		   punteggio=4;
+	   }if(contatore==4)
+	   {
+		   punteggio=6;
+	   }
+	   if(contatore==5)
+	   {
+		   punteggio=9;
+	   }
+	   if(contatore==6)
+	   {
+		   punteggio=12;
+	   }
+		return punteggio;   
+}
 }
 
-	
 
+
+
+
+/*metodo nel main
+ * 
+ * 
+ * da ripetere per ngiocatori
+ * 
+ * ArrayList <char> obiettivopersonale= new ArrayList();
+ * CartaObiettivoPersonale m= new CartaObiettivoPersonale();
+ * int appoggio=0;
+ * do
+ * {
+ * int numero = random.nextInt(12);
+ * 
+ * }while(appoggio!=numero);
+ * appoggio=numero;
+ * 
+        switch(number) {
+	case 0: 
+		System.out.println("");
+		obiettivopersonale.add(m.matrice1);
+		
+		break;
+	case 1:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+		
+	case 2:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+		
+	case 3:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	case 4:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	case 5:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	case 6:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	case 7:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	case 8:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	case 9:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	case 10:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	case 11:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	case 12:
+		System.out.println ("");
+		obiettivopersonale.add(m.matrice1);
+		break;
+	}
+	}
 	
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+
+
 

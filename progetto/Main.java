@@ -1,11 +1,17 @@
 package progetto;
 import java.util.*;
 
+import carte.CartaOb;
+
 public class Main {
 
 	public static void main(String[] args) {
 
 		int i=0;
+		CartaOb att= new CartaOb();
+		att.CaricaMatrici();
+		
+		System.out.println("Carta ob"); //Togliere
 		 System.out.println("ciao");   
 		int nverdi=22,nrosse=22,nblu=22,nazzurre=22,ngialle=22,nbianche=22;
 
@@ -1083,14 +1089,14 @@ public class Main {
 	// 3-tessere uguali adiacenti (possono/devono essere calcolati solo alla fine)
 	// 4-primo giocatore che completa la libreria (controllo ogni volta che vengono immesse tessere nella libreria, appena il primo completa la libreria termina il gioco)
 
-	// metodo4: controllare che ogni elemento della libreria sia diverso da 0 (matrice della libreria inizializzata a tanti 0, prima di passare al turno successivo)
+	// metodo4: controllare che ogni elemento della libreria sia diverso da 0 (matrice della libreria inizializzata a tanti 0, prima di passare al turno successivo)->fatto
 
 	// metodo1: verificare che la matrice obiettivo personale e la matrice della libreria abbiano elementi uguali nelle stesse coordinate (due cicli for che scorrono le  
 	//          matrici e verificano ogni volta se l'elemento è uguale o no?, possibile problema: se la libreria non è completa potrebbe considerare gli zeri delle due  
     //          matrici come valore uguale)
 
     // metodo3: realizzare qualcosa di simile al controllo delle tessere adiacenti della plancia, si sceglie una iniziale e si verifica se ce ne siano di uguali adiacenti,
-    //          si sommano gli eventuali punti e poi si passa alla lettera successiva.
+    //          si sommano gli eventuali punti e poi si passa alla lettera successiva. 
 
     // metodo2: implementare un controllo diverso per ogni tessere obiettivo comune, in parte credo si possa adattare parte dei controlli del metodo3 ma sicuramente è il più
     //          difficile da realizzare, non mi vengono in mente idee per renderlo facile da realizzare

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Libreria  {
 	private String nomegiocatore;
 	private int numgiocatore;
-	private Tessera [][] casellario;
+	public Tessera [][] casellario;
 	private boolean [][] riempimentocasella;
 
 	public Libreria (String giocatore, int ngiocatore)
@@ -226,5 +226,41 @@ public class Libreria  {
 		   }
 		   return a;
 	}
+	
+	public boolean LibreriaPiena(Libreria l)
+	{
+		boolean a=false;
+	    int contatore=0;
+		  for(int i=0;i<5;i++)
+		  {
+			  if(l.riempimentocasella[0][i]==true)
+			  {
+				  contatore++;
+			  }
+				  
+		  }
+		  if(contatore>=5)
+		  {
+			  a=true;
+		  }
+		 return true;
+	}
+	
+	
+	private void Punti(Libreria l)
+	{
+         int i=0,contatore=0;
+            if(i==0)
+            {
+            	for(int j=1;j<5;j++)
+            	{
+            		if(l.casellario[i][j].getInizialeColore()==l.casellario[i][j+1].getInizialeColore()&&l.casellario[i][j].getInizialeColore()==l.casellario[i][j-1].getInizialeColore()&&l.casellario[i][j].getInizialeColore()==l.casellario[i+1][j].getInizialeColore())
+            		{
+            			contatore=2;
+            		}
+            	}
+            }
+    }
+	
 
 }
