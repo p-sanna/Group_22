@@ -91,7 +91,7 @@ public class Libreria  {
 		int i=0,contatore=0;
 		boolean check=false;
 		int riga=0;
-		   for(i=5;i>=0;i--)
+		   for(i=6;i>=0;i--)
 		   {
 			 if(lunghezza==1&&i>=0)
 			 {
