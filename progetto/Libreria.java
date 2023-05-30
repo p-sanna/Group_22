@@ -205,5 +205,26 @@ public class Libreria  {
 	{
 		return r.numgiocatore;
 	}
+	public boolean SpazioDisponibile(Libreria r, int carte)
+	{
+		int contatore=0;
+		boolean a=false;
+		   for (int i=5;i>=0;i--)
+		   {
+			   for(int j=4;j>=0;j--)
+			   {
+				   if(r.riempimentocasella[i][j]==false)
+				   {
+					   contatore++;
+				   }
+			   }
+		   }
+		   
+		   if(contatore>=carte)
+		   {
+			   a=true;
+		   }
+		   return a;
+	}
 
 }
