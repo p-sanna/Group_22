@@ -3,6 +3,7 @@ import java.util.*;
 
 import Funzionalità.Ciclico;
 import carte.CartaOb;
+import carte.CartaObC;
 
 public class Main {
 
@@ -152,7 +153,7 @@ public class Main {
             
             //Inizio prelievo
              int riga = 0,colonna = 0,numerocarte=0;
-             int contatoreturni=1;
+             int contatoreturni=1,number1=0;
              String r = null;
              String nome1 = "";
              String nome2 = "";
@@ -161,6 +162,19 @@ public class Main {
  	         char rc=0,sd=0;
         	 boolean correttezza=false,correttezza2=false,correttezza3=false,finepartita=false; 
         	 Scanner sc= new Scanner(System.in);
+        	 int cr=0;
+        	 Random random1 = new Random();
+        	 int number = random1.nextInt(12);
+        	do
+        		{
+        		
+        		
+        	     number1 = random1.nextInt(12);
+        		}while(number==number1);
+        	
+        	CartaObC x= new CartaObC(number);
+        	CartaObC y= new CartaObC(number1);
+        	
         switch(numerogiocatori)
         {
         case 2:

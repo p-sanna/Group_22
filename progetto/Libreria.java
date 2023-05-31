@@ -295,7 +295,7 @@ public class Libreria  {
 		      System.out.println("Punteggio"+punteggio);
 		      return punteggio;	
 		     //ciaoooo
-		      System.out.printn("ciao");
+		      
     }
 	
 	public int Difficile(Libreria l, int num)
