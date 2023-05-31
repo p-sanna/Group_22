@@ -10,6 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		int i=0;
+		int ris1=0,ris2=0;
 		CartaOb att= new CartaOb();
 		att.CaricaMatrici();
 	   Ciclico prova= new Ciclico(att.matrice1);
@@ -461,15 +462,112 @@ public class Main {
    	      numerocarte=0;
           if(contatoreturni%2==0)
           {
+        	   
         	 l1.RiempiLibreria(lib,l1);
         	 l1.StampaLibreria(l1);
+        	   if(ris1==0)
+        	   {
+        		   ris1=l1.Difficile(l1, number, numerogiocatori, primo);
+        		   if (ris1!=0)
+        		   {
+        		    primo.punteggio=primo.punteggio+8;
+        		   }
+        	   }
+        	   else
+        	   {
+        		  int supporto=ris1;
+        		  ris1=0;
+        		   ris1=l1.Difficile(l1, number, numerogiocatori, primo);
+        		     if(ris1==8)
+        		     {
+        		    	 primo.punteggio=primo.punteggio+4;
+        		     }
+        		     else
+        		     {
+        		      ris1=supporto;
+        		     }
+        	   }
+        	   if(ris2==0)
+        	   {
+        		   ris2=l1.Difficile(l1, number1, numerogiocatori, primo);
+        		   if (ris2!=0)
+        		   {
+        		    primo.punteggio=primo.punteggio+8;
+        		   }
+        	   }
+        	   else
+        	   {
+        		  int supporto2=ris2;
+        		  ris2=0;
+        		   ris2=l1.Difficile(l1, number1, numerogiocatori, primo);
+        		     if(ris2==8)
+        		     {
+        		    	 primo.punteggio=primo.punteggio+4;
+        		     }
+        		     else
+        		     {
+        		      ris2=supporto2;
+        		     }
+        	   }
+        	   
+        	
+        	    
           }
           else
           {
         	  l2.RiempiLibreria(lib,l2);
         	  l2.StampaLibreria(l2);
+        	  
+        	  if(ris1==0)
+       	   {
+       		   ris1=l2.Difficile(l2, number, numerogiocatori, secondo);
+       		   if (ris1!=0)
+       		   {
+       		    secondo.punteggio=secondo.punteggio+8;
+       		   }
+       	   }
+       	   else
+       	   {
+       		  int supporto=ris1;
+       		  ris1=0;
+       		   ris1=l2.Difficile(l2, number, numerogiocatori, secondo);
+       		     if(ris1==8)
+       		     {
+       		    	 secondo.punteggio=secondo.punteggio+4;
+       		     }
+       		     else
+       		     {
+       		      ris1=supporto;
+       		     }
+       	   }
+       	   if(ris2==0)
+       	   {
+       		   ris2=l2.Difficile(l2, number1, numerogiocatori, secondo);
+       		   if (ris2!=0)
+       		   {
+       		    secondo.punteggio=secondo.punteggio+8;
+       		   }
+       	   }
+       	   else
+       	   {
+       		  int supporto2=ris2;
+       		  ris2=0;
+       		   ris2=l2.Difficile(l2, number1, numerogiocatori, secondo);
+       		     if(ris2==8)
+       		     {
+       		    	 secondo.punteggio=secondo.punteggio+4;
+       		     }
+       		     else
+       		     {
+       		      ris2=supporto2;
+       		     }
+       	   }
+       	   
+       	
+       	    
+         }
         	  System.out.println("ciaoooo");
-          }
+          
           lib=null;
           
    	      System.out.println("Tocca a un altro giocatore");  

@@ -45,9 +45,8 @@ public class CartaObC {
 		case 11:
 			System.out.println ("");
 			break;
-		case 12:
-			System.out.println ("");
-			break;
+		
+			
 		}
 	}
 	public int getNumero(CartaObC a)

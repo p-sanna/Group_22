@@ -74,7 +74,7 @@ public class Ciclico {
 	                if (!visitato[i][j]) {
 	                    char carattere = matrice[i][j];
 	                    int elementi = visitaRicorsiva(i, j, carattere,matrice);
-	                    if (elementi > ele) {
+	                    if (elementi >= ele) {
 	                        gruppi++;
 	                        g.add(elementi);
 	                        System.out.println("Gruppo " + gruppi + ": " + elementi + " elementi");
@@ -93,17 +93,20 @@ public class Ciclico {
 	        
 	    }
 	    
-	    public boolean Metodo3(char a[][])
+	    public static boolean Metodo3(char a[][])
 	    {
 	    	boolean b=false;
 	    	if(a[0][0]==a[0][4]&&a[0][0]==a[5][0]&&a[0][0]==a[5][4])
 	    	{
-	    		b=true;
+	    		if(a[0][0]!='0')
+	    				{
+	    						b=true;
+	    				}
 	    	}
 	    	return b;
 	    }
 	    
-	    public boolean Metodo4(char a[][]) //metodo 4blocchi
+	    public static boolean Metodo4(char a[][]) //metodo 4blocchi
 	    {
 	    	int j=0,contatore=0;
 	    	boolean b=false;
@@ -113,7 +116,12 @@ public class Ciclico {
 	    		{
 	    			if(a[i][j]==a[i][j+1]&&a[i][j]==a[i+1][j]&&a[i+1][j+1]==a[i][j])
 	    			{
-	    				contatore++;
+	    				if(a[i][j]!='0')
+	    					{ 
+	    					  contatore++;
+	    					
+	    					}
+	    				System.out.println("contatore " +contatore);
 	    			}
 	    		}
 	    		j++;	
@@ -126,7 +134,7 @@ public class Ciclico {
 	    	}
 	    	return b;
 	    }
-	    public boolean Metodo5(char a[][])
+	    public static boolean Metodo5(char a[][])
 	    {
 	    	int contatore1 = 0,contatore2 = 0,j=0;
 	    	boolean b=false;
@@ -155,7 +163,7 @@ public class Ciclico {
 	    	return b;
 	    }
 	    
-	    public boolean Metodo6(char a[][])
+	    public static boolean Metodo6(char a[][])
 	    {
 	    	char app=a[0][0];
 	    	int contw=0,contb=0,contg=0,contr=0,contv=0,conta=0;
@@ -198,31 +206,44 @@ public class Ciclico {
 	     return b;
 	    }  
 	    
-	  public boolean Metodo7(char a[][])  
+	  public static boolean Metodo7(char a[][])  
 	  {
 		  boolean b=false;
 		     //prima diagonale
 		  
 		       if(a[0][0]==a[1][1]&&a[0][0]==a[2][2]&&a[0][0]==a[3][3]&&a[0][0]==a[4][4])
 		       {
-		    	   b=true;
+		    	   if(a[0][0]!='0')
+		    		   {
+		    		    b=true;
+		    		   }
 		       }
 		       if(a[1][0]==a[2][1]&&a[1][0]==a[3][2]&&a[1][0]==a[4][3]&&a[1][0]==a[5][4])
 		       {
-		    	   b=true;
+		    	   if(a[1][0]!='0')
+		    		   {
+		    		   b=true;
+		    		   }
 		       }
 		       if(a[0][4]==a[1][3]&&a[0][4]==a[2][2]&&a[0][4]==a[3][1]&&a[0][4]==a[4][0])
 		       {
-		    	   b=true;
+		    	   if(a[0][4]!='0') 
+		    		   {
+		    		    b=true;
+		    		   }
 		       }
 		       if(a[1][4]==a[2][3]&&a[1][4]==a[3][2]&&a[1][4]==a[4][1]&&a[1][4]==a[5][0])
 		       {
-		    	   b=true;
+		    	   if(a[1][4]!='0') 
+		    	   {
+		    		   
+		    		   b=true;
+		    	   }
 		       }
 		       return b;
 	  }
 	  
-	  public boolean Metodo8(char a[][])
+	  public static boolean Metodo8(char a[][])
 	  {
 
 	    	int contatore1 = 0,contatore2 = 0,i=0;
@@ -251,14 +272,14 @@ public class Ciclico {
 	    	}
 	    	return b;
 	  }
-	   public Boolean Metodo9(char a[][]) 
+	   public static Boolean Metodo9(char a[][]) 
 	   {
 		   boolean b=false;
 		   int contatore1=0,contatore2=0,i=0;
-		     for (int j=0;i<5;j++)
+		     for (int j=0;j<5;j++)
 		     {
 		    	 
-		    		 if(a[i][j]!=a[i+1][j]&&a[i][j]!=a[i+3][j]&&a[i][j]!=a[i+4][j]&&a[i][j]!=a[i+5][j]&&a[i+2][j]==a[i][j])
+		    		 if(a[i][j]!=a[i+1][j]&&a[i][j]!=a[i+3][j]&&a[i][j]!=a[i+4][j]&&a[i][j]!=a[i+5][j]&&a[i+2][j]!=a[i][j])
 		    		 {
 		    			 if(a[i+1][j]!=a[i+3][j]&&a[i+1][j]!=a[i+4][j]&&a[i+1][j]!=a[i+5][j]&&a[i+1][j]!=a[i+2][j])
 			    		 {
@@ -269,6 +290,7 @@ public class Ciclico {
 				    				if(a[i+2][j]!=a[i+3][j]&&a[i+2][j]!=a[i+4][j]&&a[i+2][j]!=a[i+5][j])
 				    						{
 				    					     contatore1++;
+				    					     System.out.println("Porcalazia");
 				    						}
 				    			 }
 				    		 }
@@ -284,13 +306,12 @@ public class Ciclico {
 	   }
 	   
 	   
-	   public boolean Metodo10(char a[][])
+	   public static boolean Metodo10(char a[][])
 	   {
 		   int contatore=0;
 		   boolean b=false;
-		      for(int i=0;i<5;i++)
-		      {
-		    	  for(int j=0;j<6;j++)
+		     int i=0;
+		    	  for(int j=0;j<5;j++)
 		    	  {
 		    		  if(a[j][i]!=a[j][i+1]&&a[j][i]!=a[j][i+2]&&a[j][i]!=a[j][i+3]&&a[j][i]!=a[j][i+4])
 		    		  {
@@ -306,7 +327,7 @@ public class Ciclico {
 		    			  }
 		    		  }
 		    	  }
-		      }
+		      
 		      if (contatore==2)
 		      {
 		    	  b= true;
@@ -315,7 +336,7 @@ public class Ciclico {
 	   }
 	   
 	   
-	   public boolean Metodo11(char a[][])
+	   public static boolean Metodo11(char a[][])
 	   {
 		   int contatore=0, x=0,y=0;
 		   boolean b=false;
@@ -326,7 +347,11 @@ public class Ciclico {
 		    		 if(a[x][y]==a[x][y+2]&&a[x][y]==a[x+2][y+2]&&a[x][y]==a[x+2][y]&&a[x][y]==a[x+1][y+1])
 		    		 
 		    	  {
-		    		  contatore++;
+		    		  if(a[x][y]!='0')
+		    			  {
+		    			    contatore++;
+		    			  }
+		    			  
 		    	  }
 		    		 }
 		      }
@@ -337,7 +362,7 @@ public class Ciclico {
 		      return b;
 	   }
 	   
-	   public boolean Metodo12 (char a[][])
+	   public static boolean Metodo12 (char a[][])
 	   {
 		   int cont1=0,cont2=0,cont3=0,cont4=0,cont5=0;
 		       if(a[5][0]!='0'&&a[4][0]!='0'&&a[3][0]!='0'&&a[2][0]!='0'&&a[1][0]!='0')//colonna0

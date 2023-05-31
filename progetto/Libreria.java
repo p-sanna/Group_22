@@ -298,11 +298,11 @@ public class Libreria  {
 		      
     }
 	
-	public int Difficile(Libreria l, int num)
+	public int  Difficile(Libreria l, int num,int ngioc, Giocatore g)
 	{
 		  char a[][]= new char[6][5];
 		 
-		 
+		 boolean appoggio=false;
 		  for(int i=0;i<6;i++)
 		  {
 			  for(int j=0;j<5;j++)
@@ -316,17 +316,207 @@ public class Libreria  {
 		 
   		//
 	  int punteggio=0;
-	 boolean appoggio=false;
-		for (int i=0;i<6;i++)
-		{
-			for(int j=0;j<5;j++)
-			{
-				
-					appoggio= Ciclico.Metodo2(a,2,6);
-					   if(appoggio=true&&)   
-				
-			}
-		}
+	      
+	    	   switch(num)
+	    	   {
+	    	     case 1:
+	    	    	 appoggio=Ciclico.Metodo2(a, 2, 6);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   appoggio=false;
+	    	    	   break;
+	    	    	   
+	    	     case 2:
+	    	    	 
+	    	    	 appoggio=Ciclico.Metodo2(a, 4, 4);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 3:
+	    	    	   appoggio=Ciclico.Metodo3(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 4:
+	    	    	   appoggio=Ciclico.Metodo4(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 5:
+	    	    	   appoggio=Ciclico.Metodo5(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 6:
+	    	    	   appoggio=Ciclico.Metodo6(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 7:
+	    	    	   appoggio=Ciclico.Metodo7(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 8:
+	    	    	   appoggio=Ciclico.Metodo8(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 9:
+	    	    	   appoggio=Ciclico.Metodo9(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 10:
+	    	    	   appoggio=Ciclico.Metodo10(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 11:
+	    	    	   appoggio=Ciclico.Metodo11(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	     case 12:
+	    	    	   appoggio=Ciclico.Metodo12(a);
+	    	    	   if(appoggio==true)
+	    	    	   {
+	    	    		   if(num==1)
+	    	    		   {
+	    	    			  if (g.obc1=false)
+	    	    			   {
+	    	    				  g.obc1=true; 
+	    	    				  return 8;
+	    	    				  
+	    	    			   }
+	    	    			   
+	    	    		   }
+	    	    	   }
+	    	    	   break;
+	    	   }
+			return punteggio=0;
+	       
 	}
 	
 

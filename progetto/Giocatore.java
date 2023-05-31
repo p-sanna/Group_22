@@ -5,6 +5,8 @@ public class Giocatore {
 	private String nome;
 	public int punteggio;
 	private int posizione=0;
+	boolean obc1=false;
+	boolean obc2=false;
 	
 	public Giocatore (String nome) 
 	{
