@@ -258,28 +258,13 @@ public class Libreria  {
 		  {
 			  for(int j=0;j<5;j++)
 			  {
-				  //a[i][j]=l.casellario[i][j].getInizialeColore();
+				  a[i][j]=l.casellario[i][j].getInizialeColore();
 				  
 				  
 			  }
 			  
 		  }
-		  for (int i = 0; i < 6; i++) {
-   		    for (int j = 0; j < 5; j++) {
-   		        a[i][j] = 'X';
-   		    }
-   		}
-   		
-   		a[3][0] = 'R'; 
-   		a[0][4] = 'B';
-   		a[1][1] = 'V';
-   		a[5][3] = 'G';
-   		a[2][2] = 'A';
-   		a[4][3] = 'W';
-   		a[0][0]='A';
-   		a[0][1]='A';
-   		a[0][2]='A';
-   		a[0][3]='A';
+		 
    		
    		
    		
@@ -309,8 +294,40 @@ public class Libreria  {
 		    	      }
 		      System.out.println("Punteggio"+punteggio);
 		      return punteggio;	
-		     
+		     //ciaoooo
+		      System.out.printn("ciao");
     }
+	
+	public int Difficile(Libreria l, int num)
+	{
+		  char a[][]= new char[6][5];
+		 
+		 
+		  for(int i=0;i<6;i++)
+		  {
+			  for(int j=0;j<5;j++)
+			  {
+				  a[i][j]=l.casellario[i][j].getInizialeColore();
+				  
+				  
+			  }
+			  
+		  }
+		 
+  		//
+	  int punteggio=0;
+	 boolean appoggio=false;
+		for (int i=0;i<6;i++)
+		{
+			for(int j=0;j<5;j++)
+			{
+				
+					appoggio= Ciclico.Metodo2(a,2,6);
+					   if(appoggio=true&&)   
+				
+			}
+		}
+	}
 	
 
 }
