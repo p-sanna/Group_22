@@ -3,6 +3,8 @@ package progetto;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Funzionalità.Ciclico;
+
 public class Libreria  {
 	private String nomegiocatore;
 	private int numgiocatore;
@@ -247,19 +249,67 @@ public class Libreria  {
 	}
 	
 	
-	private void Punti(Libreria l)
+	public int PuntiTessereAd(Libreria l)
 	{
-         int i=0,contatore=0;
-            if(i==0)
-            {
-            	for(int j=1;j<5;j++)
-            	{
-            		if(l.casellario[i][j].getInizialeColore()==l.casellario[i][j+1].getInizialeColore()&&l.casellario[i][j].getInizialeColore()==l.casellario[i][j-1].getInizialeColore()&&l.casellario[i][j].getInizialeColore()==l.casellario[i+1][j].getInizialeColore())
-            		{
-            			contatore=2;
-            		}
-            	}
-            }
+		 char a[][]= new char[6][5];
+		 int punteggio=0;
+		 ArrayList <Integer> elementi= new ArrayList();
+		  for(int i=0;i<6;i++)
+		  {
+			  for(int j=0;j<5;j++)
+			  {
+				  //a[i][j]=l.casellario[i][j].getInizialeColore();
+				  
+				  
+			  }
+			  
+		  }
+		  for (int i = 0; i < 6; i++) {
+   		    for (int j = 0; j < 5; j++) {
+   		        a[i][j] = 'X';
+   		    }
+   		}
+   		
+   		a[3][0] = 'R'; 
+   		a[0][4] = 'B';
+   		a[1][1] = 'V';
+   		a[5][3] = 'G';
+   		a[2][2] = 'A';
+   		a[4][3] = 'W';
+   		a[0][0]='A';
+   		a[0][1]='A';
+   		a[0][2]='A';
+   		a[0][3]='A';
+   		
+   		
+   		
+		 Ciclico prova= new Ciclico(a);
+		 
+		   elementi=Ciclico.Main(a);
+		   int lunghezza=  elementi.size();
+		      for(int i=0;i<lunghezza;i++)
+		      {
+		    	  if(elementi.get(i)==3)
+		    	  {
+		    		  punteggio=punteggio+2;
+		    	  }
+		    	  if(elementi.get(i)==4)
+		    	  {
+		    		  punteggio=punteggio+3;
+		    	  }
+		    	  if(elementi.get(i)==5)
+		    	  {
+		    		  punteggio=punteggio+5;
+		    	  }
+		    	  if(elementi.get(i)>=6)
+		    	  {
+		    		  punteggio=punteggio+8;
+		    	  }
+		    	  
+		    	      }
+		      System.out.println("Punteggio"+punteggio);
+		      return punteggio;	
+		     
     }
 	
 

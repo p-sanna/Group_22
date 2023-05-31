@@ -7,20 +7,20 @@ import progetto.Libreria;
 public class CartaOb {
 	 static String caso;
      char[][] matrice; 
-		char[][] matrice1;  
-		char[][] matrice2; 
-		char[][] matrice3 ; 
-		char[][] matrice4; 
-		char[][] matrice5 ; 
-		char[][] matrice6 ; 
-		char[][] matrice7 ; 
-		char[][] matrice8 ; 
-		char[][] matrice9 ; 
-		char[][] matrice10 ; 
-		char[][] matrice11 ; 
-		char[][] matrice12 ; 
-		int righe;
-		int colonne;
+		public char[][] matrice1;  
+		public char[][] matrice2; 
+		public char[][] matrice3 ; 
+		public char[][] matrice4; 
+		public char[][] matrice5 ; 
+		public char[][] matrice6 ; 
+		public char[][] matrice7 ; 
+		public char[][] matrice8 ; 
+		public char[][] matrice9 ; 
+		public char[][] matrice10 ; 
+		public char[][] matrice11 ; 
+		public char[][] matrice12 ; 
+		public int righe;
+		public int colonne;
 		
 		
 	public CartaOb()

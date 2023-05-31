@@ -1,6 +1,7 @@
 package progetto;
 import java.util.*;
 
+import Funzionalità.Ciclico;
 import carte.CartaOb;
 
 public class Main {
@@ -10,9 +11,15 @@ public class Main {
 		int i=0;
 		CartaOb att= new CartaOb();
 		att.CaricaMatrici();
-		
+	   Ciclico prova= new Ciclico(att.matrice1);
+	   Ciclico.Main(att.matrice1);
+	   Libreria atttttt= new Libreria("ciaone",1);
+	   
+	   atttttt.PuntiTessereAd(atttttt);
 		System.out.println("Carta ob"); //Togliere
-		 System.out.println("ciao");   
+		 System.out.println("ciao");
+		 //togliere
+		 
 		int nverdi=22,nrosse=22,nblu=22,nazzurre=22,ngialle=22,nbianche=22;
 
 		Random generatore = new Random();
