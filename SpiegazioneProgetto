@@ -1,0 +1,39 @@
+SPIEGAZIONE DEL PROGRAMMA
+-Soggiorno: I giocatori potranno prendere le tessere dal soggiorno e metterle nelle loro librerie
+-Carta Obiettivo Personale: La carta obiettivo personale assegna punti se combini gli spazi evidenziati con le tessere oggetto corrispondenti
+-Carte Obiettivo Comune: Le carte obiettivo comuni assegnano punti ai giocatori che realizzano il modello illustrato. 
+
+- Obiettivo della partita: fare più punti degli avversari.
+Ci sono 4 modi per fare punti:
+  
+Durante il tuo turno devi prendere 1, 2 o 3 tessere oggetto dal soggiorno, seguendo queste regole:
+1.	Da scegliere 2 carte obiettivo comuni da far vedere a tutti
+2.	Una carta segreto personale 
+3.	Posso prendere da 1 a 3 tessere e formare una linea retta.
+almeno libere su un lato
+4.	Puoi mettere tessere in una sola colonna ma nell’ordine che vuoi
+COME FARE PUNTI 
+
+•	Il primo giocatore che riempie completamente la sua libreria guadagna 1 punto in più.
+•	avendo un gruppo di caselle dello stesso colore
+•	completando obiettivi comuni
+•	completare obiettivi personali 
+•	Gruppi di tessere oggetto adiacenti dello stesso tipo sulla tua libreria danno punti a seconda di quante tessere sono collegate (con un lato che si tocca).
+
+
+
+
+
+COME FUNZIONA IL POGRAMMA 
+Per ogni inserimento di valori scriverla direttamente e poi premere invio 
+Prima cosa 
+Inserire il numero di giocatori che varia tra 2 e 4.
+Vi comparirà subito dopo il numero di giocatori selezionati con sotto il nostro ‘soggiorno’ in cui possiamo visualizzare tutte le nostre tessere posizionate in modo randomico. 
+Il gioco vi chiederà di inserire il nome di ogni giocatore uno ad uno per poter procedere. 
+Qui inizia il gioco:
+1.	Come scritto inserire il numero di tessere che si vuole prelevare, con un valore compreso tra 1 a 3, se non si inserirà un valore valido il gioco ripeterà la domanda fino all’inserimento di un valore corretto
+2.	Selezionare la riga su cui si vuole operare
+3.	Selezionare la colonna su cui si vuole operare
+4.	Selezionare se si vuole prelevare le tessere in verticale od orizzontale inserendo il carattere (v) o (o) scritte in minuscolo
+5.	
+
