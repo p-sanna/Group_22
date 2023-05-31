@@ -298,16 +298,16 @@ public class Libreria  {
 		      
     }
 	
-	public int  Difficile(Libreria l, int num,int ngioc, Giocatore g)
+	public int  Difficile(Libreria l, int num,int ngioc, Giocatore g, char a[][])
 	{
-		  char a[][]= new char[6][5];
+		  char b[][]= new char[6][5];//da cambiare
 		 
 		 boolean appoggio=false;
 		  for(int i=0;i<6;i++)
 		  {
 			  for(int j=0;j<5;j++)
 			  {
-				  a[i][j]=l.casellario[i][j].getInizialeColore();
+				  b[i][j]=l.casellario[i][j].getInizialeColore();
 				  
 				  
 			  }
@@ -452,12 +452,15 @@ public class Libreria  {
 	    	    	   break;
 	    	     case 9:
 	    	    	   appoggio=Ciclico.Metodo9(a);
+	    	    	   
 	    	    	   if(appoggio==true)
 	    	    	   {
-	    	    		   if(num==1)
+	    	    		   if(num==9)
 	    	    		   {
 	    	    			  if (g.obc1=false)
+	    	    				  System.out.println("");
 	    	    			   {
+	    	    				  System.out.println("Appoggio "+appoggio);
 	    	    				  g.obc1=true; 
 	    	    				  return 8;
 	    	    				  
@@ -519,5 +522,28 @@ public class Libreria  {
 	       
 	}
 	
-
+public boolean LibreriaPiena2(Libreria l)
+{
+   int contatore=0;
+   boolean a=false;
+    for(int i=0;i<6;i++)
+    {
+    	for (int j=0;j<5;j++)
+    	{
+    		if(l.riempimentocasella[i][j]==true)
+    		{
+    			contatore++;
+    		}
+    			
+    	}
+    	
+    	
+    }
+    if (contatore==30)
+	{
+		a=true;
+	}
+    return a;
+    	
+}
 }
