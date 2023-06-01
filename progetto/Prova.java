@@ -103,7 +103,63 @@ System.out.println(due.obc1);
 }
 
 
+/*
+ * public class MatriceChecker {
+    public static boolean isMatriceValid(char[][] matrice) {
+        for (int i = 0; i < matrice.length; i++) {
+            for (int j = 0; j < matrice[i].length; j++) {
+                char currentChar = matrice[i][j];
+                if (currentChar != 'x' && currentChar != '0' && hasAdjacentChar(matrice, i, j)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
+    private static boolean hasAdjacentChar(char[][] matrice, int row, int col) {
+        // Array di direzioni per controllare gli adiacenti
+        int[] rowOffsets = {-1, 0, 1, 0};
+        int[] colOffsets = {0, 1, 0, -1};
+
+        for (int i = 0; i < 4; i++) {
+            int newRow = row + rowOffsets[i];
+            int newCol = col + colOffsets[i];
+
+            // Controlla se la posizione adiacente è valida e contiene un carattere
+            if (isValidPosition(matrice, newRow, newCol) && matrice[newRow][newCol] != ' ') {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isValidPosition(char[][] matrice, int row, int col) {
+        return row >= 0 && row < matrice.length && col >= 0 && col < matrice[row].length;
+    }
+
+    public static void main(String[] args) {
+        char[][] matrice = {
+            {'x', '0', 'x', ' ', ' ', '0', '0', 'x', 'x'},
+            {'0', 'x', ' ', '0', 'x', ' ', ' ', '0', 'x'},
+            {'x', ' ', '0', 'x', ' ', 'x', 'x', '0', ' '},
+            {' ', '0', 'x', ' ', 'x', '0', ' ', 'x', 'x'},
+            {' ', 'x', ' ', 'x', '0', 'x', '0', ' ', '0'},
+            {'0', ' ', 'x', '0', 'x', ' ', 'x', ' ', ' '},
+            {'0', ' ', 'x', ' ', '0', 'x', 'x', ' ', ' '},
+            {'x', '0', '0', 'x', ' ', ' ', ' ', 'x', '0'},
+            {'x', 'x', ' ', 'x', '0', ' ', ' ', '0', 'x'}
+        };
+
+        if (isMatriceValid(matrice)) {
+            System.out.println("La matrice è valida.");
+        } else {
+            System.out.println("La matrice non è valida.");
+        }
+    }
+}
+*/
+ */
 	
 
 
