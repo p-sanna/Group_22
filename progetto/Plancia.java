@@ -128,7 +128,7 @@ public class Plancia {
 			break;
 		case'3':
 			j=0;
-			posizione++; //adattare come sopra il caricamento e poi stampare
+			posizione++; 
 			this.riga1[0]=c.get(0);
 			 for(i=posizione;i<posizione+2;i++)
 			 {
@@ -309,7 +309,7 @@ public class Plancia {
 				
 				 j++;
 			 }
-			 System.out.println("         "+Arrays.toString(rigac2));
+			 //System.out.println("         "+Arrays.toString(rigac2));
 		     posizione=i;
 		     j=0;
 		     
@@ -320,7 +320,7 @@ public class Plancia {
 				 
 				 j++;
 			 }
-			 System.out.println("       "+ Arrays.toString(rigac3));
+			 //System.out.println("       "+ Arrays.toString(rigac3));
 			 posizione=i;
 			 j=0;
 			 for(i=posizione;i<posizione+6;i++)
@@ -329,7 +329,7 @@ public class Plancia {
 				 t[3][j+2]=riga4[j];
 				 j++;
 			 }
-			 System.out.println("    "+Arrays.toString(rigac4));
+			 //System.out.println("    "+Arrays.toString(rigac4));
 			 posizione=i;
 			 j=0;
 			 for(i=posizione;i<posizione+7;i++)
@@ -339,7 +339,7 @@ public class Plancia {
 				 j++;
 			 }
 			 posizione=i;
-			 System.out.println(" "+ Arrays.toString(rigac5));
+			 //System.out.println(" "+ Arrays.toString(rigac5));
 			 j=0;
 			 for(i=posizione;i<posizione+6;i++)
 			 {
@@ -348,7 +348,7 @@ public class Plancia {
 				 j++;
 			 }
 			 posizione=i;
-			 System.out.println( " "+Arrays.toString(rigac6));
+			 //System.out.println( " "+Arrays.toString(rigac6));
 			 j=0;
 			 for(i=posizione;i<posizione+3;i++)
 			 {
@@ -358,7 +358,7 @@ public class Plancia {
 			 }
 			 posizione=i;
 			 j=0;
-			 System.out.println( "       "+Arrays.toString(rigac7));
+			 //System.out.println( "       "+Arrays.toString(rigac7));
 			 for(i=posizione;i<posizione+2;i++)
 			 {
 				 rigac8[j+1]=riga8[j].getInizialeColore();
@@ -366,7 +366,7 @@ public class Plancia {
 				 j++;
 				 
 			 }
-			 System.out.println("          "+ Arrays.toString(rigac8));
+			 //System.out.println("          "+ Arrays.toString(rigac8));
 			 
 		
 			
@@ -384,7 +384,7 @@ public class Plancia {
 		  posizione=1;
 		  rigac1[0]=riga1[0].getInizialeColore();
 		  t[0][3]=riga1[0];
-		  System.out.println("         "+Arrays.toString(rigac1));
+		  //System.out.println("         "+Arrays.toString(rigac1));
 		  for(i=posizione;i<posizione+2;i++)
 			 {
 				 
@@ -393,7 +393,7 @@ public class Plancia {
 				
 				 j++;
 			 }
-			 System.out.println("         "+Arrays.toString(rigac2));
+			 //System.out.println("         "+Arrays.toString(rigac2));
 		     posizione=i;
 		     j=0;
 		     
@@ -403,7 +403,7 @@ public class Plancia {
 				 t[2][j+2]=riga3[j];
 				 j++;
 			 }
-			 System.out.println("      "+ Arrays.toString(rigac3));
+			 //System.out.println("      "+ Arrays.toString(rigac3));
 			 posizione=i;
 			 j=0;
 			 for(i=posizione;i<posizione+7;i++)
@@ -412,7 +412,7 @@ public class Plancia {
 				 t[3][j+2]=riga4[j];
 				 j++;
 			 }
-			 System.out.println("    "+Arrays.toString(rigac4));
+			 //System.out.println("    "+Arrays.toString(rigac4));
 			 posizione=i;
 			 j=0;
 			 for(i=posizione;i<posizione+7;i++)
@@ -422,7 +422,7 @@ public class Plancia {
 				 j++;
 			 }
 			 posizione=i;
-			 System.out.println(" "+ Arrays.toString(rigac5));
+			 //System.out.println(" "+ Arrays.toString(rigac5));
 			 j=0;
 			 for(i=posizione;i<posizione+7;i++)
 			 {
@@ -431,7 +431,7 @@ public class Plancia {
 				 j++;
 			 }
 			 posizione=i;
-			 System.out.println( ""+Arrays.toString(rigac6));
+			 //System.out.println( ""+Arrays.toString(rigac6));
 			 j=0;
 			 for(i=posizione;i<posizione+5;i++)
 			 {
@@ -441,7 +441,7 @@ public class Plancia {
 			 }
 			 posizione=i;
 			 j=0;
-			 System.out.println( "      "+Arrays.toString(rigac7));
+			 //System.out.println( "      "+Arrays.toString(rigac7));
 			 for(i=posizione;i<posizione+2;i++)
 			 {
 				 rigac8[j+1]=riga8[j].getInizialeColore();
@@ -450,10 +450,10 @@ public class Plancia {
 			 }
 			 posizione=i;
 			 j=0;
-			 System.out.println("          "+ Arrays.toString(rigac8));
+			 //System.out.println("          "+ Arrays.toString(rigac8));
 			 rigac9[1]=riga9[0].getInizialeColore();
 			 t[8][j+5]=riga9[j];
-			 System.out.println("             "+Arrays.toString(rigac9));
+			 //System.out.println("             "+Arrays.toString(rigac9));
 			 
 			 
 			
@@ -478,7 +478,7 @@ public class Plancia {
 		  posizione=2;
 		  rigac1[0]=riga1[0].getInizialeColore();
 		  rigac1[1]=riga1[1].getInizialeColore();
-		  System.out.println("         "+Arrays.toString(rigac1));
+		  //System.out.println("         "+Arrays.toString(rigac1));
 		  for(i=posizione;i<posizione+3;i++)
 			 {
 				 
@@ -486,7 +486,7 @@ public class Plancia {
 				 t[1][j+3]=riga2[j];
 				 j++;
 			 }
-			 System.out.println("         "+Arrays.toString(rigac2));
+			 //System.out.println("         "+Arrays.toString(rigac2));
 		     posizione=i;
 		     j=0;
 		     
@@ -496,7 +496,7 @@ public class Plancia {
 				 t[2][j+2]=riga3[j];
 				 j++;
 			 }
-			 System.out.println("      "+ Arrays.toString(rigac3));
+			 //System.out.println("      "+ Arrays.toString(rigac3));
 			 posizione=i;
 			 j=0;
 			 for(i=posizione;i<posizione+8;i++)
@@ -505,7 +505,7 @@ public class Plancia {
 				 t[3][j+1]=riga4[j];
 				 j++;
 			 }
-			 System.out.println("   "+Arrays.toString(rigac4));
+			 //System.out.println("   "+Arrays.toString(rigac4));
 			 posizione=i;
 			 j=0;
 			 for(i=posizione;i<posizione+9;i++)
@@ -515,7 +515,7 @@ public class Plancia {
 				 j++;
 			 }
 			 posizione=i;
-			 System.out.println(""+ Arrays.toString(rigac5));
+			 //System.out.println(""+ Arrays.toString(rigac5));
 			 j=0;
 			 for(i=posizione;i<posizione+8;i++)
 			 {
@@ -524,7 +524,7 @@ public class Plancia {
 				 j++;
 			 }
 			 posizione=i;
-			 System.out.println( ""+Arrays.toString(rigac6));
+			 //System.out.println( ""+Arrays.toString(rigac6));
 			 j=0;
 			 for(i=posizione;i<posizione+5;i++)
 			 {
@@ -534,7 +534,7 @@ public class Plancia {
 			 }
 			 posizione=i;
 			 j=0;
-			 System.out.println( "      "+Arrays.toString(rigac7));
+			 //System.out.println( "      "+Arrays.toString(rigac7));
 			 for(i=posizione;i<posizione+3;i++)
 			 {
 				 rigac8[j]=riga8[j].getInizialeColore();
@@ -542,12 +542,12 @@ public class Plancia {
 				 j++;
 			 }
 			 posizione=i;
-			 System.out.println("         "+ Arrays.toString(rigac8));
+			 //System.out.println("         "+ Arrays.toString(rigac8));
 			 rigac9[1]=riga9[0].getInizialeColore();
 			 t[8][4]=riga9[0];
 			 t[8][5]=riga9[1];
 			 rigac9[0]=riga9[1].getInizialeColore();
-			 System.out.println("            "+Arrays.toString(rigac9));
+			 //System.out.println("            "+Arrays.toString(rigac9));
 			 
 			
 			
@@ -667,7 +667,7 @@ public class Plancia {
 	  int riga,colonna;
 	  boolean controllo=true;
 	  boolean controlloa=true; boolean controllob=true; boolean controlloc=true;boolean controllod=true,controlloe=true;
-	  //fare file cosa da fare
+	  
 	  for (int i=0;i<9;i++)
 		    for(int j=0;j<9;j++) //righe centrali
 		    {
@@ -815,7 +815,7 @@ public class Plancia {
 		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 		 {
 
-             //inserire if che discrimina uno
+             
 
 			 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 			 {
@@ -836,7 +836,7 @@ public class Plancia {
 
 	 }
 	 
-	 //oggi
+	
 	 
 	 if(((riga1==0||riga1+sfasamento==0)&&(riga1+sfasamento>-1))&&colonna1>=1&&colonna1<8)
 	 {
@@ -845,7 +845,7 @@ public class Plancia {
 		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 		 {
 			 
-             //inserire if che discrimina uno
+             
 
 			 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 			 {
@@ -874,7 +874,7 @@ public class Plancia {
 	 
 	 
 	 
-	 //Parte nuova
+	 
 
 	 if(colonna1<1)
 	 {
@@ -942,7 +942,7 @@ return controllo;
 	        	 
 	        	 
 	        	 
-	        	 //Parte nuova
+	        	 
 	        	 if(riga1<1)
 	        	 {
 	        		 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
@@ -1051,7 +1051,7 @@ return controllo;
 	        	 }
 	        	 
 	        	 
-	        	 //Parte nuova
+	        	 
 	        	 if (riga1<1)
 	        	 {
 	        		 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
@@ -1142,7 +1142,7 @@ return controllo;
 	        	 
 	        	 
 	        	 
-	        	 //oggi
+	        	 
 	        	 if((riga1==0||riga1+sfasamento1==0)&&(riga1+sfasamento1>-1)&&colonna1>=1&&colonna1<8)
 	        	 {
 	        		 
@@ -1178,7 +1178,7 @@ return controllo;
 	        	 }
 	        	 }
 	        	 
-	        	 //Adesso
+	        	 
 	        	 if((riga1==0||riga1+sfasamento2==0)&&(riga1+sfasamento2>-1)&&colonna1>=1&&colonna1<8)
 	        	 {
 	        		 

@@ -236,7 +236,7 @@ public class Main {
         	
         do {
         	
-            // crea oggetto Random
+            
 	       
         	
         	
@@ -449,7 +449,7 @@ public class Main {
             	         }
             	         
             	         
-                	           //togliere il generatore k
+                	          
             	         
             	         
             	         if(rc=='o')
@@ -476,7 +476,7 @@ public class Main {
                   	                   //correttezza=false;
                   	                  // correttezza2=false;
                   	                 
-                  	            	//domani controlla questo e serve metodo per la terza carta
+                  	            	
             	         }
             	         
                     }}while(correttezza==false||correttezza2==false);
@@ -910,7 +910,7 @@ public class Main {
                       	                     correttezza2=p.Controllo2(t);
                       	                     //System.out.println("Controllo1"+correttezza);
                       	                   //System.out.println("Controllo2"+correttezza2);
-                      	                     //correttezza3=p.Controllo3c(t, riga, colonna, b);
+                      	                     
                       	                   if(correttezza==true&&correttezza2==true)
                     	                     {
                     	                    	lib=Plancia.Prelievocolonne2(t, riga, colonna,b); 

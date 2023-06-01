@@ -31,13 +31,13 @@ public class Ciclico {
 	                    if (elementi > 0) {
 	                        gruppi++;
 	                        g.add(elementi);
-	                        //System.out.println("Gruppo " + gruppi + ": " + elementi + " elementi");
+	                        
 	                        
 	                    }
 	                }
 	            }
 	        }
-	        //System.out.println("Totale gruppi: " + gruppi);
+	        
 	        return g;
 	    }
 
@@ -77,14 +77,14 @@ public class Ciclico {
 	                    if (elementi >= ele) {
 	                        gruppi++;
 	                        g.add(elementi);
-	                        //System.out.println("Gruppo " + gruppi + ": " + elementi + " elementi");
+	                        
 	                        
 	                        
 	                    }
 	                }
 	            }
 	        }
-	        //System.out.println("Totale gruppi: " + gruppi);
+	        
 	         if(gruppi==ripetizioni)
 	         {
 	        	 a= true;
@@ -121,7 +121,7 @@ public class Ciclico {
 	    					  contatore++;
 	    					
 	    					}
-	    				//System.out.println("contatore " +contatore);
+	    				
 	    			}
 	    		}
 	    		j++;	
@@ -209,7 +209,7 @@ public class Ciclico {
 	  public static boolean Metodo7(char a[][])  
 	  {
 		  boolean b=false;
-		     //prima diagonale
+		     
 		  
 		       if(a[0][0]==a[1][1]&&a[0][0]==a[2][2]&&a[0][0]==a[3][3]&&a[0][0]==a[4][4])
 		       {

@@ -277,7 +277,7 @@ public class CartaOb {
 	             
 	}
 	             
-	        // controllare problemi iniziale colore (bianco-blu)
+	        
 
 			
 	
@@ -343,7 +343,7 @@ public class CartaOb {
 	                         
 	                   char a[][]=new char[6] [5];     // crea oggetto Random
 	                    Random random = new Random();
-	                    // genera numero casuale tra 0 e 3
+	                    // genera numero casuale tra 0 e 11
 	                    int number = random.nextInt(12);
 	                    switch(number) {
 	            	case 0: 
@@ -687,7 +687,7 @@ public class CartaOb {
 
 		
 
-		//FARE NEL MAIN UN numero random da a 12 che ti dice quale matrice prendere
+		
 
 	public int PunteggioPersonale(Libreria l,char [][] a)
 	{
@@ -733,90 +733,7 @@ public class CartaOb {
 
 
 
-	/*metodo nel main
-	 * 
-	 * 
-	 * da ripetere per ngiocatori
-	 * 
-	 * ArrayList <char> obiettivopersonale= new ArrayList();
-	 * CartaObiettivoPersonale m= new CartaObiettivoPersonale();
-	 * int appoggio=0;
-	 * do
-	 * {
-	 * int numero = random.nextInt(12);
-	 * 
-	 * }while(appoggio!=numero);
-	 * appoggio=numero;
-	 * 
-	        switch(number) {
-		case 0: 
-			System.out.println("");
-			obiettivopersonale.add(m.matrice1);
-			
-			break;
-		case 1:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-			
-		case 2:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-			
-		case 3:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		case 4:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		case 5:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		case 6:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		case 7:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		case 8:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		case 9:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		case 10:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		case 11:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		case 12:
-			System.out.println ("");
-			obiettivopersonale.add(m.matrice1);
-			break;
-		}
-		}
-		
-	 * 
-	 * 
-	 * 
-	 * 
-	 */
-
-
-
-
-
+	
 
 
 

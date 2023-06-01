@@ -313,7 +313,7 @@ public class Libreria  {
 	
 	public int  Difficile(Libreria l, int num,int ngioc, Giocatore g)
 	{
-		  char a[][]= new char[6][5];//da cambiare
+		  char a[][]= new char[6][5];
 		 
 		 boolean appoggio=false;
 		  for(int i=0;i<6;i++)
