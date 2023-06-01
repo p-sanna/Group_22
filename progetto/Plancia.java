@@ -1428,77 +1428,66 @@ return controllo;
   
   public boolean ConPlancia(Tessera[][] p)
   {
-	  boolean a=false;
-	  boolean b=false;
-	  boolean c=false;
-	  boolean d=false;
-	  boolean e=false;
-	  for (int i=0;i<8;i++)
-	  {
-		  for (int j=0;j<8;j++)
-		  {
-			  if(p[i][j].getInizialeColore()!='x'&&p[i][j].getInizialeColore()!='0')
-				  System.out.println(p[i][j].getInizialeColore());
-					  {
-				            if(p[i][j+1].getInizialeColore()=='x'||p[i][j+1].getInizialeColore()=='0')
-				            {
-				            	 if(p[i+1][j].getInizialeColore()=='x'||p[i+1][j].getInizialeColore()=='0')
-				            	 {
-				            		 a=true;
-				            		 System.out.println("AAAAAA");
-				            	 }
-				            }
-					  }
-					  
-		  }
-		  }
-		  for( int j=0;j<8;j++)
-		  {
-			  if(p[8][j].getInizialeColore()!='x'&&p[8][j].getInizialeColore()!='0')
-			  {
-		            if(p[8][j+1].getInizialeColore()=='x'||p[8][j+1].getInizialeColore()=='0')
-		            {
-		            	 if(p[7][j].getInizialeColore()=='x'||p[7][j].getInizialeColore()=='0')
-		            	 {
-		            		 b=true;
-		            		 System.out.println("bbbbAA");
-		            	 }
-		            }
-			  }
-		  }
-		  for( int i=0;i<8;i++)
-		  {
-			  if(p[i][8].getInizialeColore()!='x'&&p[i][8].getInizialeColore()!='0')
-			  {
-		            if(p[i+1][8].getInizialeColore()=='x'||p[i+1][8].getInizialeColore()=='0')
-		            {
-		            	 if(p[i][7].getInizialeColore()=='x'||p[i][7].getInizialeColore()=='0')
-		            	 {
-		            		 c=true;
-		            		 System.out.println("ccccAA");
-		            	 }
-		            }
-			  }
-		  }
-		  if(p[8][8].getInizialeColore()!='x'&&p[8][8].getInizialeColore()!='0')
-		  {
-	            if(p[7][8].getInizialeColore()=='x'||p[7][8].getInizialeColore()=='0')
-	            {
-	            	 if(p[8][7].getInizialeColore()=='x'||p[8][7].getInizialeColore()=='0')
-	            	 {
-	            		 d=true;
-	            		 System.out.println("dddd");
-	            	 }
-	            }
-		  }
-		  if(a==true&&b==true&&c==true&&d==true)
-		  {
-			  e=true;
-		  }
 	 
-	return e;	  
+	  boolean tuttiElementiValidi = verificaMatrice(p); // controlla se tutti gli elementi sono x o 0
+	  if (tuttiElementiValidi) 
+	  {
+	      
+	      return true;
+	  } 
+	  
+	  for (int i = 0; i < 8; i++) {
+	        for (int j = 0; j < 8; j++) {
+	            
+	            if (p[i][j].getInizialeColore() != 'x' && p[i][j].getInizialeColore() != '0' ) {
+	                if (!verificaAdiacenti(p, i, j)) {
+	                    return false;
+	                }
+	            } 
+	        }
+	    }
+	  
+	  
+	return true;  
   }
   
+  public boolean verificaMatrice(Tessera[][] p) {
+	    for (int i = 0; i < p.length; i++) {
+	        for (int j = 0; j < p[i].length; j++) {
+	            char coloreIniziale = p[i][j].getInizialeColore();
+	            if (coloreIniziale != 'x' && coloreIniziale != '0') {
+	                return false; // Se trovi un elemento diverso da 'x' e '0', restituisci falso
+	            }
+	        }
+	    }
+	    return true; // Se tutti gli elementi soddisfano la condizione, restituisci vero
+	}
+  
+  public static boolean verificaAdiacenti(Tessera[][] tessere, int riga, int colonna) {
+	    int righe = tessere.length;
+	    int colonne = tessere[0].length;
+
+	    // Coordinate dei possibili adiacenti (su, giù, sinistra, destra)
+	    int[] righeAdiacenti = { riga - 1, riga + 1, riga, riga };
+	    int[] colonneAdiacenti = { colonna, colonna, colonna - 1, colonna + 1 };
+
+	    for (int i = 0; i < righeAdiacenti.length; i++) {
+	        int rigaAdiacente = righeAdiacenti[i];
+	        int colonnaAdiacente = colonneAdiacenti[i];
+
+	        if (rigaAdiacente >= 0 && rigaAdiacente < righe && colonnaAdiacente >= 0 && colonnaAdiacente < colonne) {
+	            Tessera tesseraAdiacente = tessere[rigaAdiacente][colonnaAdiacente];
+	            char carattereAdiacente = tesseraAdiacente.getInizialeColore();
+
+	            if (carattereAdiacente != 'x' && carattereAdiacente != '0') {
+	                return false;
+	            }
+	        }
+	    }
+
+	    return true;
+	}
+
 }
   
 
