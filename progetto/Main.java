@@ -28,7 +28,7 @@ public class Main {
 		 do //Generazione carte esattamente nelle quantità prescritte, con quindi controlli
 		  {
 			  int d = 1+ generatore.nextInt(6);
-			  System.out.println("d "+d);
+			  
 
 
 			       if(d==1)
@@ -88,7 +88,7 @@ public class Main {
 
 			    	    Tessera g= new Tessera (ngialle,"Gialla","Giochi");
 				         ngialle--;
-				         System.out.println("Ciao");
+				         
 				         carte.add(g);
 				         i++;
 			    	  }
@@ -114,11 +114,7 @@ public class Main {
 
 		  int pos=0,pt=0,pt2=0;
 		  
-		  System.out.println("   Verdi "+nverdi);
-		  System.out.println("Bianche "+nbianche);
-		  System.out.println("Blu "+nblu);
-		  System.out.println("Gialle "+ngialle);
-		  System.out.println("Azzurre "+nazzurre);
+		  
 		  int numerogiocatori=0;
 		  
 		    do
@@ -227,10 +223,9 @@ public class Main {
         	char m1[][]= new char[6][5];
         	char m2[][]= new char[6][5];
         	
-        	System.out.println("Nome1lib "+l1.getGiocatore(l1));
-        	System.out.println("Nome2lib "+l2.getGiocatore(l2));
+        	
         	 Random random = new Random();
- 	        // genera numero casuale tra 0 e 3
+ 	        
  	        int number3 = random.nextInt(12);
          	CartaOb q= new CartaOb();
          	m1=q.Carta1(number3);
@@ -255,7 +250,7 @@ public class Main {
    	    	 numerocarte= sc.nextInt();
    	    	 conplancia=p.ConPlancia(t);
    	    	 
-   	    	 System.out.println("conplancia" +conplancia);
+   	    	 
    	    	   
    	    	 if(contatoreturni%2==0)
    	    	 {
@@ -296,7 +291,7 @@ public class Main {
    	        	
    	        	
    	        	lib=Plancia.Prelievo(t, riga, colonna);
-   	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
+   	        	//System.out.println("metodo2 "+lib.get(0).getInizialeColore());
    	            t=Plancia.AggiornaMatrice(t,riga,colonna);
             }//fine if carte==1
             
@@ -320,9 +315,9 @@ public class Main {
             	       
             	      
             	         r=sca0.nextLine();
-            	         System.out.println(r+"rrrrr");
+            	         //System.out.println(r+"rrrrr");
             	         rc=r.charAt(0);
-            	         System.out.println(rc+"a");
+            	         //System.out.println(rc+"a");
             	       
             	   
             	   
@@ -419,9 +414,9 @@ public class Main {
             	       
             	      
             	         r=sca0.nextLine();
-            	         System.out.println(r+"rrrrr");
+            	         //System.out.println(r+"rrrrr");
             	         rc=r.charAt(0);
-            	         System.out.println(rc+"a");
+            	         //System.out.println(rc+"a");
             	       
             	   
             	   
@@ -513,7 +508,7 @@ public class Main {
    	         
    	            for ( i=0;i<numerocarte;i++)
    	            {
-   	            	System.out.println("metodo2 "+lib.get(i).getInizialeColore());
+   	            	//System.out.println("metodo2 "+lib.get(i).getInizialeColore());
    	            }
    	            
    	         for(int k=0;k<9;k++)
@@ -634,11 +629,11 @@ public class Main {
        	  finepartita=l2.LibreriaPiena2(l2);
        	    
          }
-        	  System.out.println("ciaoooo");
+        	  
           
           lib=null;
           
-   	      System.out.println("Tocca a un altro giocatore");  
+   	      System.out.println("Fine del turno. Tocca al giocatore successivo");  
    	      contatoreturni++;
    	         
         }while(finepartita==false); 
@@ -666,13 +661,13 @@ public class Main {
     	  if(primo.punteggio>secondo.punteggio)
     	  {
     		  System.out.println("HA VINTO IL GIOCATORE "+primo.getNome(primo)+" con "+primo.punteggio+" punti");
-    		  System.out.println("Il secondo giocatore ha "+secondo.punteggio);
+    		  System.out.println("Il secondo classificato ha "+secondo.punteggio);
     	  }
     	  else
     		  
     	  {
     		  System.out.println("HA VINTO IL GIOCATORE "+secondo.getNome(secondo)+" con "+secondo.punteggio+" punti");
-    		  System.out.println("Il primo giocatore ha "+primo.punteggio);
+    		  System.out.println("Il secondo classificato ha "+primo.punteggio);
     	  }
     		  
     		 
@@ -787,7 +782,7 @@ public class Main {
        	    	 numerocarte= sc.nextInt();
        	    	conplancia=p.ConPlancia(t);
       	    	 
-      	    	 System.out.println("conplancia" +conplancia);
+      	    	 
       	    	   
       	    	 if(c1%3==0)
       	    	 {
@@ -825,9 +820,9 @@ public class Main {
             	    
             	     
                      correttezza=p.Controllo(t, riga, colonna, numerocarte, ng);
-                     System.out.println("Correttezza "+correttezza);
+                     //System.out.println("Correttezza "+correttezza);
                      correttezza2=p.Controllo2(t);
-                     System.out.println("Correttezza2 "+correttezza2);
+                     //System.out.println("Correttezza2 "+correttezza2);
                      
     	            }  while(correttezza==false||correttezza2==false);
        	         
@@ -835,7 +830,7 @@ public class Main {
        	        	
        	        	
        	        	lib=Plancia.Prelievo(t, riga, colonna);
-       	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
+       	        	//System.out.println("metodo2 "+lib.get(0).getInizialeColore());
        	            t=Plancia.AggiornaMatrice(t,riga,colonna);
                 }//fine if carte==1
                 
@@ -859,9 +854,9 @@ public class Main {
                 	       
                 	      
                 	         r=sca0.nextLine();
-                	         System.out.println(r+"rrrrr");
+                	         //System.out.println(r+"rrrrr");
                 	         rc=r.charAt(0);
-                	         System.out.println(rc+"a");
+                	         //System.out.println(rc+"a");
                 	       
                 	   
                 	   
@@ -913,8 +908,8 @@ public class Main {
                       	            	
                       	            		 correttezza=p.Controllocolonne2(t, riga, colonna, b, ng);
                       	                     correttezza2=p.Controllo2(t);
-                      	                     System.out.println("Controllo1"+correttezza);
-                      	                   System.out.println("Controllo2"+correttezza2);
+                      	                     //System.out.println("Controllo1"+correttezza);
+                      	                   //System.out.println("Controllo2"+correttezza2);
                       	                     //correttezza3=p.Controllo3c(t, riga, colonna, b);
                       	                   if(correttezza==true&&correttezza2==true)
                     	                     {
@@ -961,9 +956,9 @@ public class Main {
                 	       
                 	      
                 	         r=sca0.nextLine();
-                	         System.out.println(r+"rrrrr");
+                	         //System.out.println(r+"rrrrr");
                 	         rc=r.charAt(0);
-                	         System.out.println(rc+"a");
+                	         //System.out.println(rc+"a");
                 	       
                 	   
                 	   
@@ -1005,7 +1000,6 @@ public class Main {
 
                     	         
                     	           
-                    	           //togliere il generatore k
                 	         
                 	         
                 	         if(rc=='o')
@@ -1029,10 +1023,7 @@ public class Main {
                     	                    
                     	                     }
                       	                   
-                      	                   //correttezza=false;
-                      	                  // correttezza2=false;
-                      	                 
-                      	            	//domani controlla questo e serve metodo per la terza carta
+                      	                  
                 	         }
                 	         
                         }}while(correttezza==false||correttezza2==false);
@@ -1052,22 +1043,10 @@ public class Main {
        	         
        	            for ( i=0;i<numerocarte;i++)
        	            {
-       	            	System.out.println("metodo2 "+lib.get(i).getInizialeColore());
+       	            	//System.out.println("metodo2 "+lib.get(i).getInizialeColore());
        	            }
        	            
-       	         for(int k=0;k<9;k++)
-                 {
-                 	for(int w=0;w<9;w++)
-                 	{
-                 		System.out.print(t[k][w].getInizialeColore());
-                 	}
-                 	System.out.println("");
-                 
-                 }
-       	         
-       	         
-       	       System.out.println("Tocca a un altro giocatore"); 
-       	      
+       	     
        	    if (conplancia==true)
 	    	   {
      		
@@ -1084,7 +1063,7 @@ public class Main {
 	         
 	            for ( i=0;i<numerocarte;i++)
 	            {
-	            	System.out.println("metodo2 "+lib.get(i).getInizialeColore());
+	            	//System.out.println("metodo2 "+lib.get(i).getInizialeColore());
 	            }
 	            
 	         for(int k=0;k<9;k++)
@@ -1356,11 +1335,11 @@ public class Main {
     	    
       }
        
-     	  System.out.println("ciaoooo");
+     	  
        
        lib=null;
        
-	      System.out.println("Tocca a un altro giocatore");  
+	      System.out.println("Fine del turno. Tocca al giocatore successivo");  
 	      c1++;
 	      c2++;
 	      c3++;
@@ -1402,17 +1381,61 @@ public class Main {
         	  
         	  if(primo.punteggio>secondo.punteggio)
         	  {
+        		  if(secondo.punteggio>terzo.punteggio)
+        		  {
+        		  
         		  System.out.println("HA VINTO IL GIOCATORE "+primo.getNome(primo)+" con "+primo.punteggio+" punti");
-        		  System.out.println("Il secondo giocatore ha "+secondo.punteggio);
-        	  }
-        	  else
+        		  System.out.println("Il secondo classificato è "+secondo.getNome(secondo)+" con "+secondo.punteggio);
+        		  System.out.println("Il terzo classificato è "+terzo.getNome(terzo)+" con "+terzo.punteggio);
+        		  }
+        		  if(terzo.punteggio>primo.punteggio)
+        		  {
         		  
+        		  System.out.println("HA VINTO IL GIOCATORE "+terzo.getNome(terzo)+" con "+terzo.punteggio+" punti");
+        		  System.out.println("Il secondo classificato è "+primo.getNome(primo)+" con "+primo.punteggio);
+        		  System.out.println("Il terzo classificato è "+secondo.getNome(secondo)+" con "+secondo.punteggio);
+        		  }
+        		  
+        	  }
+        	  if(secondo.punteggio>primo.punteggio)
         	  {
-        		  System.out.println("HA VINTO IL GIOCATORE "+secondo.getNome(secondo)+" con "+secondo.punteggio+" punti");
-        		  System.out.println("Il primo giocatore ha "+primo.punteggio);
-        	  }
+        		  if(terzo.punteggio>secondo.punteggio)
+        		  {
         		  
-        		 
+        		  System.out.println("HA VINTO IL GIOCATORE "+terzo.getNome(terzo)+" con "+terzo.punteggio+" punti");
+        		  System.out.println("Il secondo classificato è "+secondo.getNome(secondo)+" con "+secondo.punteggio);
+        		  System.out.println("Il terzo classificato è "+primo.getNome(primo)+" con "+primo.punteggio);
+        		  }
+        		  if(primo.punteggio>terzo.punteggio)
+        		  {
+        		  
+        		  System.out.println("HA VINTO IL GIOCATORE "+secondo.getNome(terzo)+" con "+secondo.punteggio+" punti");
+        		  System.out.println("Il secondo classificato è "+primo.getNome(primo)+" con "+primo.punteggio);
+        		  System.out.println("Il terzo classificato è "+terzo.getNome(secondo)+" con "+terzo.punteggio);
+        		  }
+        		  
+        	  }
+        	  if(primo.punteggio>terzo.punteggio)
+        	  {
+        		  if(terzo.punteggio>secondo.punteggio)
+        		  {
+        		  
+        		  System.out.println("HA VINTO IL GIOCATORE "+primo.getNome(primo)+" con "+primo.punteggio+" punti");
+        		  System.out.println("Il secondo classificato è "+terzo.getNome(terzo)+" con "+terzo.punteggio);
+        		  System.out.println("Il terzo classificato è "+secondo.getNome(secondo)+" con "+secondo.punteggio);
+        		  }
+        	  }
+        		
+        	  if(secondo.punteggio>terzo.punteggio)
+        	  {
+        		  if(terzo.punteggio>primo.punteggio)
+        		  {
+        		  
+        		  System.out.println("HA VINTO IL GIOCATORE "+secondo.getNome(secondo)+" con "+secondo.punteggio+" punti");
+        		  System.out.println("Il secondo classificato è "+terzo.getNome(terzo)+" con "+terzo.punteggio);
+        		  System.out.println("Il terzo classificato è "+primo.getNome(primo)+" con "+primo.punteggio);
+        		  }
+        	  }
         	
         	break;
             
@@ -1476,9 +1499,9 @@ public class Main {
             	    
             	     
                      correttezza=p.Controllo(t, riga, colonna, numerocarte, ng);
-                     System.out.println("Correttezza "+correttezza);
+                     
                      correttezza2=p.Controllo2(t);
-                     System.out.println("Correttezza2 "+correttezza2);
+                     
                      
     	            }  while(correttezza==false||correttezza2==false);
        	         
@@ -1486,7 +1509,7 @@ public class Main {
        	        	
        	        	
        	        	lib=Plancia.Prelievo(t, riga, colonna);
-       	        	System.out.println("metodo2 "+lib.get(0).getInizialeColore());
+       	        	
        	            t=Plancia.AggiornaMatrice(t,riga,colonna);
                 }//fine if carte==1
                 
@@ -1510,9 +1533,9 @@ public class Main {
                 	       
                 	      
                 	         r=sca0.nextLine();
-                	         System.out.println(r+"rrrrr");
+                	         
                 	         rc=r.charAt(0);
-                	         System.out.println(rc+"a");
+                	         
                 	       
                 	   
                 	   
@@ -1564,8 +1587,7 @@ public class Main {
                       	            	
                       	            		 correttezza=p.Controllocolonne2(t, riga, colonna, b, ng);
                       	                     correttezza2=p.Controllo2(t);
-                      	                     System.out.println("Controllo1"+correttezza);
-                      	                   System.out.println("Controllo2"+correttezza2);
+                      	                     
                       	                     //correttezza3=p.Controllo3c(t, riga, colonna, b);
                       	                   if(correttezza==true&&correttezza2==true)
                     	                     {
@@ -1612,9 +1634,9 @@ public class Main {
                 	       
                 	      
                 	         r=sca0.nextLine();
-                	         System.out.println(r+"rrrrr");
+                	         
                 	         rc=r.charAt(0);
-                	         System.out.println(rc+"a");
+                	         
                 	       
                 	   
                 	   
@@ -1656,7 +1678,7 @@ public class Main {
 
                     	         
                     	           
-                    	           //togliere il generatore k
+                    	           
                 	         
                 	         
                 	         if(rc=='o')
@@ -1680,10 +1702,7 @@ public class Main {
                     	                    
                     	                     }
                       	                   
-                      	                   //correttezza=false;
-                      	                  // correttezza2=false;
-                      	                 
-                      	            	//domani controlla questo e serve metodo per la terza carta
+                      	                   
                 	         }
                 	         
                         }}while(correttezza==false||correttezza2==false);
@@ -1703,7 +1722,7 @@ public class Main {
        	         
        	            for ( i=0;i<numerocarte;i++)
        	            {
-       	            	System.out.println("metodo2 "+lib.get(i).getInizialeColore());
+       	            	//System.out.println("metodo2 "+lib.get(i).getInizialeColore());
        	            }
        	            
        	         for(int k=0;k<9;k++)
@@ -1717,7 +1736,7 @@ public class Main {
                  }
        	         
        	         
-       	       System.out.println("Tocca a un altro giocatore"); 
+       	       System.out.println("Fine del turno. Tocca al giocatore successivo"); 
             }while(finepartita==false); 
             numerocarte=0;
         	
@@ -1731,22 +1750,3 @@ public class Main {
 	
 	
 	}}
-
-	// 4 metodi di fare punti 
-
-    // 1-tessera obiettivo personale (possono/devono essere calcolati solo alla fine)
-	// 2-tessera obiettivo comune (deve essere controllato ogni volta che vengono immesse tessere nella libreria)
-	// 3-tessere uguali adiacenti (possono/devono essere calcolati solo alla fine)
-	// 4-primo giocatore che completa la libreria (controllo ogni volta che vengono immesse tessere nella libreria, appena il primo completa la libreria termina il gioco)
-
-	// metodo4: controllare che ogni elemento della libreria sia diverso da 0 (matrice della libreria inizializzata a tanti 0, prima di passare al turno successivo)->fatto
-
-	// metodo1: verificare che la matrice obiettivo personale e la matrice della libreria abbiano elementi uguali nelle stesse coordinate (due cicli for che scorrono le  
-	//          matrici e verificano ogni volta se l'elemento è uguale o no?, possibile problema: se la libreria non è completa potrebbe considerare gli zeri delle due  
-    //          matrici come valore uguale)
-
-    // metodo3: realizzare qualcosa di simile al controllo delle tessere adiacenti della plancia, si sceglie una iniziale e si verifica se ce ne siano di uguali adiacenti,
-    //          si sommano gli eventuali punti e poi si passa alla lettera successiva. 
-
-    // metodo2: implementare un controllo diverso per ogni tessere obiettivo comune, in parte credo si possa adattare parte dei controlli del metodo3 ma sicuramente è il più
-    //          difficile da realizzare, non mi vengono in mente idee per renderlo facile da realizzare

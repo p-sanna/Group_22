@@ -32,8 +32,7 @@ public class Libreria  {
 	{
 
 		int lunghezza= lib.size();
-		System.out.println
-		("Lunghezza "+lunghezza);
+		System.out.println("Tessere prelevate "+lunghezza + ", premere INVIO");
 		Scanner sc= new Scanner(System.in);
 		int a=0;
 		int i=0;
@@ -48,7 +47,7 @@ public class Libreria  {
 			System.out.println("");
 			sel1=sc.nextLine();
 			
-				System.out.println("Inserisci la colonna");
+				System.out.println("Inserisci la colonna della libreria desiderata (da 1 a 5)");
 				 a=sc.nextInt();
 				 
 				 r=Controllor(a,lunghezza,l);
@@ -306,9 +305,9 @@ public class Libreria  {
 		    	  }
 		    	  
 		    	      }
-		      System.out.println("Punteggio"+punteggio);
+		      
 		      return punteggio;	
-		     //ciaoooo
+		  
 		      
     }
 	

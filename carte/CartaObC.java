@@ -43,7 +43,7 @@ public class CartaObC {
 			System.out.println ("Inserisci nella libreria 5 tessere dello stesso tipo disposte a X");
 			break;
 		case 11:
-			System.out.println ("Completa 5 colonne della libreria in modo che siano decrescenti o crescenti l'una con l'altra (5,4,3,2,1 o 1,2,3,4,5");
+			System.out.println ("Completa 5 colonne della libreria in modo che siano decrescenti o crescenti l'una con l'altra (5,4,3,2,1 o 1,2,3,4,5)");
 			break;
 		
 			

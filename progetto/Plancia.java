@@ -579,7 +579,7 @@ public class Plancia {
   public static Tessera[][] AggiornaMatrice(Tessera t[][],int riga,int colonna)
   {
 	  t[riga-1][colonna-1]=new Tessera(1000,"xn","nera");
-	  System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
+	  //System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
 	  return t;
   }
   
@@ -841,7 +841,7 @@ public class Plancia {
 	 if(((riga1==0||riga1+sfasamento==0)&&(riga1+sfasamento>-1))&&colonna1>=1&&colonna1<8)
 	 {
 		 
-		 System.out.println(riga1+sfasamento);
+		 //System.out.println(riga1+sfasamento);
 		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 		 {
 			 
@@ -1009,14 +1009,14 @@ return controllo;
   {
 	  t[riga-1+sfasamento][colonna-1]=new Tessera(1000,"xn","nera");
 	  t[riga-1][colonna-1]=new Tessera(1000,"xn","nera");
-	  System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
+	  //System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
 	  return t;
   }
   public static Tessera[][] AggiornaMatricecolonne2(Tessera t[][],int riga,int colonna,int sfasamento)
   {
 	  t[riga-1][colonna-1+sfasamento]=new Tessera(1000,"xn","nera");
 	  t[riga-1][colonna-1]=new Tessera(1000,"xn","nera");
-	  System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
+	  //System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
 	  return t;
   }
   public boolean Controllocolonne3(Tessera t[][], int riga,int colonna,int sfasamento1, int ngioc,int sfasamento2)
@@ -1377,7 +1377,7 @@ return controllo;
 	  t[riga-1+sfasamento1][colonna-1]=new Tessera(1000,"xn","nera");
 	  t[riga-1][colonna-1]=new Tessera(1000,"xn","nera");
 	  t[riga-1+sfasamento2][colonna-1]=new Tessera(1000,"xn","nera");
-	  System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
+	  //System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
 	  return t;
   }
   public static Tessera[][] AggiornaMatricecolonne3(Tessera t[][],int riga,int colonna,int sfasamento1,int sfasamento2)
@@ -1385,7 +1385,7 @@ return controllo;
 	  t[riga-1][colonna-1+sfasamento1]=new Tessera(1000,"xn","nera");
 	  t[riga-1][colonna-1+sfasamento2]=new Tessera(1000,"xn","nera");
 	  t[riga-1][colonna-1]=new Tessera(1000,"xn","nera");
-	  System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
+	  //System.out.println("metodo3 "+t[riga-1][colonna-1].getInizialeColore());
 	  return t;
   }
   
