@@ -560,4 +560,9 @@ public boolean LibreriaPiena2(Libreria l)
     return a;
     	
 }
+public void setNome(Libreria l, String nome3)
+{
+	this.nomegiocatore=nome3;
+}
+
 }

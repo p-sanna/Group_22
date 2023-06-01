@@ -197,28 +197,32 @@ public class Main {
 	        	}}
         	Giocatore primo= new Giocatore ("A");
         	 Giocatore secondo= new Giocatore("B");
+        	 Libreria l1= new Libreria("A",1);
+             Libreria l2= new Libreria("B",2);
         	
         	Random random3 = new Random();
         	 int number5 = random3.nextInt(1);
         	 if(number5==1)
         	 {
         		  primo.setNome(secondo, nome2);
-        		 System.out.println("Inizia il giocatore "+primo.getNome(primo));
+        		  l1.setNome(l1, nome2);
+        		 System.out.println("Inizia il giocatore "+secondo.getNome(secondo));
         		 secondo.setNome(primo, nome1);
-        		 
+        		  l2.setNome(l2, nome1);
         	 }
         	 else
         	 {
         		 primo.setNome(primo, nome1);
+        		 l1.setNome(l1,nome1);
         		 System.out.println("Inizia il giocatore "+primo.getNome(primo));
         		 secondo.setNome(secondo, nome2);
+        		  l2.setNome(l2, nome2);
         	 }
         	
         	
         	char m1[][]= new char[6][5];
         	char m2[][]= new char[6][5];
-        	Libreria l1= new Libreria(nome1,1);
-        	Libreria l2= new Libreria(nome2,2);
+        	
         	System.out.println("Nome1lib "+l1.getGiocatore(l1));
         	System.out.println("Nome2lib "+l2.getGiocatore(l2));
         	 Random random = new Random();
@@ -246,9 +250,11 @@ public class Main {
    	    	 System.out.println("Inserisci il numero di tessere adiacenti tra loro che vuoi prelevare, da 1 a 3");
    	    	 numerocarte= sc.nextInt();
    	    	 conplancia=p.ConPlancia(t);
+   	    	 System.out.println("conplancia" +conplancia);
    	    	   if (conplancia==true)
    	    	   {
    	    		   p.CaricaCarte(carte, p);
+   	    		   p.StampaCarte(p);
    	    	   }
    	    	 if(contatoreturni%2==0)
    	    	 {
@@ -509,7 +515,7 @@ public class Main {
    	         
    	         
    	      numerocarte=0;
-          if(contatoreturni%2==0)
+          if(contatoreturni%2!=0)
           {
         	   
         	 l1.RiempiLibreria(lib,l1);
@@ -634,7 +640,7 @@ public class Main {
     	punteggios=0;
     	punteggios=l2.PuntiTessereAd(l2);
     	secondo.punteggio=secondo.punteggio+punteggios;
-    	  if((contatoreturni-1)%2==0)
+    	  if((contatoreturni-1)%2!=0)
     	  {
     		  primo.punteggio=primo.punteggio+1;
     	  }

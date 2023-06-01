@@ -1436,51 +1436,57 @@ return controllo;
 	  {
 		  for (int j=0;j<8;j++)
 		  {
-			  if(p[i][j].getInizialeColore()!='x'||p[i][j].getInizialeColore()!='0')
+			  if(p[i][j].getInizialeColore()!='x'&&p[i][j].getInizialeColore()!='0')
+				  System.out.println(p[i][j].getInizialeColore());
 					  {
 				            if(p[i][j+1].getInizialeColore()=='x'||p[i][j+1].getInizialeColore()=='0')
 				            {
 				            	 if(p[i+1][j].getInizialeColore()=='x'||p[i+1][j].getInizialeColore()=='0')
 				            	 {
 				            		 a=true;
+				            		 System.out.println("AAAAAA");
 				            	 }
 				            }
 					  }
 					  
 		  }
-		  for(int j=0;j<8;j++)
+		  }
+		  for( int j=0;j<8;j++)
 		  {
-			  if(p[8][j].getInizialeColore()!='x'||p[8][j].getInizialeColore()!='0')
+			  if(p[8][j].getInizialeColore()!='x'&&p[8][j].getInizialeColore()!='0')
 			  {
 		            if(p[8][j+1].getInizialeColore()=='x'||p[8][j+1].getInizialeColore()=='0')
 		            {
 		            	 if(p[7][j].getInizialeColore()=='x'||p[7][j].getInizialeColore()=='0')
 		            	 {
 		            		 b=true;
+		            		 System.out.println("bbbbAA");
 		            	 }
 		            }
 			  }
 		  }
-		  for( i=0;i<8;i++)
+		  for( int i=0;i<8;i++)
 		  {
-			  if(p[i][8].getInizialeColore()!='x'||p[i][8].getInizialeColore()!='0')
+			  if(p[i][8].getInizialeColore()!='x'&&p[i][8].getInizialeColore()!='0')
 			  {
 		            if(p[i+1][8].getInizialeColore()=='x'||p[i+1][8].getInizialeColore()=='0')
 		            {
 		            	 if(p[i][7].getInizialeColore()=='x'||p[i][7].getInizialeColore()=='0')
 		            	 {
 		            		 c=true;
+		            		 System.out.println("ccccAA");
 		            	 }
 		            }
 			  }
 		  }
-		  if(p[8][8].getInizialeColore()!='x'||p[8][8].getInizialeColore()!='0')
+		  if(p[8][8].getInizialeColore()!='x'&&p[8][8].getInizialeColore()!='0')
 		  {
 	            if(p[7][8].getInizialeColore()=='x'||p[7][8].getInizialeColore()=='0')
 	            {
 	            	 if(p[8][7].getInizialeColore()=='x'||p[8][7].getInizialeColore()=='0')
 	            	 {
 	            		 d=true;
+	            		 System.out.println("dddd");
 	            	 }
 	            }
 		  }
@@ -1488,7 +1494,7 @@ return controllo;
 		  {
 			  e=true;
 		  }
-	  }
+	 
 	return e;	  
   }
   
