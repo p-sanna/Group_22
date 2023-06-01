@@ -52,17 +52,17 @@ public class Libreria  {
 				 a=sc.nextInt();
 				 
 				 r=Controllor(a,lunghezza,l);
-				 System.out.println(r);
+				 //System.out.println(r);
 				  if(r!=-6)
 				   {
 					   for(int j=r;j>r-lunghezza;j--)
 					   {
-						   System.out.println("J"+j);
+						   //System.out.println("J"+j);
 						   if(l.riempimentocasella[j][a-1]==false)
 						   {
 							   l.casellario[j][a-1]=lib.get(i);
 							   i--;
-							   System.out.println("J"+j);
+							   //System.out.println("J"+j);
 							   l.riempimentocasella[j][a-1]=true;
 							   
 							   ctr=true;
@@ -71,7 +71,7 @@ public class Libreria  {
 				   
 			   }
 			   
-		System.out.println("ctr"+ctr);		   
+		//System.out.println("ctr"+ctr);		   
 			
 		}while(ctr==false);
 
@@ -116,7 +116,7 @@ public class Libreria  {
 			 
 			 if (lunghezza==2&&i-1>=0)
 			 {
-				 System.out.println("i "+i);
+				 //System.out.println("i "+i);
 				 
 				 if(l.riempimentocasella[i][a-1]==false&&l.riempimentocasella[i-1][a-1]==false)
 				 {
@@ -132,7 +132,7 @@ public class Libreria  {
 			 }
 			 if (lunghezza==3&&i-2>=0)
 			 {
-				 System.out.println("i "+i);
+				 //System.out.println("i "+i);
 				 
 				 if(l.riempimentocasella[i][a-1]==false&&l.riempimentocasella[i-1][a-1]==false&&l.riempimentocasella[i-2][a-1]==false)
 				 {
@@ -152,7 +152,7 @@ public class Libreria  {
 		   
 		   
 		   }
-		   System.out.println("Riga"+riga);
+		   //System.out.println("Riga"+riga);
 		return riga;
 	}
 	public boolean Controlr(int a, int lunghezza,Libreria l)
@@ -474,7 +474,7 @@ public class Libreria  {
 	    	    			  if (g.obc1=false)
 	    	    				  System.out.println("");
 	    	    			   {
-	    	    				  System.out.println("Appoggio "+appoggio);
+	    	    				  //System.out.println("Appoggio "+appoggio);
 	    	    				  g.obc1=true; 
 	    	    				  return 8;
 	    	    				  
