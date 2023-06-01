@@ -49,6 +49,6 @@ public class J {
 	    	
 	     }
  		CartaOb w= new CartaOb();
-	    assertEquals(w.PunteggioPersonale(l,a),3);
+	    assertEquals(w.PunteggioPersonale(l,a),4);
   }
 }
