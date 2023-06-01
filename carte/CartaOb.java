@@ -1,8 +1,10 @@
 package carte;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import progetto.Libreria;
+import progetto.Tessera;
 
 public class CartaOb {
 	 static String caso;
@@ -358,8 +360,7 @@ public class CartaOb {
 	        // controllare problemi iniziale colore (bianco-blu)
 
 			
-			
-			
+	
 			
 			
 			

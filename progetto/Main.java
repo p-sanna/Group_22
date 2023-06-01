@@ -21,7 +21,7 @@ public class Main {
 		System.out.println("Carta ob"); //Togliere
 		 System.out.println("ciao");
 		 //togliere
-		 
+	
 		int nverdi=22,nrosse=22,nblu=22,nazzurre=22,ngialle=22,nbianche=22;
 
 		Random generatore = new Random();
@@ -112,9 +112,9 @@ public class Main {
 			    d=0;
 
 		  } while(i<132);
-		  
+		 
 
-		  
+		  int pos=0,pt=0,pt2=0;
 		  
 		  System.out.println("   Verdi "+nverdi);
 		  System.out.println("Bianche "+nbianche);
@@ -133,8 +133,16 @@ public class Main {
 		  char ng= str.charAt(0);
 		 
           Plancia p= new Plancia(ng);
-          p.CaricaCarte(carte,  p);
+          p.CaricaCarte(carte,  p,pos);
           Tessera t[][]= new Tessera[9][9];
+          Giocatore primo= new Giocatore ("A");
+     	 Giocatore secondo= new Giocatore("B");
+     	 Giocatore terzo= new Giocatore("C");
+     	 Giocatore quarto= new Giocatore("D");
+     	 Libreria l1= new Libreria("A",1);
+         Libreria l2= new Libreria("B",2);
+         Libreria l3= new Libreria("C",3);
+         Libreria l4= new Libreria("D",4);
         
           t=p.StampaCarte(p);
           
@@ -195,10 +203,8 @@ public class Main {
 	        	{System.out.println("I nomi dei giocatori non possono essere uguali. Riprova");
 	        	
 	        	}}
-        	Giocatore primo= new Giocatore ("A");
-        	 Giocatore secondo= new Giocatore("B");
-        	 Libreria l1= new Libreria("A",1);
-             Libreria l2= new Libreria("B",2);
+        	
+        	
         	
         	Random random3 = new Random();
         	 int number5 = random3.nextInt(1);
@@ -206,7 +212,7 @@ public class Main {
         	 {
         		  primo.setNome(secondo, nome2);
         		  l1.setNome(l1, nome2);
-        		 System.out.println("Inizia il giocatore "+secondo.getNome(secondo));
+        		 System.out.println("Inizia il giocatore "+primo.getNome(primo));
         		 secondo.setNome(primo, nome1);
         		  l2.setNome(l2, nome1);
         	 }
@@ -250,12 +256,9 @@ public class Main {
    	    	 System.out.println("Inserisci il numero di tessere adiacenti tra loro che vuoi prelevare, da 1 a 3");
    	    	 numerocarte= sc.nextInt();
    	    	 conplancia=p.ConPlancia(t);
+   	    	 
    	    	 System.out.println("conplancia" +conplancia);
-   	    	   if (conplancia==true)
-   	    	   {
-   	    		   p.CaricaCarte(carte, p);
-   	    		   p.StampaCarte(p);
-   	    	   }
+   	    	   
    	    	 if(contatoreturni%2==0)
    	    	 {
    	    		 
@@ -496,7 +499,19 @@ public class Main {
                   	           
                
             
-        
+        	if (conplancia==true)
+	    	   {
+        		
+        		  
+	    		   p=null;
+	    		   t=null;
+	    		   
+	    		   p= new Plancia('2');
+	    		   p.CaricaCarte(carte, p,pos+29);
+	    		   t= new Tessera[9][9];
+	    		   t=p.StampaCarte(p);
+	    		 
+	    	   }
    	         
    	            for ( i=0;i<numerocarte;i++)
    	            {
@@ -671,6 +686,7 @@ public class Main {
    	      
    	      
         case 3:
+        	int c1=0,c2=-1,c3=-2;
         	while(nome1.isEmpty()||nome2.isEmpty()||nome3.isEmpty()||nome1.equals(nome2)||nome2.equals(nome3)||nome3.equals(nome1))
         	{
         	System.out.println("Inserisci il nome del primo giocatore");
@@ -679,18 +695,69 @@ public class Main {
         	nome2=sc.nextLine();
         	System.out.println("Inserisci il nome del terzo giocatore");
         	nome3=sc.nextLine();
-        	
-        	
+        	 
+             l1= new Libreria("A",1);
+             l2= new Libreria("B",2);
+             l3= new Libreria("C",3);
+             
         	if(nome1.isEmpty()||nome2.isEmpty()||nome3.isEmpty())
         	{System.out.println("I nomi dei giocatori non possono essere vuoti. Riprova");
         	} else if(nome1.equals(nome2)||nome2.equals(nome3)||nome3.equals(nome1))
         	{System.out.println("I nomi dei giocatori non possono essere uguali. Riprova");
         	
         	}}
+        	 random3 = new Random();
+       	  number5 = random3.nextInt(2);
+       	 if(number5==1)
+       	 {
+       		  primo.setNome(secondo, nome2);
+       		  l1.setNome(l1, nome2);
+       		 System.out.println("Inizia il giocatore "+primo.getNome(primo));
+       		 
+       		 secondo.setNome(primo, nome1);
+       		 System.out.println("Come secondo il giocatore "+secondo.getNome(secondo));
+       		
+       		 terzo.setNome(terzo, nome3);
+       		 System.out.println("Come terzo il giocatore "+terzo.getNome(terzo));
+       		  l2.setNome(l2, nome1);
+       		  l3.setNome(l3, nome3);
+       	 }
+       	 if(number5==0)
+       	 {
+       		 primo.setNome(primo, nome1);
+       		 l1.setNome(l1,nome1);
+       		 System.out.println("Inizia il giocatore "+primo.getNome(primo));
+       		 
+       		 secondo.setNome(secondo, nome2);
+       		System.out.println("Come secondo il giocatore "+secondo.getNome(secondo));
+       		 terzo.setNome(terzo, nome3);
+       		 System.out.println("Come terzo il giocatore "+terzo.getNome(terzo));
+       		  l2.setNome(l2, nome2);
+       		  l3.setNome(l3, nome3);
+       	 }
+       	if(number5==2)
+       	 {
+       		 primo.setNome(terzo, nome3);
+       		 l1.setNome(l1,nome3);
+       		 System.out.println("Inizia il giocatore "+primo.getNome(primo));
+       		 secondo.setNome(secondo, nome2);
+       		System.out.println("Come secondo il giocatore "+secondo.getNome(secondo));
+       		terzo.setNome(primo, nome1);
+       		System.out.println("Come terzo il giocatore "+terzo.getNome(terzo));
+       		  l2.setNome(l2, nome2);
+       		  c2=-1;
+       		  c1=-2;
+       		l3.setNome(l3, nome1);
+       		  
+       	 }
+       	 
+       	
+       	
+       	 m1= new char[6][5];
+       	 m2= new char[6][5];
+       	 char m3[][]=new char[6][5];
+       	
         	
-        	primo= new Giocatore (nome1);
-        	secondo= new Giocatore(nome2);
-        	Giocatore terzo= new Giocatore(nome3);
         	
         	do {
             	
@@ -708,6 +775,27 @@ public class Main {
        	     {
        	    	 System.out.println("Inserisci il numero di tessere adiacenti tra loro che vuoi prelevare, da 1 a 3");
        	    	 numerocarte= sc.nextInt();
+       	    	conplancia=p.ConPlancia(t);
+      	    	 
+      	    	 System.out.println("conplancia" +conplancia);
+      	    	   
+      	    	 if(c1%3==0)
+      	    	 {
+      	    		 
+      	    	 spaziodisponibile=l1.LibreriaPiena(l1);
+      	    	 }
+      	    	 if(c2%23==0)
+      	    	 {
+      	    		 spaziodisponibile=l2.LibreriaPiena(l2);
+      	    	 }
+      	    	 if(c3%3==0)
+      	    	 {
+      	    		spaziodisponibile=l3.LibreriaPiena(l3);
+      	    	 }
+      	    	     if(spaziodisponibile<numerocarte)
+      	    	      {
+      	    		   numerocarte=5;
+      	    	      }
        	     }while(numerocarte>3||numerocarte<1);
                 
                 if (numerocarte==1)
@@ -969,7 +1057,305 @@ public class Main {
        	         
        	         
        	       System.out.println("Tocca a un altro giocatore"); 
-            }while(finepartita==false); 
+       	    if (conplancia==true)
+	    	   {
+     		
+     		  
+	    		   p=null;
+	    		   t=null;
+	    		   
+	    		   p= new Plancia('2');
+	    		   p.CaricaCarte(carte, p,pos+29);
+	    		   t= new Tessera[9][9];
+	    		   t=p.StampaCarte(p);
+	    		 
+	    	   }
+	         
+	            for ( i=0;i<numerocarte;i++)
+	            {
+	            	System.out.println("metodo2 "+lib.get(i).getInizialeColore());
+	            }
+	            
+	         for(int k=0;k<9;k++)
+          {
+          	for(int w=0;w<9;w++)
+          	{
+          		System.out.print(t[k][w].getInizialeColore());
+          	}
+          	System.out.println("");
+          
+          }
+	         
+	         
+	      numerocarte=0;
+       if(c1%3==0)
+       {
+     	   
+     	 l1.RiempiLibreria(lib,l1);
+     	 l1.StampaLibreria(l1);
+     	   if(ris1==0)
+     	   {
+     		   ris1=l1.Difficile(l1, number, numerogiocatori, primo);
+     		   if (ris1!=0)
+     		   {
+     		    primo.punteggio=primo.punteggio+8;
+     		   }
+     	   }
+     	   if (ris1!=0&&pt==0)
+     	   {
+     		  int supporto=ris1;
+     		  ris1=0;
+     		   ris1=l1.Difficile(l1, number, numerogiocatori, primo);
+     		     if(ris1==8)
+     		     {
+     		    	 primo.punteggio=primo.punteggio+6;
+     		     }
+     		     else
+     		     {
+     		      ris1=supporto;
+     		     }
+     	   }
+     	  if (ris1!=0&&pt!=0)
+    	   {
+    		  int supporto=ris1;
+    		  ris1=0;
+    		   ris1=l1.Difficile(l1, number, numerogiocatori, primo);
+    		     if(ris1==8)
+    		     {
+    		    	 primo.punteggio=primo.punteggio+4;
+    		     }
+    		     else
+    		     {
+    		      ris1=supporto;
+    		     }
+    	   }
+     	   if(ris2==0)
+     	   {
+     		   ris2=l1.Difficile(l1, number1, numerogiocatori, primo);
+     		   if (ris2!=0)
+     		   {
+     		    primo.punteggio=primo.punteggio+8;
+     		   }
+     	   }
+     	  if(ris2!=0&&pt2==0)
+     	   {
+     		  int supporto2=ris2;
+     		  ris2=0;
+     		   ris2=l1.Difficile(l1, number1, numerogiocatori, primo);
+     		     if(ris2==8&&pt==0)
+     		     {
+     		    	 primo.punteggio=primo.punteggio+6;
+     		    	 pt2=5;
+     		     }
+     		     else
+     		     {
+     		      ris2=supporto2;
+     		     }
+     	   }
+     	 if(ris2!=0&&pt2!=0)
+   	   {
+   		  int supporto2=ris2;
+   		  ris2=0;
+   		   ris2=l1.Difficile(l1, number1, numerogiocatori, primo);
+   		     if(ris2==8&&pt==0)
+   		     {
+   		    	 primo.punteggio=primo.punteggio+6;
+   		    	 
+   		     }
+   		     else
+   		     {
+   		      ris2=supporto2;
+   		     }
+   	   }
+     	  
+     	   
+     	finepartita=l1.LibreriaPiena2(l1);
+     	    
+       }
+       if(c2%3==0)
+       {
+     	  l2.RiempiLibreria(lib,l2);
+     	  l2.StampaLibreria(l2);
+     	  
+     	  if(ris1==0)
+    	   {
+    		   ris1=l2.Difficile(l2, number, numerogiocatori, secondo);
+    		   if (ris1!=0)
+    		   {
+    		    secondo.punteggio=secondo.punteggio+8;
+    		   }
+    	   }
+     	  
+    	  if(ris1!=0&&pt==0)
+    	   {
+    		  int supporto=ris1;
+    		  ris1=0;
+    		   ris1=l2.Difficile(l2, number, numerogiocatori, secondo);
+    		     if(ris1==8)
+    		     {
+    		    	 secondo.punteggio=secondo.punteggio+6;
+    		    	 pt=5;
+    		     }
+    		     else
+    		     {
+    		      ris1=supporto;
+    		     }
+    	   }if(ris1!=0&&pt!=0)
+    	   {
+    		  int supporto=ris1;
+    		  ris1=0;
+    		   ris1=l2.Difficile(l2, number, numerogiocatori, secondo);
+    		     if(ris1==8)
+    		     {
+    		    	 secondo.punteggio=secondo.punteggio+4;
+    		    	
+    		     }
+    		     else
+    		     {
+    		      ris1=supporto;
+    		     }
+    	   }
+    	  
+    	   if(ris2==0)
+    	   {
+    		   ris2=l2.Difficile(l2, number1, numerogiocatori, secondo);
+    		   if (ris2!=0)
+    		   {
+    		    secondo.punteggio=secondo.punteggio+8;
+    		   }
+    	   }
+    	   if(ris2!=0&&pt2==0)
+    	   {
+    		  int supporto2=ris2;
+    		  ris2=0;
+    		   ris2=l2.Difficile(l2, number1, numerogiocatori, secondo);
+    		     if(ris2==8)
+    		     {
+    		    	 secondo.punteggio=secondo.punteggio+6;
+    		    	 pt2=5;
+    		     }
+    		     else
+    		     {
+    		      ris2=supporto2;
+    		     }
+    	   }
+    	   if(ris2!=0&&pt2!=0)
+    	   {
+    		  int supporto2=ris2;
+    		  ris2=0;
+    		   ris2=l2.Difficile(l2, number1, numerogiocatori, secondo);
+    		     if(ris2==8)
+    		     {
+    		    	 secondo.punteggio=secondo.punteggio+4;
+    		    	 
+    		     }
+    		     else
+    		     {
+    		      ris2=supporto2;
+    		     }
+    	   }
+    	   
+    	  finepartita=l2.LibreriaPiena2(l2);
+    	    
+      }
+       if(c3%3==0)
+       {
+     	  l3.RiempiLibreria(lib,l3);
+     	  l3.StampaLibreria(l3);
+     	  
+     	  if(ris1==0)
+    	   {
+    		   ris1=l3.Difficile(l3, number, numerogiocatori, terzo);
+    		   if (ris1!=0)
+    		   {
+    		    terzo.punteggio=terzo.punteggio+8;
+    		   }
+    	   }
+    	   if (ris1!=0&&pt==0)
+    	   {
+    		  int supporto=ris1;
+    		  ris1=0;
+    		   ris1=l3.Difficile(l3, number, numerogiocatori, terzo);
+    		     if(ris1==8)
+    		     {
+    		    	 terzo.punteggio=terzo.punteggio+6;
+    		    	 pt=5;
+    		     }
+    		     else
+    		     {
+    		      ris1=supporto;
+    		     }
+    	   }
+    	   if (ris1!=0&&pt!=0)
+    	   {
+    		  int supporto=ris1;
+    		  ris1=0;
+    		   ris1=l3.Difficile(l2, number, numerogiocatori, terzo);
+    		     if(ris1==8)
+    		     {
+    		    	 terzo.punteggio=terzo.punteggio+4;
+    		     }
+    		     else
+    		     {
+    		      ris1=supporto;
+    		     }
+    	   }
+    	   
+    	   if(ris2==0)
+    	   {
+    		   ris2=l3.Difficile(l3, number1, numerogiocatori, terzo);
+    		   if (ris2!=0)
+    		   {
+    			   terzo.punteggio=terzo.punteggio+8;
+    		   }
+    	   }
+    	   if(ris2!=0&&pt2==0)
+    	   {
+    		  int supporto2=ris2;
+    		  ris2=0;
+    		   ris2=l3.Difficile(l3, number1, numerogiocatori, terzo);
+    		     if(ris2==8)
+    		     {
+    		    	 terzo.punteggio=terzo.punteggio+6;
+    		    	 pt2=5;
+    		     }
+    		     else
+    		     {
+    		      ris2=supporto2;
+    		     }
+    	   }
+    	   if(ris2!=0&&pt2!=0)
+    	   {
+    		  int supporto2=ris2;
+    		  ris2=0;
+    		   ris2=l3.Difficile(l3, number1, numerogiocatori, terzo);
+    		     if(ris2==8)
+    		     {
+    		    	 terzo.punteggio=(terzo.punteggio)+4;
+    		     }
+    		     else
+    		     {
+    		      ris2=supporto2;
+    		     }
+    	   }
+    	   
+    	   
+    	   
+    	  finepartita=l3.LibreriaPiena2(l3);
+    	    
+      }
+       
+     	  System.out.println("ciaoooo");
+       
+       lib=null;
+       
+	      System.out.println("Tocca a un altro giocatore");  
+	      c1++;
+	      c2++;
+	      c3++;
+        	
+        	
+        	}while(finepartita==false); 
             numerocarte=0;
         	
         	
@@ -998,7 +1384,7 @@ public class Main {
         	primo= new Giocatore (nome1);
         	secondo= new Giocatore(nome2);
         	terzo= new Giocatore(nome3);
-        	Giocatore quarto= new Giocatore(nome4);
+        	//Giocatore quarto= new Giocatore(nome4);
         	
         	do {
             	

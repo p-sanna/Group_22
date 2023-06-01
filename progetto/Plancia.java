@@ -64,7 +64,7 @@ public class Plancia {
 		}
 	
 	}
-  public void CaricaCarte(ArrayList <Tessera> c, Plancia p)
+  public void CaricaCarte(ArrayList <Tessera> c, Plancia p,int posizione)
   {
 	  int i;
 	 switch(p.ngioc)
@@ -123,7 +123,7 @@ public class Plancia {
 				 j++;
 			 }
 			 
-		
+		     j=0;
 			
 			break;
 		case'3':
@@ -280,10 +280,11 @@ public class Plancia {
 	  int i;
 	  switch(p.ngioc)
 	  {
-	  
+	 
 	      case'2':
 		 
-		  
+	    	  posizione=0;
+	    	  j=0;
 		  
 			this.riga1=null;
 			for(int k=0;k<9;k++)
