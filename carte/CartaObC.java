@@ -8,42 +8,42 @@ public class CartaObC {
 		this.numero=random;
 		switch(random) {
 		case 0: 
-			System.out.println( "completa un quadrato 2*2 dello stesso colore per 2 volte");
+			System.out.println ("Disponi le tessere nella libreria in modo da formare 6 gruppi di elementi di almeno 2 tesssre dello stesso tipo");
 			break;
 		case 1:
-			System.out.println ("completa due colonne dello stesso colore per 2 volte");
+			System.out.println ("Disponi le tessere nella libreria in modo da formare 4 gruppi di elementi di almeno 4 tesssre dello stesso tipo");
 			break;
 			
 		case 2:
-			System.out.println ("completa una colonna da 4 dello stesso colore per 4 volte");
+			System.out.println ("Inserisci nei 4 vertici della libreria 4 tessere dello stesso colore");
 			break;
 			
 		case 3:
-			System.out.println ("completa una coppia dello stetto colore su una colonna per 6 volte");
+			System.out.println ("Completa 2 gruppi ciascuno formato 4 tessere dello stesso tipo in un quadrato 2x2");
 			break;
 		case 4:
-			System.out.println ("completa 2 righe dello stesso colore da 5 caselle");
+			System.out.println ("Completa 3 colonne da 6 tessere ciascuna, ogni colonna può contenere al massimo 3 tipi di tessere");
 			break;
 		case 5:
-			System.out.println ("completa i vertici della libreria dello stesso colore");
+			System.out.println ("Inserisci nella libreria 8 tessere dello stesso colore, non ci sono vincoli di forma");
 			break;
 		case 6:
-			System.out.println ("completa la digonale della libreria dello stesso colore");
+			System.out.println ("Inserisci nella libreria 5 tessere dello stesso tipo in modo che formino una diagonale");
 			break;
 		case 7:
-			System.out.println ("completa in 3 righe differenti il seguente schema dello stesso oclore dal basso verso l'alto: 3,3,2");
+			System.out.println ("Completa 4 righe da 5 tessere ciascuna, ogni riga può contenere al massimo 3 tipi di tessere");
 			break;
 		case 8:
-			System.out.println ("");
+			System.out.println ("Completa 2 colonne da 6 tessere ciascuna, ogni colonna deve contenere 6 tipi di tessere diversi");
 			break;
 		case 9:
-			System.out.println ("");
+			System.out.println ("Completa 2 righe da tessere ciascuna, ogni riga deve contenere 5 tipi di tessere diversi");
 			break;
 		case 10:
-			System.out.println ("");
+			System.out.println ("Inserisci nella libreria 5 tessere dello stesso tipo disposte a X");
 			break;
 		case 11:
-			System.out.println ("");
+			System.out.println ("Completa 5 colonne della libreria in modo che siano decrescenti o crescenti l'una con l'altra");
 			break;
 		
 			
