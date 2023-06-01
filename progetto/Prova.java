@@ -99,7 +99,11 @@ System.out.println(due.obc1);
 	}
  
  
-		
+		//fine partita tessere adiacenti e obiettivo personale
+	    //controllo libreria sazio sufficiebte
+	//Estensione a 3 e 4 giocatore anche su diffcile
+	//togliere tutti gli output
+	//Libreria piena
 }
 
 

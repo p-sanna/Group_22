@@ -794,6 +794,7 @@ public class Plancia {
 	    if(controlloa==false&&controllob==false&&controlloc==false&&controllod==false&&controlloe==false)
 	    {
 	    	controllo=false;
+	    	System.out.println("Controllonuovo" +controllo);
 	    	
 	    }
 	   

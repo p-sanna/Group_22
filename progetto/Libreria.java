@@ -229,23 +229,37 @@ public class Libreria  {
 		   return a;
 	}
 	
-	public boolean LibreriaPiena(Libreria l)
+	public int LibreriaPiena(Libreria l)
 	{
 		boolean a=false;
 	    int contatore=0;
+	    int []r = new int [5];
 		  for(int i=0;i<5;i++)
 		  {
-			  if(l.riempimentocasella[0][i]==true)
-			  {
-				  contatore++;
-			  }
+			 for(int j=0;j<6;j++)
+				 {
+				   if(l.riempimentocasella[j][i]==false)
+				   {
+					   contatore++;
+				   }
+				 }
+			 r[i]=contatore;
+			 contatore=0;
+					 
+			  
 				  
 		  }
-		  if(contatore>=5)
-		  {
-			  a=true;
-		  }
-		 return true;
+		  int max= r[0];
+		     for (int i=0;i<5;i++)
+		     {
+		    	 if(max<r[i])
+		    	 {
+		    		 max=r[i];
+		    	 }
+		     }
+		  
+		  
+		 return max;
 	}
 	
 	
@@ -298,16 +312,16 @@ public class Libreria  {
 		      
     }
 	
-	public int  Difficile(Libreria l, int num,int ngioc, Giocatore g, char a[][])
+	public int  Difficile(Libreria l, int num,int ngioc, Giocatore g)
 	{
-		  char b[][]= new char[6][5];//da cambiare
+		  char a[][]= new char[6][5];//da cambiare
 		 
 		 boolean appoggio=false;
 		  for(int i=0;i<6;i++)
 		  {
 			  for(int j=0;j<5;j++)
 			  {
-				  b[i][j]=l.casellario[i][j].getInizialeColore();
+				  a[i][j]=l.casellario[i][j].getInizialeColore();
 				  
 				  
 			  }

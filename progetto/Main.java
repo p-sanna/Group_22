@@ -153,7 +153,7 @@ public class Main {
             
             
             //Inizio prelievo
-             int riga = 0,colonna = 0,numerocarte=0;
+             int riga = 0,colonna = 0,numerocarte=0,spaziodisponibile=0;
              int contatoreturni=1,number1=0;
              String r = null;
              String nome1 = "";
@@ -214,6 +214,19 @@ public class Main {
    	     {
    	    	 System.out.println("Inserisci il numero di tessere adiacenti tra loro che vuoi prelevare, da 1 a 3");
    	    	 numerocarte= sc.nextInt();
+   	    	 if(contatoreturni%2==0)
+   	    	 {
+   	    		 
+   	    	 spaziodisponibile=l1.LibreriaPiena(l1);
+   	    	 }
+   	    	 else
+   	    	 {
+   	    		 spaziodisponibile=l2.LibreriaPiena(l2);
+   	    	 }
+   	    	     if(spaziodisponibile<numerocarte)
+   	    	      {
+   	    		   numerocarte=5;
+   	    	      }
    	     }while(numerocarte>3||numerocarte<1);
             
             if (numerocarte==1)
@@ -510,7 +523,7 @@ public class Main {
         		     }
         	   }
         	   
-        	
+        	finepartita=l1.LibreriaPiena2(l1);
         	    
           }
           else
@@ -563,7 +576,7 @@ public class Main {
        		     }
        	   }
        	   
-       	
+       	  finepartita=l2.LibreriaPiena2(l2);
        	    
          }
         	  System.out.println("ciaoooo");
