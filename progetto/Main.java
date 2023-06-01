@@ -207,7 +207,7 @@ public class Main {
         	
         	
         	Random random3 = new Random();
-        	 int number5 = random3.nextInt(1);
+        	 int number5 = random3.nextInt(2);
         	 if(number5==1)
         	 {
         		  primo.setNome(secondo, nome2);
@@ -708,7 +708,7 @@ public class Main {
         	
         	}}
         	 random3 = new Random();
-       	  number5 = random3.nextInt(2);
+       	  number5 = random3.nextInt(3);
        	 if(number5==1)
        	 {
        		  primo.setNome(secondo, nome2);
