@@ -25,5 +25,15 @@ public class Giocatore {
 	{
 		return g.punteggio;
 	}
+	public String getNome(Giocatore g)
+	{
+		return g.nome;
+	}
+	public void setNome(Giocatore g,String nome2)
+	{
+		this.nome=nome2;
+	}
+	
+	
 
 }

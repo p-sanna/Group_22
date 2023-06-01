@@ -1424,6 +1424,74 @@ return controllo;
 	      }
 	      return correttezza;
   }
+  
+  public boolean ConPlancia(Tessera[][] p)
+  {
+	  boolean a=false;
+	  boolean b=false;
+	  boolean c=false;
+	  boolean d=false;
+	  boolean e=false;
+	  for (int i=0;i<8;i++)
+	  {
+		  for (int j=0;j<8;j++)
+		  {
+			  if(p[i][j].getInizialeColore()!='x'||p[i][j].getInizialeColore()!='0')
+					  {
+				            if(p[i][j+1].getInizialeColore()=='x'||p[i][j+1].getInizialeColore()=='0')
+				            {
+				            	 if(p[i+1][j].getInizialeColore()=='x'||p[i+1][j].getInizialeColore()=='0')
+				            	 {
+				            		 a=true;
+				            	 }
+				            }
+					  }
+					  
+		  }
+		  for(int j=0;j<8;j++)
+		  {
+			  if(p[8][j].getInizialeColore()!='x'||p[8][j].getInizialeColore()!='0')
+			  {
+		            if(p[8][j+1].getInizialeColore()=='x'||p[8][j+1].getInizialeColore()=='0')
+		            {
+		            	 if(p[7][j].getInizialeColore()=='x'||p[7][j].getInizialeColore()=='0')
+		            	 {
+		            		 b=true;
+		            	 }
+		            }
+			  }
+		  }
+		  for( i=0;i<8;i++)
+		  {
+			  if(p[i][8].getInizialeColore()!='x'||p[i][8].getInizialeColore()!='0')
+			  {
+		            if(p[i+1][8].getInizialeColore()=='x'||p[i+1][8].getInizialeColore()=='0')
+		            {
+		            	 if(p[i][7].getInizialeColore()=='x'||p[i][7].getInizialeColore()=='0')
+		            	 {
+		            		 c=true;
+		            	 }
+		            }
+			  }
+		  }
+		  if(p[8][8].getInizialeColore()!='x'||p[8][8].getInizialeColore()!='0')
+		  {
+	            if(p[7][8].getInizialeColore()=='x'||p[7][8].getInizialeColore()=='0')
+	            {
+	            	 if(p[8][7].getInizialeColore()=='x'||p[8][7].getInizialeColore()=='0')
+	            	 {
+	            		 d=true;
+	            	 }
+	            }
+		  }
+		  if(a==true&&b==true&&c==true&&d==true)
+		  {
+			  e=true;
+		  }
+	  }
+	return e;	  
+  }
+  
 }
   
 

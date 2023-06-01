@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		int i=0;
-		int ris1=0,ris2=0;
+		int ris1=0,ris2=0, number4=0;;
 		CartaOb att= new CartaOb();
 		att.CaricaMatrici();
 	   Ciclico prova= new Ciclico(att.matrice1);
@@ -175,17 +175,18 @@ public class Main {
         	
         	CartaObC x= new CartaObC(number);
         	CartaObC y= new CartaObC(number1);
-        	
+        	boolean conplancia=false;
         switch(numerogiocatori)
         {
         case 2:
         	while(nome1.isEmpty()|| nome2.isEmpty()||nome1.equals(nome2))
         	{
-	        	System.out.println("Inserisci il nome del primo giocatore");
+	        	
+        		System.out.println("Inserisci il nome del primo giocatore (non include la posizione nel gioco)");
 	        	nome1=sc.nextLine();
 	        	
 	        	
-	        	System.out.println("Inserisci il nome del secondo giocatore");
+	        	System.out.println("Inserisci il nome del secondo giocatore (non include la posizione nel gioco)");
 	        	nome2=sc.nextLine();
 	        	
 	        	if(nome1.isEmpty()||nome2.isEmpty())
@@ -194,16 +195,46 @@ public class Main {
 	        	{System.out.println("I nomi dei giocatori non possono essere uguali. Riprova");
 	        	
 	        	}}
-        	Giocatore primo= new Giocatore (nome1);
-        	Giocatore secondo= new Giocatore(nome2);
+        	Giocatore primo= new Giocatore ("A");
+        	 Giocatore secondo= new Giocatore("B");
+        	
+        	Random random3 = new Random();
+        	 int number5 = random3.nextInt(1);
+        	 if(number5==1)
+        	 {
+        		  primo.setNome(secondo, nome2);
+        		 System.out.println("Inizia il giocatore "+primo.getNome(primo));
+        		 secondo.setNome(primo, nome1);
+        		 
+        	 }
+        	 else
+        	 {
+        		 primo.setNome(primo, nome1);
+        		 System.out.println("Inizia il giocatore "+primo.getNome(primo));
+        		 secondo.setNome(secondo, nome2);
+        	 }
+        	
+        	
+        	char m1[][]= new char[6][5];
+        	char m2[][]= new char[6][5];
         	Libreria l1= new Libreria(nome1,1);
         	Libreria l2= new Libreria(nome2,2);
         	System.out.println("Nome1lib "+l1.getGiocatore(l1));
         	System.out.println("Nome2lib "+l2.getGiocatore(l2));
+        	 Random random = new Random();
+ 	        // genera numero casuale tra 0 e 3
+ 	        int number3 = random.nextInt(12);
+         	CartaOb q= new CartaOb();
+         	m1=q.Carta1(number3);
+         	do {
+         	 number4 = random.nextInt(12);
+         	}while(number4==number3);
+         	m2=q.Carta1(number4);
         	
         do {
         	
-        	
+            // crea oggetto Random
+	       
         	
         	
         	
@@ -214,6 +245,11 @@ public class Main {
    	     {
    	    	 System.out.println("Inserisci il numero di tessere adiacenti tra loro che vuoi prelevare, da 1 a 3");
    	    	 numerocarte= sc.nextInt();
+   	    	 conplancia=p.ConPlancia(t);
+   	    	   if (conplancia==true)
+   	    	   {
+   	    		   p.CaricaCarte(carte, p);
+   	    	   }
    	    	 if(contatoreturni%2==0)
    	    	 {
    	    		 
@@ -587,7 +623,42 @@ public class Main {
    	      contatoreturni++;
    	         
         }while(finepartita==false); 
-       
+        int punteggiop=0,punteggios=0;
+        punteggiop=q.PunteggioPersonale(l1,m1 );
+    	punteggios=q.PunteggioPersonale(l2, m2);
+    	primo.punteggio=primo.punteggio+punteggiop;
+    	secondo.punteggio=secondo.punteggio+punteggios;
+    	punteggiop=0;
+    	punteggiop=l1.PuntiTessereAd(l1);
+    	primo.punteggio=primo.punteggio+punteggiop;
+    	punteggios=0;
+    	punteggios=l2.PuntiTessereAd(l2);
+    	secondo.punteggio=secondo.punteggio+punteggios;
+    	  if((contatoreturni-1)%2==0)
+    	  {
+    		  primo.punteggio=primo.punteggio+1;
+    	  }
+    	  else
+    	  {
+    		  secondo.punteggio=secondo.punteggio+1;
+    	  }
+    	  
+    	  if(primo.punteggio>secondo.punteggio)
+    	  {
+    		  System.out.println("HA VINTO IL GIOCATORE "+primo.getNome(primo)+" con "+primo.punteggio+" punti");
+    		  System.out.println("Il secondo giocatore ha "+secondo.punteggio);
+    	  }
+    	  else
+    		  
+    	  {
+    		  System.out.println("HA VINTO IL GIOCATORE "+secondo.getNome(secondo)+" con "+secondo.punteggio+" punti");
+    		  System.out.println("Il primo giocatore ha "+primo.punteggio);
+    	  }
+    		  
+    		 
+    		  
+        
+        
    	      break;  
           
    	      
