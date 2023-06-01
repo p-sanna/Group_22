@@ -22,11 +22,11 @@ public class Plancia {
 	{
 	 this.ngioc=ngioc;
 	 
-	 System.out.println("ngioc "+ngioc);
+	 
 		switch (ngioc)
 		{
 			case'2':
-				System.out.println("Ciaooooo");
+				
 				this.riga2=new Tessera[2];
 				this.riga3=new Tessera[3];
 				this.riga4=new Tessera[6];
@@ -81,7 +81,7 @@ public class Plancia {
 		     posizione=i;
 		     j=0;
 		     
-		     System.out.println("Posizione "+posizione);
+		     //System.out.println("Posizione "+posizione);
 			 for(i=posizione;i<posizione+3;i++)
 			 {
 				 this.riga3[j]=c.get(i);
@@ -588,7 +588,7 @@ public class Plancia {
 	  boolean correttezza=false;
 	  int riga1,colonna1=0;
 	  riga1=riga-1;
-	  System.out.println(riga1 +" ciaone");
+	  //System.out.println(riga1 +" ciaone");
 	  colonna1=colonna-1;
 	
 	 
@@ -609,7 +609,7 @@ public class Plancia {
 	   	        	    		
 	   	        	    	}
 	        	    	    correttezza=true;
-	        	    	    System.out.println(correttezza +" ciaone");
+	        	    	    
 	        	    	 
 	        	         }
 	        	   
@@ -619,7 +619,7 @@ public class Plancia {
 	        		 
 	        		 if(riga1==0)
 	        		 {
-	        			 System.out.println(correttezza +" ciaone1");
+	        			 
 	        			 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 		        		 {
 		        			 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
@@ -630,7 +630,7 @@ public class Plancia {
 		   	        	    		
 		   	        	    	}
 		        	    	    correttezza=true;
-		        	    	    System.out.println(correttezza +" ciaone");
+		        	    	    
 		        	    	 
 		        	         }
 	        		 }}
@@ -647,7 +647,7 @@ public class Plancia {
 		   	        	    		
 		   	        	    	}
 		        	    	    correttezza=true;
-		        	    	    System.out.println(correttezza +" ciaone");
+		        	    	    
 		        	    	 
 		        	         }
 	        		 }
@@ -795,7 +795,7 @@ public class Plancia {
 	    if(controlloa==false&&controllob==false&&controlloc==false&&controllod==false&&controlloe==false)
 	    {
 	    	controllo=false;
-	    	System.out.println("Controllonuovo" +controllo);
+	    	
 	    	
 	    }
 	   
@@ -811,7 +811,7 @@ public class Plancia {
 	
 	 if(riga1>=1&&riga1<=8&&riga1+sfasamento>=1&&riga1+sfasamento<=8&&colonna1>=1&&colonna1<8)
 	 {
-		 System.out.println("Controllo1");
+		 
 		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 		 {
 
@@ -822,7 +822,7 @@ public class Plancia {
 
 				 if((t[riga1-1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='0')||(t[riga1-1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='x'))
 				 {
-					 System.out.println("Provariga");
+					 
 			           if(t[riga1+sfasamento][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento][colonna1].getInizialeColore()!='x')
 			        		   {
 			        	            controllo=true;
@@ -840,25 +840,24 @@ public class Plancia {
 	 
 	 if(((riga1==0||riga1+sfasamento==0)&&(riga1+sfasamento>-1))&&colonna1>=1&&colonna1<8)
 	 {
-		 System.out.println("Oggi1");
+		 
 		 System.out.println(riga1+sfasamento);
 		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 		 {
-			 System.out.println("Oggi2");
+			 
              //inserire if che discrimina uno
 
 			 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 			 {
-				 System.out.println("Oggi3");
+				 
 
 				 if((t[riga1+sfasamento][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='x'))
 				 {
-					 System.out.println("Provariga");
-					 System.out.println("Oggi4");
+					 
 			           if(t[riga1+sfasamento][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento][colonna1].getInizialeColore()!='x')
 			        		   {
 			        	            controllo=true;
-			        	            System.out.println("Oggi5");
+			        	            
 			        		   }
 
 			 }}
@@ -885,7 +884,7 @@ public class Plancia {
 
 				 if((t[riga1-1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='0')||(t[riga1-1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='x'))
 				 {
-					 System.out.println("Provariga");
+					 
 			           if(t[riga1+sfasamento][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento][colonna1].getInizialeColore()!='x')
 			        		   {
 			        	            controllo=true;
@@ -901,7 +900,7 @@ public class Plancia {
 
 				 if((t[riga1-1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='0')||(t[riga1-1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+1+sfasamento][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento][colonna1-1].getInizialeColore()=='x'))
 				 {
-					 System.out.println("Provariga");
+					 
 			           if(t[riga1+sfasamento][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento][colonna1].getInizialeColore()!='x')
 			        		   {
 			        	            controllo=true;
@@ -924,7 +923,7 @@ return controllo;
 	        
 	        	 if(colonna1>=0&&colonna1<=8&&colonna1+sfasamento>=0&&colonna1+sfasamento<=8&&  riga1>=1&&riga1<8)
 	        	 {
-	        		 System.out.println("Controllo1");
+	        		 
 	        		 if((t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 	        		 {
 	        			 if((t[riga1-1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1+1+sfasamento].getInizialeColore()=='0'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='0'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='0')||(t[riga1-1][colonna1+sfasamento].getInizialeColore()=='x'||t[riga1][colonna1+1+sfasamento].getInizialeColore()=='x'||t[riga1+1][colonna1+sfasamento].getInizialeColore()=='x'||t[riga1][colonna1-1+sfasamento].getInizialeColore()=='x'))
@@ -1146,30 +1145,28 @@ return controllo;
 	        	 //oggi
 	        	 if((riga1==0||riga1+sfasamento1==0)&&(riga1+sfasamento1>-1)&&colonna1>=1&&colonna1<8)
 	        	 {
-	        		 System.out.println("Oggi1");
+	        		 
 	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 	        		 {
-	        			 System.out.println("Oggi2");
-	                     //inserire if che discrimina uno
+	        			 
 
 	        			 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 	        			 {
-	        				 System.out.println("Oggi3");
+	        				 
 	        				 
 	        				 if((t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento2][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento2][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='x'))
         					 {
 
 	        				 if((t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento1][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento1][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='x'))
 	        				 {
-	        					 System.out.println("Provariga");
-	        					 System.out.println("Oggi4");
+	        					 
 	        			           if(t[riga1+sfasamento1][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento1][colonna1].getInizialeColore()!='x')
 	        			        		   {
 	        			        	            
 	        			        	           if(t[riga1+sfasamento2][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento2][colonna1].getInizialeColore()!='x')   
 	        			        		      
 	        			        	        	   {controllo=true;
-	        			        	                System.out.println("Oggi5");
+	        			        	                
 	        			        		         }
 	        			        	           }
 
@@ -1184,30 +1181,28 @@ return controllo;
 	        	 //Adesso
 	        	 if((riga1==0||riga1+sfasamento2==0)&&(riga1+sfasamento2>-1)&&colonna1>=1&&colonna1<8)
 	        	 {
-	        		 System.out.println("Oggi1");
+	        		 
 	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 	        		 {
-	        			 System.out.println("Oggi2");
-	                     //inserire if che discrimina uno
+	        			 
 
 	        			 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1+1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1+1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 	        			 {
-	        				 System.out.println("Oggi3");
+	        				 
 	        				 
 	        				 if((t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento1][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento1][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='x'))
         					 {
 
 	        				 if((t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento2][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento2][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='x'))
 	        				 {
-	        					 System.out.println("Provariga");
-	        					 System.out.println("Oggi4");
+	        					 
 	        			           if(t[riga1+sfasamento2][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento2][colonna1].getInizialeColore()!='x')
 	        			        		   {
 	        			        	            
 	        			        	           if(t[riga1+sfasamento1][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento1][colonna1].getInizialeColore()!='x')   
 	        			        		      
 	        			        	        	   {controllo=true;
-	        			        	                System.out.println("Oggi5");
+	        			        	                
 	        			        		         }
 	        			        	           }
 
@@ -1222,33 +1217,32 @@ return controllo;
 	        	 
 	        	 
 	        	 
-	        	 //Adesso2
+	        	 
 	        	 if((riga1==8||riga1+sfasamento2==8)&&(riga1+sfasamento2<9)&&colonna1>=1&&colonna1<8)
 	        	 {
-	        		 System.out.println("Oggi1");
+	        		 
 	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 	        		 {
-	        			 System.out.println("Oggi2");
-	                     //inserire if che discrimina uno
+	        			 
+	                    
 
 	        			 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 	        			 {
-	        				 System.out.println("Oggi3");
+	        				 
 	        				 
 	        				 if((t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='0'||t[riga1-1+sfasamento1][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='x'||t[riga1-1+sfasamento1][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='x'))
         					 {
 
 	        				 if((t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='0'||t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='x'||t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='x'))
 	        				 {
-	        					 System.out.println("Provariga");
-	        					 System.out.println("Oggi4");
+	        					 
 	        			           if(t[riga1+sfasamento2][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento2][colonna1].getInizialeColore()!='x')
 	        			        		   {
 	        			        	            
 	        			        	           if(t[riga1+sfasamento1][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento1][colonna1].getInizialeColore()!='x')   
 	        			        		      
 	        			        	        	   {controllo=true;
-	        			        	                System.out.println("Oggi5");
+	        			        	                
 	        			        		         }
 	        			        	           }
 
@@ -1260,33 +1254,31 @@ return controllo;
 	        	 }
 	        	 }
 	        	 
-	        	 //oggi2
+	        	 
 	        	 if((riga1==8||riga1+sfasamento1==8)&&(riga1+sfasamento1<9)&&colonna1>=1&&colonna1<8)
 	        	 {
-	        		 System.out.println("Oggi1");
+	        		 
 	        		 if(t[riga1][colonna1].getInizialeColore()!='0'&&t[riga1][colonna1].getInizialeColore()!='x')
 	        		 {
-	        			 System.out.println("Oggi2");
-	                     //inserire if che discrimina uno
+	        			
 
 	        			 if((t[riga1][colonna1+1].getInizialeColore()=='0'||t[riga1-1][colonna1].getInizialeColore()=='0'||t[riga1][colonna1-1].getInizialeColore()=='0')||(t[riga1][colonna1+1].getInizialeColore()=='x'||t[riga1-1][colonna1].getInizialeColore()=='x'||t[riga1][colonna1-1].getInizialeColore()=='x'))
 	        			 {
-	        				 System.out.println("Oggi3");
+	        				 
 	        				 
 	        				 if((t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='0'||t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='x'||t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='x'))
         					 {
 
 	        				 if((t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='0'||t[riga1-1+sfasamento1][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='0')||(t[riga1+sfasamento1][colonna1+1].getInizialeColore()=='x'||t[riga1-1+sfasamento1][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento1][colonna1-1].getInizialeColore()=='x'))
 	        				 {
-	        					 System.out.println("Provariga");
-	        					 System.out.println("Oggi4");
+	        					 
 	        			           if(t[riga1+sfasamento1][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento1][colonna1].getInizialeColore()!='x')
 	        			        		   {
 	        			        	            
 	        			        	           if(t[riga1+sfasamento2][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento2][colonna1].getInizialeColore()!='x')   
 	        			        		      
 	        			        	        	   {controllo=true;
-	        			        	                System.out.println("Oggi5");
+	        			        	                
 	        			        		         }
 	        			        	           }
 
@@ -1312,7 +1304,7 @@ return controllo;
 	        					 if((t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento2][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='0')||(t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento2][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='x'))
 	        					 {
 	        					 
-	        					 System.out.println("Provariga");
+	        					 
 	        			           if(t[riga1+sfasamento1][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento1][colonna1].getInizialeColore()!='x')
 	        			        		   {
 	        			        	          if(t[riga1+sfasamento2][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento2][colonna1].getInizialeColore()!='x')
@@ -1336,7 +1328,7 @@ return controllo;
 	        					 if((t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='0'||t[riga1+1+sfasamento2][colonna1].getInizialeColore()=='0'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='0')||(t[riga1-1+sfasamento2][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento2][colonna1+1].getInizialeColore()=='x'||t[riga1+1+sfasamento2][colonna1].getInizialeColore()=='x'||t[riga1+sfasamento2][colonna1-1].getInizialeColore()=='x'))
 	        					 {
 	        					 
-	        					 System.out.println("Provariga");
+	        					 
 	        			           if(t[riga1+sfasamento1][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento1][colonna1].getInizialeColore()!='x')
 	        			        		   {
 	        			        	          if(t[riga1+sfasamento2][colonna1].getInizialeColore()!='0'&&t[riga1+sfasamento2][colonna1].getInizialeColore()!='x')
@@ -1489,21 +1481,3 @@ return controllo;
 	}
 
 }
-  
-
-
-    // ---> resta da implementare il controllo per impedire la selezione di singole tessere con soli zeri e x adiacenti in nuovo turno
-    // ---> resta da implementare il controllo per impedire, quando si vogliono prendere tessere in fila o colonna, si selezionare tessere della stessa riga/colonna ma 
-    //      non adiacenti (credo basti imporre che, quando il giocatore deve dire se salire o scendere ecc, si sia un controllo a ciclo sul numero immesso)
-
-
-	// caso 4 gioc 3 carte: problemi con il prelievo in verticale dalla prima riga (DA CORREGGERE)
-	
-	// richiamare un controllo del numero massimo di elementi che si possono prendere e immettere (DA FARE)
-
-	// quando nella propria libreria ho già tre tessere in una colonna non mi lascia metterne 3 sopra e mi rimette nel ciclo di richiaesta colonna
-	// se ne ho 2 e poi 3 funziona, se ne ho 3 e poi 2 funziona  (CONTROLLARE)
-
-	// riempimento plancia non attivo (DA FARE)
-
-	// implementare ciclo per quando si immettono le tessere nella propria libreria sulla colonna selezionata, altrimenti riporta errore (DA FARE)

@@ -18,9 +18,7 @@ public class Main {
 	   Libreria atttttt= new Libreria("ciaone",1);
 	   
 	   atttttt.PuntiTessereAd(atttttt);
-		System.out.println("Carta ob"); //Togliere
-		 System.out.println("ciao");
-		 //togliere
+		
 	
 		int nverdi=22,nrosse=22,nblu=22,nazzurre=22,ngialle=22,nbianche=22;
 
