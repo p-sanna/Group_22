@@ -31,13 +31,13 @@ public class Ciclico {
 	                    if (elementi > 0) {
 	                        gruppi++;
 	                        g.add(elementi);
-	                        System.out.println("Gruppo " + gruppi + ": " + elementi + " elementi");
+	                        //System.out.println("Gruppo " + gruppi + ": " + elementi + " elementi");
 	                        
 	                    }
 	                }
 	            }
 	        }
-	        System.out.println("Totale gruppi: " + gruppi);
+	        //System.out.println("Totale gruppi: " + gruppi);
 	        return g;
 	    }
 
@@ -77,14 +77,14 @@ public class Ciclico {
 	                    if (elementi >= ele) {
 	                        gruppi++;
 	                        g.add(elementi);
-	                        System.out.println("Gruppo " + gruppi + ": " + elementi + " elementi");
+	                        //System.out.println("Gruppo " + gruppi + ": " + elementi + " elementi");
 	                        
 	                        
 	                    }
 	                }
 	            }
 	        }
-	        System.out.println("Totale gruppi: " + gruppi);
+	        //System.out.println("Totale gruppi: " + gruppi);
 	         if(gruppi==ripetizioni)
 	         {
 	        	 a= true;
@@ -121,7 +121,7 @@ public class Ciclico {
 	    					  contatore++;
 	    					
 	    					}
-	    				System.out.println("contatore " +contatore);
+	    				//System.out.println("contatore " +contatore);
 	    			}
 	    		}
 	    		j++;	
@@ -290,7 +290,7 @@ public class Ciclico {
 				    				if(a[i+2][j]!=a[i+3][j]&&a[i+2][j]!=a[i+4][j]&&a[i+2][j]!=a[i+5][j])
 				    						{
 				    					     contatore1++;
-				    					     System.out.println("Porcalazia");
+				    					     
 				    						}
 				    			 }
 				    		 }

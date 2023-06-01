@@ -54,21 +54,13 @@ public class CartaOb {
 			    }
 			}
 
-			// Stampa matrice prova 
-			System.out.println("libreria vuota prova");
-			for (int i = 0; i < righe; i++) {
-			    for (int j = 0; j < colonne; j++) {
-			        System.out.print(matrice[i][j] + " ");
-			    }
-			    System.out.println(); 
-			}
-	        System.out.println();
+			
 			
 			
 			
 			
 			// Carta Personale 1
-			System.out.println("personale 1 prova");
+			
 			
 			for (int i = 0; i < righe; i++) {
 			    for (int j = 0; j < colonne; j++) {
@@ -83,16 +75,10 @@ public class CartaOb {
 			matrice1[5][2] = 'A';
 			matrice1[2][3] = 'W';
 			
-			for (int i = 0; i < righe; i++) {
-			    for (int j = 0; j < colonne; j++) {
-			        System.out.print(matrice1[i][j] + " ");
-			    }
-			    System.out.println(); 
-			}
-	        System.out.println();
+			
 	        
 			// Carta Personale 2
-			System.out.println("personale 2 prova");
+			
 			
 			for (int i = 0; i < righe; i++) {
 			    for (int j = 0; j < colonne; j++) {
@@ -107,16 +93,10 @@ public class CartaOb {
 			matrice2[4][3] = 'A';
 			matrice2[3][4] = 'W';
 			
-			for (int i = 0; i < righe; i++) {
-			    for (int j = 0; j < colonne; j++) {
-			        System.out.print(matrice2[i][j] + " ");
-			    }
-			    System.out.println(); 
-			}
-	        System.out.println();
+			
 	        
 			// Carta Personale 3
-			System.out.println("personale 3 prova");
+			
 			
 			for (int i = 0; i < righe; i++) {
 			    for (int j = 0; j < colonne; j++) {
@@ -131,16 +111,10 @@ public class CartaOb {
 			matrice3[3][4] = 'A';
 			matrice3[5][0] = 'W';
 			
-			for (int i = 0; i < righe; i++) {
-			    for (int j = 0; j < colonne; j++) {
-			        System.out.print(matrice3[i][j] + " ");
-			    }
-			    System.out.println(); 
-			}
-	        System.out.println();
+			
 	        
 	     // Carta Personale 4
-	     		System.out.println("personale 4 prova");
+	     		
 	     		
 	     		for (int i = 0; i < righe; i++) {
 	     		    for (int j = 0; j < colonne; j++) {
@@ -155,16 +129,10 @@ public class CartaOb {
 	     		matrice4[2][0] = 'A';
 	     		matrice4[4][1] = 'W';
 	     		
-	     		for (int i = 0; i < righe; i++) {
-	     		    for (int j = 0; j < colonne; j++) {
-	     		        System.out.print(matrice4[i][j] + " ");
-	     		    }
-	     		    System.out.println(); 
-	     		}
-	             System.out.println();
+	     		
 	             
 	     		// Carta Personale 5
-	     		System.out.println("personale 5 prova");
+	     		
 	     		
 	     		for (int i = 0; i < righe; i++) {
 	     		    for (int j = 0; j < colonne; j++) {
@@ -179,16 +147,10 @@ public class CartaOb {
 	     		matrice5[1][1] = 'A';
 	     		matrice5[3][2] = 'W';
 	     		
-	     		for (int i = 0; i < righe; i++) {
-	     		    for (int j = 0; j < colonne; j++) {
-	     		        System.out.print(matrice5[i][j] + " ");
-	     		    }
-	     		    System.out.println(); 
-	     		}
-	             System.out.println();
+	     		
 	             
 	     		// Carta Personale 6
-	     		System.out.println("personale 6 prova");
+	     		
 	     		
 	     		for (int i = 0; i < righe; i++) {
 	     		    for (int j = 0; j < colonne; j++) {
@@ -203,16 +165,10 @@ public class CartaOb {
 	     		matrice6[0][2] = 'A';
 	     		matrice6[2][3] = 'W';
 	     		
-	     		for (int i = 0; i < righe; i++) {
-	     		    for (int j = 0; j < colonne; j++) {
-	     		        System.out.print(matrice6[i][j] + " ");
-	     		    }
-	     		    System.out.println(); 
-	     		}
-	             System.out.println();
+	     		
 	             
 	          // Carta Personale 7
-	     		System.out.println("personale 7 prova");
+	     		
 	     		
 	     		for (int i = 0; i < righe; i++) {
 	     		    for (int j = 0; j < colonne; j++) {
@@ -227,16 +183,10 @@ public class CartaOb {
 	     		matrice7[3][0] = 'A';
 	     		matrice7[5][2] = 'W';
 	     		
-	     		for (int i = 0; i < righe; i++) {
-	     		    for (int j = 0; j < colonne; j++) {
-	     		        System.out.print(matrice7[i][j] + " ");
-	     		    }
-	     		    System.out.println(); 
-	     		}
-	             System.out.println();
+	     		
 	             
 	     		// Carta Personale 8
-	     		System.out.println("personale 8 prova");
+	     		
 	     		
 	     		for (int i = 0; i < righe; i++) {
 	     		    for (int j = 0; j < colonne; j++) {
@@ -251,16 +201,10 @@ public class CartaOb {
 	     		matrice8[2][2] = 'A';
 	     		matrice8[4][3] = 'W';
 	     		
-	     		for (int i = 0; i < righe; i++) {
-	     		    for (int j = 0; j < colonne; j++) {
-	     		        System.out.print(matrice8[i][j] + " ");
-	     		    }
-	     		    System.out.println(); 
-	     		}
-	             System.out.println();
+	     		
 	             
 	     		// Carta Personale 9
-	     		System.out.println("personale 9 prova");
+	     		
 	     		
 	     		for (int i = 0; i < righe; i++) {
 	     		    for (int j = 0; j < colonne; j++) {
@@ -275,16 +219,10 @@ public class CartaOb {
 	     		matrice9[4][1] = 'A';
 	     		matrice9[3][4] = 'W';
 	     		
-	     		for (int i = 0; i < righe; i++) {
-	     		    for (int j = 0; j < colonne; j++) {
-	     		        System.out.print(matrice9[i][j] + " ");
-	     		    }
-	     		    System.out.println(); 
-	     		}
-	             System.out.println();
+	     		
 	             
 	          // Carta Personale 10
-	     		System.out.println("personale 10 prova");
+	     		
 	     		
 	     		for (int i = 0; i < righe; i++) {
 	     		    for (int j = 0; j < colonne; j++) {
@@ -299,16 +237,10 @@ public class CartaOb {
 	     		matrice10[0][4] = 'A';
 	     		matrice10[2][0] = 'W';
 	     		
-	     		for (int i = 0; i < righe; i++) {
-	     		    for (int j = 0; j < colonne; j++) {
-	     		        System.out.print(matrice10[i][j] + " ");
-	     		    }
-	     		    System.out.println(); 
-	     		}
-	             System.out.println();
+	     		
 	             
 	          // Carta Personale 11
-	     		System.out.println("personale 11 prova");
+	     		
 	     		
 	     		for (int i = 0; i < righe; i++) {
 	     		    for (int j = 0; j < colonne; j++) {
@@ -323,16 +255,10 @@ public class CartaOb {
 	     		matrice11[5][3] = 'A';
 	     		matrice11[1][1] = 'W';
 	     		
-	     		for (int i = 0; i < righe; i++) {
-	     		    for (int j = 0; j < colonne; j++) {
-	     		        System.out.print(matrice11[i][j] + " ");
-	     		    }
-	     		    System.out.println(); 
-	     		}
-	             System.out.println();
+	     		
 	             
 	          // Carta Personale 12
-	     		System.out.println("personale 12 prova");
+	     		
 	     		
 	     		for (int i = 0; i < righe; i++) {
 	     		    for (int j = 0; j < colonne; j++) {
@@ -347,13 +273,7 @@ public class CartaOb {
 	     		matrice12[3][3] = 'A';
 	     		matrice12[0][2] = 'W';
 	     		
-	     		for (int i = 0; i < righe; i++) {
-	     		    for (int j = 0; j < colonne; j++) {
-	     		        System.out.print(matrice12[i][j] + " ");
-	     		    }
-	     		    System.out.println(); 
-	     		}
-	             System.out.println();
+	     		
 	             
 	}
 	             
@@ -427,7 +347,7 @@ public class CartaOb {
 	                    int number = random.nextInt(12);
 	                    switch(number) {
 	            	case 0: 
-
+	            		System.out.println("Tessera Obiettivo Personale 1");
 	            		for (int i = 0; i < righe; i++) {
 	            		    for (int j = 0; j < colonne; j++) {
 	            		        matrice1[i][j] = 'X';
@@ -454,7 +374,7 @@ public class CartaOb {
 	            	case 1:
 	            		System.out.println ("");
 	            		// Carta Personale 2
-	            				System.out.println("personale 2 prova");
+	            				System.out.println("Tessera Obiettivo Personale 2");
 	            				
 	            				for (int i = 0; i < righe; i++) {
 	            				    for (int j = 0; j < colonne; j++) {
@@ -480,7 +400,7 @@ public class CartaOb {
 	            		
 	            	case 2:
 	            		System.out.println ("");
-	            System.out.println("personale 3 prova");
+	            System.out.println("Tessera Obiettivo Personale 3");
 	            		
 	            		for (int i = 0; i < righe; i++) {
 	            		    for (int j = 0; j < colonne; j++) {
@@ -507,7 +427,7 @@ public class CartaOb {
 	            	case 3:
 	            		System.out.println ("");
 	            		// Carta Personale 4
-	             		System.out.println("personale 4 prova");
+	             		System.out.println("Tessera Obiettivo Personale 4");
 	             		
 	             		for (int i = 0; i < righe; i++) {
 	             		    for (int j = 0; j < colonne; j++) {
@@ -533,7 +453,7 @@ public class CartaOb {
 	            	case 4:
 	            		System.out.println ("");
 	            		// Carta Personale 5
-	             		System.out.println("personale 5 prova");
+	             		System.out.println("Tessera Obiettivo Personale 5");
 	             		
 	             		for (int i = 0; i < righe; i++) {
 	             		    for (int j = 0; j < colonne; j++) {
@@ -560,7 +480,7 @@ public class CartaOb {
 	            	case 5:
 	            		System.out.println ("");
 	            		// Carta Personale 6
-	             		System.out.println("personale 6 prova");
+	             		System.out.println("Tessera Obiettivo Personale 6");
 	             		
 	             		for (int i = 0; i < righe; i++) {
 	             		    for (int j = 0; j < colonne; j++) {
@@ -587,7 +507,7 @@ public class CartaOb {
 	            	case 6:
 	            		System.out.println ("");
 	            		// Carta Personale 7
-	             		System.out.println("personale 7 prova");
+	             		System.out.println("Tessera Obiettivo Personale 7");
 	             		
 	             		for (int i = 0; i < righe; i++) {
 	             		    for (int j = 0; j < colonne; j++) {
@@ -613,7 +533,7 @@ public class CartaOb {
 	            	case 7:
 	            		System.out.println ("");
 	            		// Carta Personale 8
-	             		System.out.println("personale 8 prova");
+	             		System.out.println("Tessera Obiettivo Personale 8");
 	             		
 	             		for (int i = 0; i < righe; i++) {
 	             		    for (int j = 0; j < colonne; j++) {
@@ -640,7 +560,7 @@ public class CartaOb {
 	            	case 8:
 	            		System.out.println ("");
 	            		// Carta Personale 9
-	             		System.out.println("personale 9 prova");
+	             		System.out.println("Tessera Obiettivo Personale 9");
 	             		
 	             		for (int i = 0; i < righe; i++) {
 	             		    for (int j = 0; j < colonne; j++) {
@@ -666,7 +586,7 @@ public class CartaOb {
 	            	case 9:
 	            		System.out.println ("");
 	            		 // Carta Personale 10
-	             		System.out.println("personale 10 prova");
+	             		System.out.println("Tessera Obiettivo Personale 10");
 	             		
 	             		for (int i = 0; i < righe; i++) {
 	             		    for (int j = 0; j < colonne; j++) {
@@ -692,7 +612,7 @@ public class CartaOb {
 	            	case 10:
 	            		System.out.println ("");
 	            		  // Carta Personale 11
-	             		System.out.println("personale 11 prova");
+	             		System.out.println("Tessera Obiettivo Personale 11");
 	             		
 	             		for (int i = 0; i < righe; i++) {
 	             		    for (int j = 0; j < colonne; j++) {
@@ -719,7 +639,7 @@ public class CartaOb {
 	            		System.out.println ("");
 	            	    
 	                    // Carta Personale 12
-	               		System.out.println("personale 12 prova");
+	               		System.out.println("Tessera Obiettivo Personale 12");
 	               		
 	               		for (int i = 0; i < righe; i++) {
 	               		    for (int j = 0; j < colonne; j++) {
