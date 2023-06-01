@@ -9,7 +9,7 @@ public class Libreria  {
 	private String nomegiocatore;
 	private int numgiocatore;
 	public Tessera [][] casellario;
-	private boolean [][] riempimentocasella;
+	public boolean [][] riempimentocasella;
 
 	public Libreria (String giocatore, int ngiocatore)
 	{
