@@ -17,6 +17,7 @@ Inizia ora la sequenza di richieste riguardanti il prelievo di tessere dalla pla
 •	Se viene indicato 1: si devono inserire le coordinate della tessera seguendo le indicazioni a console;
 •	Se viene indicato 2: viene richiesto di indicare le coordinate della prima tessera, la richiesta successiva riguarda la direzione di spostamento (v/o) e la conseguente richiesta di decidere se spostarsi di una riga/colonna di coordinata -1 o +1;
 •	Se viene indicato 3: avviene la stessa sequenza del caso 2 tessere, in aggiunta però è richiesto di inserir e la colonna/riga della terza tessera da prelevare sempre rispetto della prima tessera ma tenendo conto della direzione della seconda tessera selezionata (se si inserisce -1 per la seconda, si deve inserire -2 per la terza, e allo stesso modo se si inserisce +1 per la seconda, si deve inserire +2 per la terza).
+
 Se la selezione del prelievo avviene correttamente viene stampata a console la plancia aggiornata e il numero di tessere prelevate. Successivamente viene richiesto di inserire in quale colonna (da 1 a 5) della rispettiva libreria inserire le tessere appena prese. Terminata questa azione viene considerato finito il turno e viene indicato l’inizio del turno successivo.
-Si prosegue in sequenza con i vari turni, se necessario la plancia viene ricaricata, fino a quando uno dei giocatori completa la propria libreria. In questo caso la partita termina e vengono stampati i risultati con i relativi punteggi.
+Si prosegue in sequenza con i vari turni, se necessario la plancia viene ricaricata, fino a quando uno dei giocatori completa la propria libreria. In questo caso la partita termina e vengono stampati i risultati con i punteggi di ogni giocatore.
 
